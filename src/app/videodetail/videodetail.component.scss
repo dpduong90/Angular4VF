@@ -1,0 +1,1262 @@
+@import "../../styles.scss";
+.pageVideo
+{	
+	position: $position-relative;
+	// plugin 
+	.fstResults
+	{
+		display: block !important; 
+	}
+	.fstSelected
+	{
+		display: none;
+	}
+	//class chung
+	.wrapShowseason
+	{
+		float: $float-left;
+		// width: calc(100% - 355px);
+		margin-top: 5px;
+		margin-right: 15px;
+		.wrap-selecttag
+		{	
+			// background: #dcdde3;
+			height: 30px;
+			line-height: 30px;						
+			&::after 
+			{
+				top: 13px;
+				right: 17px;
+				border-top: 5px solid #303234;
+			}
+			select 
+			{					
+			    @include styleText(#303234, 13px);					   
+			    background: none;				    	    
+			}
+
+			.styledSelect
+			{
+				min-width: 125px;
+				background-color: #dcdde3;
+				font-style: normal;
+				 @include styleText(#303234, 13px);
+				&::after 
+				{
+					top: 12px;
+				}
+			}
+			.select
+			{
+				margin-top: 0;
+			}
+			.options
+			{
+				z-index: 100;
+				li 
+				{
+					 @include styleText(#303234, 13px);
+					 font-style: normal;
+				}
+			}
+		}
+	}
+	.container
+	{
+		position: $position-relative;
+		z-index: 10;
+	}	
+	.mainContent
+	{		
+		width: 100%;
+		min-height: 1390px;		
+		.section 
+		{
+			width: calc(100% - 375px);
+			margin-left: 0;			
+		}
+		.videoPlaying
+		{						
+			padding-top: 20px;
+			width: calc(100% - 375px);
+			> #player 
+			{
+				width: 100%;
+				margin-left: 0;
+				z-index: 200;
+				position: $position-relative;
+				background: #000000;
+				height:484px ; 
+			}
+			// &.extendVideo > #player 
+			// {
+			// 	height: calc(100vh - 210px ) !important;
+			// }
+
+		}
+		.introduceVideo
+		{
+			border-bottom: 1px solid #efefef;
+		    margin-bottom: 5px;
+		    padding-bottom: 15px;		    
+		    header.titleVideo
+			{
+				padding-top: 12px;
+				margin-bottom: 20px;
+				.title 
+				{
+					@include styleText(#2f2f2f, 28px);	
+					font-weight: normal;
+					overflow: $overflow-hidden;
+					a 
+					{
+						@include styleText(#2f2f2f, 28px);
+						display: $display-block;						
+					}		
+				}
+			}
+		    .user_wrap
+		    {
+		    	//overflow: $overflow-hidden;
+		    	margin-bottom: 10px;
+		    }
+		    .user_info
+		    {
+		    	 float: $float-left;
+   				 width: 270px;
+   				 // overflow: hidden;
+   				 .user_avatar
+   				 {
+   				 	 display: $display-block;
+				    float: $float-left;
+				    height: 50px;
+				    width: 50px;
+				    margin-right: 10px;
+				    overflow: $overflow-hidden;
+				    background-color: #b7b7b7;				    
+				    .thumbnail	
+				    {
+				    	background-size: cover;
+				    	background-position: 50% 50%;
+				    	height: 100%;
+				    	width: 100%;
+				    }
+   				 }
+
+   				 .user_meta
+   				 {
+   				 	// overflow: $overflow-hidden;  
+   				 	float: $float-left; 
+   				 	width: calc(100% - 65px);				 	
+   				 	.user_name
+   				 	{
+   				 		margin-bottom: 5px; 
+   				 		font-weight: bold;  				 		
+   				 		a 
+   				 		{   				 			
+   				 			@include styleText(#303234, 15px);
+   				 			line-height: 18px;
+   				 			 text-overflow: ellipsis;
+    						white-space: nowrap;
+   				 			// display: $display-block; 
+   				 			overflow: $overflow-hidden;   				 			
+   				 		}
+   				 	}
+
+   		
+   				 	.videoTotal
+   				 	{
+   				 		display: $display-block;  
+   				 		@include styleText(#6b6b6b, 14px);				 		
+   				 	}
+   				 }
+		    }
+
+		     .video-meta
+			 {
+			 	float: $float-left;
+			 	width: 130px;
+			 	text-align: center;			 	
+			 	height: 25px;
+			 	line-height: 25px;
+			 	margin-right: 25px;	
+			 	margin-left: 17px;				 		 	
+			 	.embedbtn
+			 	{
+			 		@include styleText(#707378, 13px);
+					background: #dcdde3;							
+					width:107px ;
+					height: 26px;
+					line-height: 26px;
+					text-align:$align-center;
+					border-radius: 5px;
+					cursor: pointer;
+					margin-left: 0;
+					&:hover 
+					{
+						background: #eb3999;
+						color: #ffffff;
+					}
+				    span 
+				    {				    	 
+					    position: $position-relative;
+					    top: 2px;
+				    }
+				    .ti-angle-right
+				    {
+				    	left: -5px;
+				    }
+			 	}
+			 }
+
+			 .videoAddpl
+			 {
+			 	float: $float-left;
+			 	min-width: 115px;			 			 	
+			 	min-height: 30px;
+			 	position: $position-relative;
+			 	.btn-add
+			 	{
+			 		@include styleText(#707378, 13px);
+					// background: #dcdde3;							
+					width:117px ;
+					height: 30px;
+					line-height: 30px;
+					text-align:left;
+					// border-radius: 15px;
+					display: $display-inlinebl;
+					&:hover 
+					{
+						color: #2f5dab;
+						text-decoration: none;
+					}
+			 		.iconAdd
+			 		{
+			 			font-weight: bold;
+			 			position: $position-relative;
+			 			bottom: -6px;
+			 			color: #7b7b7b;
+			 			font-size: 25px;
+			 			width: 25px;
+			 		}
+			 	}
+			 	.add-playlist
+			 	{
+			 		display: $display-none;
+			 		position: $position-absolute;
+			 		top:calc(100% + 20px);
+			 		left: 0;			 		
+			 		width: 310px;
+			 		margin: 0 auto;
+			 		z-index: 500;
+			 		background: #fff;
+			 		&.arrow_box::before
+			 		{
+			 			left: 30px;
+			 		}
+			 		&.arrow_box::after
+			 		{
+			 			left: 30px;
+			 		}
+
+			 		.vf-newplaylist
+			 		{
+			 			text-align: center;	
+			 			button 
+			 			{
+			 				background-color: #e5e6ec ;
+			 				width: calc(100% - 20px);
+			 				height: 32px;
+			 				line-height: 32px;
+			 				@include styleText(#555555, 13px);
+			 				text-align: center;
+			 				border-radius: 3px;
+			 				margin: 0 auto;
+			 			}
+
+			 			input 
+			 			{
+			 				width: calc(100% - 20px);
+			 				height: 32px;			 				
+			 				@include styleText(#707378, 13px);
+			 				padding: 0 5px;
+			 				border: 1px solid #cccccc;
+			 				border-radius: 3px;
+			 				background-color: #ffffff;
+			 			}
+			 		}
+					.actionCustom
+					{
+						border-top: 1px solid #c2c2c2;
+						padding-top: 10px;
+						text-align: $align-right;
+						margin-top: 10px;
+						a 
+						{
+							display: inline-block;
+							padding: 10px 15px;
+							border-radius: 3px;
+							margin-right: 10px;
+							text-align: $align-center;
+						}
+						
+						.btnClose
+						{
+							border: 1px solid #c2c2c2;
+							@include styleText(#2d2d2d, 14px);
+							
+						}
+
+						.btnUpdate
+						{
+							background: #3ba84b;
+							@include styleText(#ffffff, 14px);
+							font-weight: bold;
+						}
+
+					}
+
+			 	}
+
+
+			 }
+
+			 .likeandshare
+			 {
+			 	border-bottom: 1px solid #efefef;
+			    margin-bottom: 10px;
+			    padding-bottom: 5px;
+			    padding-top: 8px;
+			    border-top: 1px solid #efefef;
+			    position: relative;
+			    z-index: 100;
+			    .shareSocial
+			 	{
+			 		display: $display-inlinebl;
+			 		float: $float-left;
+			 		margin-right: 10px;
+			 		.sharethisvideo
+			 		{
+			 			display: $display-inlinebl;
+			 			@include styleText(#707070, 13px);
+			 			padding-right: 10px;
+			 			&:hover 
+			 			{
+			 				color: #2f5dab;
+    						text-decoration: none;
+			 			}
+			 			&.active 
+			 			{
+			 				color: #2f5dab;
+    						text-decoration: none;
+    						.shareicon
+    						{
+    							background-position: -113px -1971px;
+    						}
+			 			}
+			 		}
+			 		.social
+			 		{
+			 			display: $display-inlinebl;
+			 			li 
+			 			{
+			 				display: $display-inlinebl;
+			 				a 
+			 				{
+			 					display: $display-block;			 					
+			 					text-align: $align-center;
+			 					line-height: 25px; 					
+								color: #a2a2a2;
+								font-weight: bold;
+								position: $position-relative;
+								top:3px;
+															
+			 				}		 				
+			 				
+			 			}
+			 		}
+			 	}
+			 	.sharing
+			 	{
+			 		float: left;
+			 		width: 200px;
+			 		margin-top: 7px;
+			 	}
+
+			 	.likeActivity
+			 	{
+			 		text-align: $align-right;
+			 		float: $float-right;
+			 		margin-top: 4px;
+			 		.btnlike
+			 		{
+			 			display: $display-inlinebl;
+			 			margin-left: 0;
+			 			position: $position-relative;
+
+			 			&:hover 
+			 			{
+			 				span {color: #eb3999;}
+			 				text-decoration: none;
+			 			}			 			
+			 			span 
+			 			{
+			 				@include styleText(#6b6b6b, 13px);
+			 				position: $position-relative;
+			 				bottom: 5px;
+			 			}
+			 			
+			 		} 
+			 		.btnlike.active
+			 		{
+			 			
+			 			span 
+			 			{
+			 				color: #eb3999;
+			 			}
+			 			
+			 			
+			 		}
+			 		.btndislike
+			 		{
+			 			@extend .btnlike;		 					 			
+			 		}			 		
+
+			 	}
+			 }
+
+			 .viewer
+			 {
+			 	float: $float-right;
+			 	.watch-count 
+			 	{
+			 		@include styleText(#707378, 21px);
+			 		text-align: right;
+			 		font-weight: bold;
+			 	}
+			 	p 
+			 	{
+			 		@include styleText(#707378, 12px);
+			 		text-align: right;			 		
+			 	}
+			 }
+
+			 .sharing
+			 {			 	
+			    padding-top: 3px;		    
+			    .fb-like
+			    {
+			    	display: $display-inlinebl;
+			    }
+			    .fb-send
+			    {
+			    	@extend  .fb-like;
+			    }
+			 }
+
+		    .description
+		    {
+		    	overflow: $overflow-hidden;
+		    	p 
+		    	{
+		    		margin-bottom: 5px;
+		    	}
+		    	.published-date
+		    	{
+		    		@include styleText(#6d6d6d, 13px);
+		    		font-weight: bold;
+
+		    		span 
+		    		{
+		    			font-weight: normal;		    			
+		    		}
+		    	}
+		    	.category
+		    	{
+		    		@extend .published-date;
+		    		a 
+		    		{
+		    			@include styleText(#6d6d6d, 13px);		    			
+		    		}
+		    	}
+		    	.tags
+		    	{
+		    		@extend .published-date;
+		    		a 
+		    		{
+		    			@include styleText(#6d6d6d, 13px);		    			
+		    		}
+		    	}
+		    	a 
+	    		{
+	    			@include styleText(#6d6d6d, 13px);	    			
+	    		}
+		    	p.video-desc 
+		    	{
+		    		@include styleText(#434343, 13px);
+		    		overflow: $overflow-hidden;		    		
+		    		line-height: 22px;
+		    		margin-top: 10px;
+		    		-webkit-transition: all 0.5s;
+					-moz-transition: all 0.5s;
+					-ms-transition: all 0.5s;
+					-o-transition: all 0.5s;
+					transition: all 0.5s;
+
+		    	}
+		    	.viewMore
+		    	{
+		    		@include styleText(#6d6d6d, 14px);
+		    		display: $display-block;
+		    		margin: 0 auto;
+		    		width: 100px;
+		    		padding: 5px 0;
+		    		margin-top: 10px;
+		    		text-align: center;
+		    		
+		    	}
+		    }
+		}
+		.comments
+		{
+			.subTitelsection
+			{
+				.title
+				{
+					margin-bottom: 0;	
+					text-transform: none;
+					@include styleText(#707378, 17px);	
+				}
+			}
+			.fb-comments
+			{
+				margin-left: -10px;
+				margin-right: -10px;
+			}
+			
+		}
+		
+		.otherVideoplay
+		{
+			padding-top: 15px;
+			overflow: $overflow-hidden;	
+			border-bottom: 1px solid #e4e4e4;
+			margin-bottom: 22px;		
+			.listvideo
+			{
+				.video 
+				{
+					&:first-child 
+					{
+						@extend %widthVideohome;
+						padding-left: 0;
+					}
+					&:nth-child(4) 
+					{
+						@extend %widthVideohome;
+						padding-right: 0;
+					}
+					&:nth-child(n +5)
+					{
+						display: $display-none;
+					}
+				}
+			}
+		}
+
+		
+
+		.extendVideo
+		{
+			width: 100%;
+			background: #000;
+			padding: 0;			
+			#player
+			{
+				margin: 0 auto;
+				width: 100%;
+				text-align: center;
+			}
+		}
+
+		.share-bytools
+		{
+			display: none;
+			border-bottom: 1px solid #efefef;
+			padding-bottom: 8px;
+			margin-bottom: 10px;
+			#vfsharefb
+			{
+				float: left;
+				padding-top: 0;
+				a 
+				{
+					display: inline-block;
+					background: #dcdde3;
+				    border-radius: 5px;
+				    color: #707378;
+				    cursor: pointer;
+				    font-family: Arial;
+				    font-size: 13px;
+				    height: 26px;
+				    line-height: 26px;
+				    text-align: right;
+				    padding-right: 10px;
+				    width: 90px;
+				    position: relative;
+				    &:hover 
+				    {
+				    	background: #3b5998 ;
+				    	color: #ffffff;
+				    	text-decoration: none;
+
+				    }
+				    span
+				    {
+				    	height: 22px;
+				    	position: absolute;
+				    	top: 1px;
+				    	left: 0;
+
+				    }
+				    &#btshfb
+				    {
+				    	margin-right: 15px;
+				    	width: 84px;
+				    }
+				    &#btsendfb:hover
+				    {
+				    	background: #0083FF ;
+				    }
+				}
+			}
+			
+		}
+
+	}
+
+	.relationVideo
+	{
+		float: $float-right;
+		width: 375px;		
+		position: $position-absolute;
+		top:20px;
+		right:0;
+		//bottom: 50px;
+		//margin: auto;		
+		-webkit-transition: all 0.5s;
+		-moz-transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-o-transition: all 0.5s;
+		transition: all 0.5s;
+		// class chung
+		.listvideo 
+		{						
+			padding-top: 15px;			
+			overflow: $overflow-hidden;
+			.video
+			{
+				float: $float-none;				
+				padding: 0;
+				margin-bottom: 15px;				
+				.thumbnail 
+				{
+					float: $float-left;
+					margin-right: 10px;					
+				}
+				header.meta
+				{
+					overflow: hidden;	
+					padding-top: 0;				
+				}
+			}
+		}	
+
+		.favoriteVideo
+		{			
+			padding:0 0 15px 0;
+			margin-left: 16px;
+			.listvideo 
+			{				
+				border-bottom: 1px solid #d7d7d7;
+				height: calc(100% - 60px);
+				.video
+				{
+					float: $float-none;				
+					margin: 0;
+					margin-bottom: 15px;
+					width: 100%;	
+					height: auto;
+					overflow: hidden;				
+					&:nth-child(n + 14)
+					{
+						display: none;
+					}				
+					.thumbnail 
+					{
+						width: 182px;
+						height: calc(182px / 1.77);
+						float: $float-left;
+						margin-right: 10px;											
+					}
+					header.meta
+					{
+						overflow: hidden;	
+						padding-top: 0;	
+						margin-bottom: 5px;
+						.title 
+						{						
+							a 
+							{
+								@include styleText(#303234, 15px);
+								font-weight: bold;								
+							}
+						}
+						// .watch-count
+						// {
+						// 	@include styleText(#707378, 12px);
+						// }			
+					}
+
+					.uploader
+					{
+						padding: 0 10px;
+						margin-bottom: 10px;
+						a
+						{
+							@include styleText(#828282, 11px);
+							text-transform: uppercase;
+							&:hover 
+							{
+								color: #527afa;
+								text-decoration: none;
+							}					
+						    
+						}
+					}
+
+					>ul>li 
+					{
+						list-style: none;
+						display: inline-block;
+						padding-right: 4px;
+						@include styleText(#707378, 12px);
+						&:last-child 
+						{
+							padding-right: 0;
+						}
+						&.watch-count::after
+						{
+							content: '';
+						    display: inline-block;
+						    width: 3px;
+						    height: 3px;
+						    background: #d7d7d7;
+						    margin-left: 8px;
+						    position: relative;
+						    bottom: 2px;
+						}
+					} 
+					.decs-show
+					{
+						@include styleText(#707378, 12px);
+						line-height: 20px;
+						max-height: 62px;
+						overflow: $overflow-hidden;
+						display: none;
+					}
+					
+				}
+				.video-related
+				{
+					float: $float-none;				
+					margin: 0;
+					margin-bottom: 15px;
+					width: 100%;
+					height: 182px !important;
+					&:nth-child(n + 14)
+					{
+						display: none;
+					}				
+					.thumbnail 
+					{
+						float: $float-left;
+						margin-right: 10px;	
+						width: 182px !important ;
+						height: 182px !important;				
+					}
+					header.meta
+					{
+						overflow: hidden;	
+						padding-top: 0;	
+						margin-bottom: 5px;
+						.title 
+						{						
+							a 
+							{
+								@include styleText(#1e1e1e, 15px);
+								display: $display-block;							
+							}
+						}
+						.watch-count
+						{
+							@include styleText(#707378, 12px);
+						}			
+					}
+					.uploader
+					{
+						padding: 0 10px;
+						margin-bottom: 10px;
+						a
+						{
+							@include styleText(#828282, 11px);
+							text-transform: uppercase;
+							&:hover 
+							{
+								color: #527afa;
+								text-decoration: none;
+							}					
+						    
+						}
+					}
+					.decs-show
+					{
+						@include styleText(#707378, 12px);
+						line-height: 20px;
+						max-height: 137px;
+						overflow: $overflow-hidden;
+					}
+
+					.vf-followplbtn
+					{
+						display: none;
+					}
+					&:hover 
+					{
+						.playitems
+						{
+							opacity:1;
+						}		
+						.vf-followplbtn
+						{
+							display: block;					
+						}
+					}
+					.desc-intro
+					{
+						@include styleText(#828282, 13px);
+						max-height: 51px;
+						overflow: $overflow-hidden;						
+						line-height: 17px;
+						margin-top: 5px;
+						display: block;						
+
+						h1,h2,h3,h4,h5,h6 
+						{
+							@include styleText(#828282, 13px);
+							line-height: 16px;
+							font-weight: normal;
+						}
+					}
+
+					> ul 
+					{						
+						width: 100%;
+						
+						li 
+						{
+							@include styleText(#818181, 12px);
+							display: $display-inlinebl;
+							// padding-right: 15px;
+							span.arrow-right
+							{
+								@extend %arrow-right;
+								border-left: 11px solid #c1c1c1;
+								display: $display-inlinebl;							
+							}
+							
+						}
+						.videoTotal
+						{
+							@include styleText(#818181, 12px);
+							background: none;
+							position: relative;
+							bottom: 0;
+							left: 0;
+						}
+						.watch-count
+						{
+							
+							@include styleText(#818181, 12px);
+						}
+					}
+				}
+				&.vf-playlistitems
+				{
+					.video-related
+					{
+						.desc-intro
+						{
+							display: block;
+						}
+					}
+				}
+
+			}
+			
+		}	
+		header.subTitelsection
+		{			
+			.title
+			{
+				margin-bottom: 0;	
+				text-transform: none;
+				@include styleText(#707378, 17px);									
+			}
+			
+		}			
+		
+		.showmore
+		{
+			@include styleText(#6d6d6d, 14px);
+    		display: $display-block;
+    		margin: 0 auto;
+    		width: 100px;
+    		padding: 5px 0;
+    		margin-top: 10px;
+    		text-align: center;
+    		&:hover 
+    		{
+    			color: $color-hover;
+    			text-decoration: none;
+    		}
+		}
+		.wrapNextandPrev
+		{
+			overflow: $overflow-hidden;
+			margin-top: 10px;
+			a 
+			{
+				display: $display-block;
+				width: 35px;
+				height: 30px;
+				line-height: 30px;
+				text-align: $align-center;
+				color: #6d6d6d;
+				font-size: 14px;
+				border: 1px solid #ccc;
+				&:hover 
+				{
+					background: #ccc;
+				}
+			}
+			.prevbt
+			{
+				float: $float-left;
+			}
+			.nextbt
+			{
+				float: $float-right;
+			}
+			.limitbt
+			{
+				opacity: 0.4;
+				cursor:no-drop;
+				//background: #ccc;
+			}
+
+		}
+
+	}
+
+	.bgBlack
+	{
+		background-color: transparent;
+		position: $position-absolute;
+		z-index: 0;
+		width: 100%;
+		// height: calc(100vh - 210px)!important;
+		left: 0;
+		top:0;
+		-webkit-transition: background-color 0.3s ease 0s;
+		-moz-transition: background-color 0.3s ease 0s;
+		-ms-transition: background-color 0.3s ease 0s;
+		-o-transition: background-color 0.3s ease 0s;
+		transition: background-color 0.3s ease 0s;
+	}
+	.activebg
+	{
+		background-color: #000;		
+	}
+	
+
+	.activeExtend
+	{
+		// top: calc(100vh - 190px)!important;;
+		.listvideo 
+		{			
+			// .video:nth-child(n + 8)
+			// {
+			// 	display: $display-none;
+			// }
+
+		}	
+	}
+
+	.waiting_approve {background: #000; color: #a9a9a9; min-height: 300px; text-align: center; position: relative;
+		.waiting_message {position: absolute; top: 50%; left: 50%; width: 100%; -moz-transform: translateX(-50%) translateY(-50%); -webkit-transform: translateX(-50%) translateY(-50%); transform: translateX(-50%) translateY(-50%);
+			p{line-height: 22px; font-size: 14px;}
+		}
+	 }
+
+
+
+
+}
+
+// for add playlist
+
+
+.arrow_box {
+	position: relative;
+	background: #ffffff;
+	border: 1px solid #c2c2c2;
+	width: 100%;	
+	border-radius: 3px;
+	padding: 10px 0;	
+}
+.arrow_box:after, .arrow_box:before {
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+}
+
+.arrow_box:after {
+	border-color: rgba(255, 255, 255, 0);
+	border-bottom-color: #ffffff;
+	border-width: 12px;
+	margin-left: -12px;
+}
+.arrow_box:before {
+	border-color: rgba(194, 194, 194, 0);
+	border-bottom-color: #c2c2c2;
+	border-width: 13px;
+	margin-left: -13px;
+}
+
+// scroll bar
+
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar
+{
+	background-color: #d7d7d7 !important;
+	//height: 56px;
+	width: 6px;
+}
+.mCSB_scrollTools .mCSB_draggerRail
+{
+	background-color: #ebebeb;
+	width: 6px;
+}
+
+.mCSB_inside > .mCSB_container
+{
+	margin-right: 0;
+}
+
+
+ul.ft-menu > li.ft-field > span.ft-label
+{
+	display: none;
+}
+ul.ft-menu > li.ft-field > div.ft-panel
+{
+	margin-left:0;
+	margin-top: 0;
+	top: 0;
+	position: relative;
+	border: none;
+	box-shadow: none;
+	display: block !important;
+	left: 0;
+	&::before 
+	{
+		display: none;
+	}
+	&::after 
+	{
+		display: none;
+	}
+
+}
+ul.ft-menu > li.ft-field
+{
+	margin-right: 0;
+}
+ul.ft-menu, ul.ft-menu * 
+{
+	width: 100%;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > fieldset.ft-search
+{
+	background: none !important;
+	&::before 
+	{
+		display: none;
+	}
+	input 
+	{
+		background: #fff;
+		border: 1px solid #cccccc;
+		width: 100%;
+		min-height: 32px;
+		border-radius: 3px;
+		box-shadow: none;
+		padding-left: 10px;
+	}
+}
+ul.ft-menu  li.ft-field  div.ft-panel  ul.ft-tags  li
+{
+	box-shadow: none;
+	border: none;
+	background: none;
+	@include styleText(#646464, 13px);
+	text-shadow: none;
+	padding: 4px 10px;
+	cursor: pointer;
+}
+ul.ft-menu  li.ft-field  div.ft-panel  ul.ft-tags  li.ft-highlight
+{
+	background: #e5e5e5;
+	color:#646464;
+	border: none;
+	box-shadow: none;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags > li::after
+{
+	display: none;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-tags
+{
+	border-top: none;
+}
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected > li
+{
+	width: auto;
+	background: #e4e4e4;
+	border-radius: 3px;
+	border: 1px solid #aaaaaa;
+	@include styleText(#000000, 13px);
+	&::after 
+	{
+		color: #999999;
+	}
+}
+
+ul.ft-menu > li.ft-field > div.ft-panel > ul.ft-selected
+{
+	background: none;
+}
+
+#mCSB_1_scrollbar_vertical
+{
+	position: absolute !important;
+	width: 17px;
+	left: auto;
+	right: 0;
+}
+
+.forgotLoginbox
+{
+	padding: 10px;
+	.title
+	{
+		@include styleText(#646464, 15px);
+		font-weight: bold;
+		margin-bottom: 10px;
+	}
+	p 
+	{
+		@include styleText(#646464, 13px);
+	}
+	.btnLogin
+	{
+		display: $display-inlinebl;
+		background: green;
+		padding: 5px 15px;							
+		@include styleText(#fff, 13px);
+		text-align: center;
+		margin-top: 10px;
+		border-radius: 3px;
+	}
+}
+.wrapbox
+{
+	display: $display-none;
+	position: $position-absolute;
+	left: -200px;
+	right:-200px;
+	width: 200px;
+	top: calc(100% + 15px);
+	z-index: 100;
+}
+
+.fstElement  
+{
+	width: calc( 100% - 20px );
+	margin: 0 auto;
+	display: $display-block;
+	box-shadow: none !important;
+	.fstControls
+	{
+		width: 100%;
+		.fstChoiceItem
+		{
+			background-color: #e4e4e4;
+			border: 1px solid #aaaaaa;
+			color: #000;
+			font-size: 11px;
+			.fstChoiceRemove
+			{
+				color: #9a9a9a;
+				font-weight: bold;
+			}
+		}
+		.fstQueryInput 
+		{
+			font-size: 14px;
+			color: #010101;
+		}
+	}
+	.fstResults
+	{
+		display: block ;
+		max-height: 180px;
+		overflow: hidden;
+		position: relative;
+		box-shadow: none !important;
+		border: none;
+		left: 0;
+		right:0;
+		top:0;
+		padding: 10px 0;
+		.fstResultItem
+		{
+			@include styleText(#646464, 13px);
+		}
+		.fstFocused
+		{
+			background-color: #e5e5e5;
+			border-top: 1px solid #e5e5e5;
+		}
+		.fstSelected
+		{
+			@extend .fstFocused;
+		}
+	}
+}
+.fstMultipleMode { display: block; }

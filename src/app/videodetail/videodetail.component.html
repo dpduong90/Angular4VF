@@ -2,14 +2,17 @@
   <div class="bgBlack"></div>
   <div class="container">
     <div class="mainContent">
-      <div class="section videoPlaying">
+      <div id="vf-player" class="section videoPlaying">
         <div id="player">
-          <div class="waiting_approve">
-            <div class="waiting_message">
-              <p>Video này chưa được duyệt hoặc đã giới hạn quyền xem.</p>
-              <p>Vui lòng thử 1 video khác</p>
+            <!-- EMBED PLAYER -->
+            <div id="embed" style="height: 100%;" data-video-moderated="">
+              <video id="vfplayer_primary_video" class="videofly video-js" preload="auto" autoplay crossorigin="anonymous">
+                <p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to
+                  a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports
+                    HTML5 video</a></p>
+              </video>
             </div>
-          </div>
+            <!-- end EMBED PLAYER -->
         </div>
       </div>
 
@@ -44,10 +47,6 @@
                       <span class="fonticons"><i class="fa fa-times" aria-hidden="true"></i></span>	
                     </span> 
 
-                    <!-- <span class="iconFont vf-iconmyaccount">										
-                      <span class="icon-webs accounticonsm"></span>
-                    </span>  -->
-
                     <span class="textFollow follow"> Theo dõi </span>
                     <span class="textFollow following"> Đang theo dõi </span>
                     <span class="textFollow disfollow"> Hủy theo dõi </span>
@@ -66,31 +65,6 @@
               </div>
             </div>
           </div>
-
-          <script type="text/javascript">
-            $(document).ready(function () {
-              $('.vf-subscription').click(function () {
-                if ($(this).hasClass('active')) {
-                  $(this).removeClass("active");
-                  $("span.vf-iconFldone").css('display', 'none');
-                  $("span.vf-iconFladd").css('display', 'inline-block');
-                  $(".following").css('display', 'none');
-                  $(".follow").css('display', 'inline-block');
-                }
-                else {
-                  $(this).addClass("active");
-                  $("span.vf-iconFldone").css('display', 'inline-block');
-                  $("span.vf-iconFladd").css('display', 'none');
-                  $(".vf-subscription .following").css('display', 'inline-block');
-                  $(".vf-subscription .follow").css('display', 'none');
-                  $('.vf-subscription .vf-activity').removeClass("vf-activityfl");
-                  setTimeout(function () {
-                    $('.vf-subscription .vf-activity').addClass("vf-activityfl");
-                  }, 1500);
-                }
-              });
-            });
-          </script>
 
           <div class="viewer">
             <p class="watch-count"> <span>3.442.000</span></p>
@@ -139,11 +113,6 @@
 
           <div class="shareSocial">
             <a class="sharethisvideo"><span class="icon-webs shareicon"></span>Chia sẻ</a>
-            <!--  <ul class="social">
-              <li><a href="#"> <span class="icon-webs facebookicon"></span></a></li>
-              <li><a href="#"> <span class="icon-webs twittericon"></span></a></li>
-              <li><a href="#"> <span class="icon-webs googleicon"></span></a></li>
-            </ul> -->
           </div>
 
 
@@ -151,45 +120,15 @@
             <a class="btnlike " title="Thích video">
               <span class="icon-webs likeicon"></span>
                <span class="totalLike">200</span>
-               <!-- <div class="wrapbox">
-                 <div class="arrow_box forgotLoginbox">
-                  <p class="title">Bạn chưa đăng nhập?</p>
-                  <p>Hãy đăng nhập để sử dụng chức năng này nhé.</p>
-                  <button class="btnLogin" > Đăng nhập</button>
-                </div>
-               </div> -->
             </a>
             <a class="btndislike" title="Không thích video">
               <span class="icon-webs dislikeicon"></span>
               <span class="totaldisLike">200</span>
-              <!-- <div class="wrapbox">
-                 <div class="arrow_box forgotLoginbox">
-                  <p class="title">Bạn chưa đăng nhập?</p>
-                  <p>Hãy đăng nhập để sử dụng chức năng này nhé.</p>
-                  <button class="btnLogin" > Đăng nhập</button>
-                </div>
-               </div> -->
             </a>
           </div>
 
           <div class="clear"></div>
         </div>
-        <script type="text/javascript">
-          $(document).ready(function () {
-            $(".sharethisvideo").click(function () {
-              if ($(this).hasClass("active")) {
-                $(this).removeClass("active");
-                $('.share-bytools').hide();
-
-              }
-              else {
-                $(this).addClass("active");
-                $('.share-bytools').show();
-              }
-
-            });
-          });
-        </script>
 
         <div class="share-bytools">
           <div class="sharing" id="vfsharefb">
@@ -222,293 +161,12 @@
         <header class="subTitelsection">
           <h3 class="title">BÌNH LUẬN</h3>
         </header>
-        <!-- <div class="fb-comments fb_iframe_widget fb_iframe_widget_fluid" data-href="http://videofly.vn/_video308267.html" data-numposts="10" data-width="100%" fb-xfbml-state="rendered"><span style="height: 176px;"><iframe id="f2c0409c6ce46a4" name="f3a64a324d31e4c" scrolling="no" style="border: medium none; overflow: hidden; height: 176px; width: 100%;" title="Facebook Social Plugin" class="fb_ltr fb_iframe_widget_lift" src="https://www.facebook.com/plugins/comments.php?api_key=904786639597536&amp;channel_url=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter.php%3Fversion%3D42%23cb%3Df15742f870ca28%26domain%3Dvideofly.vn%26origin%3Dhttp%253A%252F%252Fvideofly.vn%252Ff2a59314f0cb5bc%26relation%3Dparent.parent&amp;href=http%3A%2F%2Fvideofly.vn%2F_video308267.html&amp;locale=en_US&amp;numposts=10&amp;sdk=joey&amp;version=v2.4&amp;width=100%25"></iframe></span></div> -->
       </div>
       <!-- comments -->
 
     </div>
     <!-- mainContent -->
-
-    <aside class="relationVideo">
-      <div class="favoriteVideo">
-        <header class="subTitelsection">
-          <h3 class="title">Có thể bạn thích</h3>
-        </header>
-        <div class="listvideo">
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-          <article class="video">
-            <p class="thumbnail" style="background-image: url(assets/images/thumb-larger.jpg)">
-              <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#">							
-            </a>
-              <span class="duration">03:15</span>
-            </p>
-            <header class="meta">
-              <h3 class="title">
-                <a title="Hòa Âm Ánh Sáng" rel="bookmark" href="#"> Hòa Âm Ánh Sáng </a>
-              </h3>
-
-            </header>
-            <p class="uploader">
-              <a title="videofly" href="#">Videofly</a>
-              <span class="vf-confirm" title="Đã xác nhận">
-              <i class="fa fa-check-square" aria-hidden="true"></i>
-            </span>
-            </p>
-            <ul>
-              <li class="watch-count">
-                0 lượt xem
-              </li>
-              <li class="datetime">
-                Hôm nay
-              </li>
-            </ul>
-          </article>
-        </div>
-      </div>
-
-    </aside>
+    <app-suggestvideo></app-suggestvideo>
     <div class="clear"></div>
   </div>
   <!-- container -->

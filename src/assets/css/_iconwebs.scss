@@ -1,0 +1,707 @@
+//for icon
+.icon-webs
+{
+    background: url(/assets/images/iconwebs_v13.png) no-repeat;
+    width: 30px;
+    height: 22px;
+    display: inline-block;
+}
+
+.searchicon
+{
+    background-position: -3px -1507px;
+    height: 25px;
+    width: 21px;
+}
+.playlisticon
+{
+    background-position: 0 -517px;
+    height: 15px;
+}
+.uploadicon
+{
+    background-position: 0 -792px;
+    width: 20px;
+    position: $position-relative;
+    top: 2px;
+}
+.usericon
+{
+    background-position: 0 -830px;
+    width: 25px;
+}
+#loginDropdown
+{
+    .usericon
+    {       
+        width: 30px;
+    }
+}
+.activeicon
+{
+    background-position: 0 -594px;
+    width: 120px;
+    height: 120px;
+}
+.uparrowicon
+{
+    background-position: 0 -594px;
+}
+
+.cameraicon
+{
+    background-position: 0 -869px;
+}
+
+.activemsicon
+{
+    background-position: 0 -733px;
+    width: 50px;
+    height: 60px;
+}
+.closeicon 
+{
+    background-position: 0 -1202px;
+}
+.uparrowicon
+{
+    background-position: 0 -1167px;
+}
+
+.ringicon
+{
+    background-position: 0 -343px;
+    height: 25px;
+}
+.playshowicon
+{
+    background-position: 0 -384px;
+    height: 25px;
+}
+
+.watchicon
+{
+    background-position: 0 -383px;
+    height: 27px;
+}
+.bx-prev, .slick-slider .slick-arrow.slick-prev
+{   
+    background: url(/assets/images/iconwebs_v13.png) no-repeat;
+    background-position: 0 -467px;
+    &::before 
+    {
+        display: none !important;
+    }
+}
+.bx-next, .slick-slider .slick-arrow.slick-next
+{   
+    background: url(/assets/images/iconwebs_v13.png) no-repeat;
+    background-position: 0 -425px;
+    &::before 
+    {
+        display: none !important;
+    }
+}
+.vf-playlist-suggest .bx-wrapper .bx-controls-direction .bx-next
+{
+    background-position: 12px -425px;
+}
+
+
+ .pageMusic .hotPlaylistvideo .bx-prev, 
+ .hotPlaylistvideo.slides-section .bx-prev,
+  .category .hotPlaylistvideo .bx-prev, 
+.vf-communitynewvideo .bx-prev,
+.vf-communitynewPlaylist .bx-prev,
+#home-page .wrap-section .bx-wrapper .bx-prev,
+.slick-slider .slick-arrow.slick-prev
+{
+    
+    background-position: 0 -467px !important;
+    &::before 
+    {
+        display: none !important;
+    }
+    &:hover 
+    {
+        background-position: 0 -467px !important;
+    }
+}
+
+ .pageMusic .hotPlaylistvideo .bx-next,
+  .hotPlaylistvideo.slides-section .bx-next,
+ .category .hotPlaylistvideo .bx-next, 
+.vf-communitynewvideo .bx-next, 
+.vf-communitynewPlaylist .bx-next,
+#home-page .wrap-section .bx-wrapper .bx-next,
+.genredetailpage .wrap-section .bx-wrapper .bx-next,
+.slick-slider .slick-arrow.slick-next
+{    
+    background-position: 14px -425px !important;
+    &::before 
+    {
+        display: none !important;
+    }
+    &:hover 
+    {
+        background-position: 14px -425px !important;
+    }
+}
+
+.facebookicon
+{
+    background-position: -72px -1877px;
+    width: 25px;
+    height: 25px;   
+}
+.twittericon
+{
+    background-position: -6px -1842px;
+    width: 20px;
+    height: 25px;   
+}
+.googleicon
+{
+    background-position: -72px -1844px;
+    width: 25px;
+    height: 25px;   
+}
+.instagram-icon
+{
+    background-position: -121px -1845px;
+}
+.pinterest-icon
+{
+    background-position: -120px -1878px;
+}
+.facebookMessage-icon
+{
+    background-position: -5px -1878px;
+    
+}
+
+.loopicon
+{
+    // background-position: -3px -2003px;
+    // you can see this icon on live because iconfont live
+    background: none;
+    &::before 
+    {
+        color: #707378;
+        content: "\ea2d";
+        font-family: VideoJS;
+        font-size: 18px;
+    }
+}
+.activemode
+{
+    .loopicon::before
+    {
+        // background-position: -71px  -2003px;
+         color: #eb4335;
+    }
+}
+.shuffleicon
+{
+    // background-position: -3px -2038px;
+     background: none;
+    &::before 
+    {
+        color: #707378;
+        content: "\ea30";
+        font-family: VideoJS;
+        font-size: 18px;
+    }
+}
+.activemode
+{
+    .shuffleicon::before
+    {
+        // background-position: -71px -2037px;
+        color: #eb4335;
+    }
+}
+
+.prevarrowicon
+{
+    background-position: -3px -1141px;
+    width: 10px;
+    margin-top: 7px;
+}
+.nextarrowicon
+{
+    background-position: -16px -1141px;
+    width: 10px;
+    margin-top: 7px;
+}
+.viewicon
+{
+    background-position: 0 -923px;
+    height: 15px;
+    width: 22px;
+}
+
+.videocontrolicon
+{
+    background-position: 0 -1285px;
+
+}
+.videofavorite
+{
+    background-position: 0 -1313px;
+}
+.statisticsicon
+{
+    background-position: 0 -1344px;
+}
+#loginDropdown .usericon
+{
+    background-position: 0 -834px;  
+    top:-2px;
+}
+.chagepasswordicon
+{
+    background-position: 0 -1375px; 
+    top:-1px;
+}
+.logouticon
+{
+    background-position: 0 -1438px;
+    top:-3px;   
+}
+
+.notififeed:hover 
+{
+    .ringicon
+    {
+        background-position: -36px -357px
+    }
+}
+.newWatchs:hover
+{
+    .watchicon 
+    {
+        background-position: -34px -390px
+    }
+}
+
+.facebookrgicon
+{
+    width: 50px;
+    height: 50px;
+    background-position: 14px -1455px;
+}
+
+.playitems
+{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);        
+    color: #fff;
+    display: block;
+    text-align: center;     
+     opacity: 0;
+     cursor: pointer;
+     -webkit-transition: opacity 0.2s;
+    -moz-transition: opacity 0.2s;
+    -ms-transition: opacity 0.2s;
+    -o-transition: opacity 0.2s;
+    transition: opacity 0.2s;
+    .playicon
+    {
+        background-position: -44px -275px;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        top: 30%;
+    }
+}
+.video:hover 
+{
+    .playitems 
+    {
+        display: block;
+        opacity: 1;
+    }
+}
+.playsmicon
+{
+    background-position: -3px -296px;
+    height: 30px;
+    position: relative;
+    top: 6px;
+}
+
+.category
+{
+    .bx-prev
+    {
+        background-position: -7px -1576px;      
+        &:hover 
+        {
+            background-position: -74px -1576px;
+        }
+    }
+    .bx-next
+    {
+        background-position: -6px -1650px;
+        &:hover 
+        {
+            background-position: -74px -1650px;
+        }
+    }
+}
+
+.category-special, .vf-communityPage .vf-slider
+{
+    .bx-prev
+    {
+        background-position: -7px -1576px;      
+        &:hover 
+        {
+            background-position: -74px -1576px;
+        }
+    }
+    .bx-next
+    {
+        background-position: -6px -1650px;
+        &:hover 
+        {
+            background-position: -74px -1650px;
+        }
+    }
+}
+
+
+.smlogoicon
+{
+    background-position: -8px -1729px;
+    height: 37px;
+    width: 35px;
+}
+
+.staricon
+{
+    background-position: -8px -1729px;
+}
+.addicon 
+{
+    background-position: 1px -1916px;
+    height: 20px;
+    position: $position-relative;
+    top: 4px;
+    width: 25px;
+}
+.btn-add:hover .addicon
+{
+    background-position: -33px  -1916px;
+}
+.embedicon
+{
+    background-position: -76px -1916px;
+    height: 18px;
+    position: $position-relative;
+    top:3px;
+    width: 26px;
+}
+
+.embedbtn:hover 
+{
+    .embedicon 
+    {
+        background-position: -118px  -1916px;
+    }
+}
+
+.sharefbicon
+{
+    background-position: -114px -2002px;
+}
+#btshfb:hover .sharefbicon
+{
+    background-position: -114px -2038px;
+}
+.sendfbicon
+{
+    background-position: -114px -2066px;
+}
+
+#btsendfb:hover .sendfbicon
+{
+    background-position: -114px -2091px;
+}
+
+.likeicon
+{
+    background-position: 1px -1945px;
+    width: 25px;
+}
+.btnlike:hover 
+{
+    .likeicon
+    {
+        background-position:-66px -1945px;
+    }
+}
+.btnlike.active
+{
+    
+    span 
+    {
+        color: #eb4335;
+    }
+    .likeicon
+    {
+        background-position: -66px -1945px;
+    }
+    
+}
+.dislikeicon
+{
+    background-position: 1px -1972px;
+    width: 25px;
+    bottom: 2px !important;
+    position: relative;
+}
+.btndislike:hover 
+{
+    .dislikeicon
+    {
+        background-position: -66px -1972px;
+    }
+}
+.btndislike.active
+{
+    span 
+    {
+        color: #eb4335;
+    }
+    .dislikeicon
+    {
+        background-position: -66px -1972px;
+    }
+}
+
+.shareicon
+{
+    background-position:-113px -1942px;
+    position: relative;
+    top:2px;
+    height: 20px;
+}
+.sharethisvideo:hover
+{    
+    .shareicon
+    {
+         background-position:-113px -1971px;
+    }
+}
+
+
+
+.playicon 
+{
+    background-position: -66px -1782px;
+    width: 61px;
+    height: 50px;
+}
+
+
+
+.wrapPlaynow 
+{
+    a:hover .playicon
+    {
+        background-position: 3px -2148px;
+    }
+}
+
+.deleteicon1
+{
+    background-position: -66px -2147px;
+    float: $float-right;
+}
+.staricon
+{
+    background-position: -74px -1729px;
+    height: 37px;
+    width: 35px;
+}
+.hoticon
+{
+    background-position: -6px -1787px;
+    height: 37px;
+    width: 36px;
+}
+
+
+.cleariconsm
+{
+    background-position: -2px -2211px;
+    height: 100%;
+}
+
+.doneiconsm
+{
+    background-position: -2px -2235px;
+    height: 100%;
+}
+
+.fladdiconsm
+{
+    background-position: -2px -2263px;
+    height: 100%;
+}
+
+.accounticonsm
+{
+    background-position:-2px -2288px;
+    height: 100%;
+    width: 25px;
+}
+
+.contactus .phone-icon 
+{
+    background-position:-70px  -2172px; 
+    width: 20px;
+}
+.contactus .fax-icon 
+{
+    background-position:-67px -2199px; 
+    width: 25px;
+}
+.contactus .email-icon 
+{
+    background-position:-65px -2223px; 
+    width: 23px;
+}
+
+.closeicon 
+{
+    background-position:5px -1200px
+}
+
+
+.vf-listshow-chanel .bx-wrapper .bx-prev
+{
+    background-position:-6px -2336px;
+    left: -44px;
+}
+.vf-listshow-chanel .bx-wrapper .bx-next
+{
+    background-position:-72px -2336px;
+    right: -44px;
+}
+
+.followpl-icon
+{
+    background-position:4px  -2455px;
+}
+.vf-followplbtn:hover .followpl-icon
+{
+    background-position:-28px  -2455px;
+}
+.vf-followplbtn.active .followpl-icon
+{
+    background-position:-62px  -2455px;
+}
+
+.vf-followplbtn.active:hover .followpl-icon
+{
+    background-position:-62px  -2455px;
+}
+
+.vietsubbg
+{
+    background-position: -1px -2509px;
+}
+.feedbackicon
+{
+    background-position: -70px -2509px;
+    float: left;
+    margin-top: 11px;
+    width: 28px;
+}
+.usfacebook
+{
+     background-position: 0 -2585px;
+     width: 130px;
+     height: 36px;
+}
+.like-us-onfb
+{
+    a:hover .usfacebook
+    {
+        background-position: 0 -2633px;
+    }
+}
+
+.editor-icon
+{
+   background-position: -114px -2202px;
+}
+.update-icon
+{
+    background-position: -111px  -2134px;
+}
+.cancel-icon
+{
+    background-position: -109px   -2165px;
+}
+
+.videostotalicon
+{
+    background-position: -3px -2691px;
+    height: 15px;
+    width: 19px;
+    position: relative;
+    top:1px;
+}
+.viewicon
+{
+    background-position: -2px -2722px;
+    height: 15px;
+    width: 22px;
+    position: relative;
+    top: 1px;
+}
+
+
+.wrap-banner , .introduceShow
+{
+    .videostotalicon
+    {
+        background-position: -55px -2691px;     
+        width: 22px;   
+    }
+    .viewicon
+    {
+        background-position: -55px -2723px; 
+        width: 24px;       
+    }
+}
+
+.hideicon
+{
+    background-position: -109px  -2691px;
+    height: 22px;
+    width: 20px;
+}
+
+
+.rating 
+{
+    .fonticons
+    {
+        color: #f1c40f;
+    }
+}
+.birthday-icon
+{
+    background-position: -111px  -2724px;
+    height: 22px;
+    width: 24px;
+}

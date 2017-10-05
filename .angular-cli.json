@@ -19,9 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss"
+        "styles.scss",
+        "./assets/css/vfplayer.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/js/jquery-1.12.4.min.js",
+        "./assets/js/moment-with-locales.js",
+        "./assets/js/main.js",
+        "./assets/js/vfplayer.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",

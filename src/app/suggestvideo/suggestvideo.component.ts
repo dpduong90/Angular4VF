@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpParams } from '@angular/common/http';
-import { Http, RequestOptions, RequestMethod, Headers, URLSearchParams } from '@angular/http';
+import { HttpParams, HttpClient } from '@angular/common/http';
+import { Observable } from "rxjs/Observable";
 
 @Component({
   selector: 'app-suggestvideo',
@@ -9,23 +9,16 @@ import { Http, RequestOptions, RequestMethod, Headers, URLSearchParams } from '@
 })
 export class SuggestvideoComponent implements OnInit {
   results: string[];
-  constructor(private http: Http) {
+  constructor(private http: HttpClient) {
     
   }
 
   ngOnInit() {
-    let url = 'http://192.168.11.18:7177/api/nextvideoinplaylist';
-    let myHeaders = new Headers();
-    myHeaders.append('Content-Type', 'application/json; charset=UTF-8');    
-    let myParams = new URLSearchParams();
-    myParams.append('playlist', '464107518177651604');
-    let options = new RequestOptions({ 
-      params: myParams,
-      headers: myHeaders
-    });
+    let url = 'http://videofly.vn/api/nextvideoinplaylist';
 
-    this.http.get(url, options).subscribe(data => {
-        console.log(data);
-    });
+    this.http.get(url, {
+      params: new HttpParams().set('playlist', '464107518177651604')
+    }).map(data => _.values(data))
+    .do(console.log);
   }
 }

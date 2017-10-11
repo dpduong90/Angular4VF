@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpParams, HttpClient } from '@angular/common/http';
-import { Observable } from "rxjs/Observable";
+import 'rxjs/add/operator/map';
 
 @Component({
   selector: 'app-suggestvideo',
@@ -14,11 +14,10 @@ export class SuggestvideoComponent implements OnInit {
   }
 
   ngOnInit() {
-    let url = 'http://videofly.vn/api/nextvideoinplaylist';
+    let url = 'http://local.videofly.vn:7277/api/video';
 
     this.http.get(url, {
-      params: new HttpParams().set('playlist', '464107518177651604')
-    }).map(data => _.values(data))
-    .do(console.log);
+      params: new HttpParams().set('video_id', '570442892623084701')
+    }).subscribe(data => console.log(data));
   }
 }

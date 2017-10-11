@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { VideodetailComponent } from './videodetail/videodetail.component';
-import { SuggestvideoComponent } from './suggestvideo/suggestvideo.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { VideodetailComponent } from './components/video/videodetail/videodetail.component';
+import { SuggestvideoComponent } from './components/video/suggestvideo/suggestvideo.component';
 
 @NgModule({
   declarations: [

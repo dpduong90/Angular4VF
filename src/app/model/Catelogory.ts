@@ -1,3 +1,5 @@
-export class Catelogory {
-
+export interface Catelogory {
+    cateId: number;
+    cateName: string;
+    pathName: string;
 }

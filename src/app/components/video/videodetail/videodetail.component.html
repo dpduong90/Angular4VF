@@ -18,9 +18,7 @@
 
       <div class="section introduceVideo">
         <header class="titleVideo">
-          <h3 class="title">
-            Iraq cảnh báo dùng biện pháp quân sự với Thổ Nhĩ Kỳ
-          </h3>
+          <h3 class="title">{{videoDetail.title}}</h3>
         </header>
         <div class="user_wrap clearfix">
           <div class="user_info clearfix">
@@ -29,7 +27,7 @@
             </a>
             <div class="user_meta">
               <h4 class="user_name">
-                <a href="#">Gamapmo</a>
+                <a href="#">{{videoDetail.userProfile.userId}}</a>
                 <span class="vf-confirm" title="Đã xác nhận">
                 <i class="fa fa-check-square" aria-hidden="true"></i>
                 </span>
@@ -52,7 +50,7 @@
                     <span class="textFollow disfollow"> Hủy theo dõi </span>
                   </span> 
                 </button>
-                <span class="total-subscription">99</span>
+                <span class="total-subscription">{{videoDetail.userProfile.countSubscriber}}</span>
                 <div class="wrapbox" style="display: none">
                   <div class="arrow_box forgotLoginbox">
                     <p class="title">Bạn chưa đăng nhập?</p>
@@ -67,7 +65,7 @@
           </div>
 
           <div class="viewer">
-            <p class="watch-count"> <span>3.442.000</span></p>
+            <p class="watch-count"> <span>{{videoDetail.view}}</span></p>
             <p> Lượt xem</p>
           </div>
 
@@ -119,11 +117,11 @@
           <div class="likeActivity">
             <a class="btnlike " title="Thích video">
               <span class="icon-webs likeicon"></span>
-               <span class="totalLike">200</span>
+               <span class="totalLike">0</span>
             </a>
             <a class="btndislike" title="Không thích video">
               <span class="icon-webs dislikeicon"></span>
-              <span class="totaldisLike">200</span>
+              <span class="totaldisLike">0</span>
             </a>
           </div>
 
@@ -142,16 +140,14 @@
         </div>
 
         <div class="description">
-          <p class="published-date">Ngày đăng: <span>06/01/2016</span></p>
-          <p class="category"> Chuyên mục: <span> <a href="#">Âm nhạc</a> , <a href="#">Moods & Genres</a> </span> </p>
-          <p class="tags"> Chủ đề: <span> <a href="#">2012</a>, <a href="#">i swear</a> , <a href="#"> it's the truth redemption rob baird</a> </span>            </p>
-          <p class="video-desc">“GDP của ASEAN dự kiến sẽ đạt 4.700 tỷ USD vào năm 2020. Theo dự báo, khu vực có tiềm năng trở thành nền kinh tế
-            lớn thứ tư trên thế giới vào năm 2030. Có rất nhiều lợi ích kinh tế mà chúng ta sẽ gặt hái được, qua đó mang
-            lại cuộc sống sung túc hơn cho tất cả người dân ASEAN”, Thủ tướng Malaysia Najib Razak phát biểu tại lễ ký kết
-            hồi tháng 11/2015. “GDP của ASEAN dự kiến sẽ đạt 4.700 tỷ USD vào năm 2020. Theo dự báo, khu vực có tiềm năng
-            trở thành nền kinh tế lớn thứ tư trên thế giới vào năm 2030. Có rất nhiều lợi ích kinh tế mà chúng ta sẽ gặt
-            hái được, qua đó mang lại cuộc sống sung túc hơn cho tất cả người dân ASEAN”, Thủ tướng Malaysia Najib Razak
-            phát biểu tại lễ ký kết hồi tháng 11/2015.</p>
+          <p class="published-date">Ngày đăng: <span>{{videoDetail.createTs}}</span></p>
+          <p class="category"> Chuyên mục: 
+            <span *ngFor= "let subCatelogory of videoDetail.subCategories"> 
+              <a href="/subCatelogory.pathName/subCatelogory.pathName">{{subCatelogory.cateName}}</a> 
+            </span> 
+          </p>
+          <p class="tags"> Chủ đề: <span> <a href="#">2012</a>, <a href="">i swear</a> , <a href="#"> it's the truth redemption rob baird</a> </span>            </p>
+          <p class="video-desc">{{ videoDetail.description }}</p>
           <a class="viewMore"> Xem thêm </a>
         </div>
         <!-- description -->

@@ -10,12 +10,15 @@ export class VideoService {
     
   }
 
-  getVideoDetail(videoId: string): Video {
+  getVideoDetail(id: string) {
     let url = 'http://local.videofly.vn:7277/api/video';
-    this.http.get(url, {
-      params: new HttpParams().set('video_id', videoId)
-    }).subscribe(data => console.log(data));
-    return this.videoDetail;
+    return this.http.get(url, {
+      params: new HttpParams().set('video_id', id)
+    }).map(data => {
+      console.log(data["data"].video);
+      return <Video>data["data"].video;
+    });
+      
   }
 
 }

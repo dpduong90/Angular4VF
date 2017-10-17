@@ -15,7 +15,6 @@ export class VideoService {
     return this.http.get(url, {
       params: new HttpParams().set('video_id', id)
     }).map(data => {
-      console.log(data["data"].video);
       return <Video>data["data"].video;
     });
       

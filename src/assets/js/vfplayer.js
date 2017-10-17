@@ -1,4 +1,4 @@
-/*! javascript vfplayer 04-10-2017, 10:43:39 AM */
+/*! javascript vfplayer 17-10-2017, 3:10:20 PM */
 /**
  * @license
  * Video.js 5.17.0 <http://videojs.com/>
@@ -43920,12 +43920,18 @@ function extend() {
 if (!window.vfplayer) {
 
   window.vfplayer = {};
-  vfplayer.StaticBase = (typeof CONFIG == 'undefined' || !CONFIG.BASE_STATIC) ? '//' + window.location.host + '/v2/' : CONFIG.BASE_STATIC + '/v2/';
-  vfplayer.ApiBase = (typeof CONFIG == 'undefined' || !CONFIG.API_BASE) ? '//' + window.location.host + 'api/' : CONFIG.API_BASE + 'api/';
-  vfplayer.ApiLog = (typeof CONFIG == 'undefined' || !CONFIG.API_LOG) ? '//log.' + window.location.host : CONFIG.API_LOG;
-  vfplayer.ApiAds = (typeof CONFIG == 'undefined' || !CONFIG.API_ADS) ? '//' + window.location.host : CONFIG.API_ADS;
-  vfplayer.LogDomain = 'http://log.videofly.vn';
+  // vfplayer.StaticBase = (typeof CONFIG == 'undefined' || !CONFIG.BASE_STATIC) ? '//' + window.location.host + '/v2/' : CONFIG.BASE_STATIC + '/v2/';
+  // vfplayer.ApiBase = (typeof CONFIG == 'undefined' || !CONFIG.API_BASE) ? '//' + window.location.host + 'api/' : CONFIG.API_BASE + 'api/';
+  // vfplayer.ApiLog = (typeof CONFIG == 'undefined' || !CONFIG.API_LOG) ? '//log.' + window.location.host : CONFIG.API_LOG;
+  // vfplayer.ApiAds = (typeof CONFIG == 'undefined' || !CONFIG.API_ADS) ? '//' + window.location.host : CONFIG.API_ADS;
+  // vfplayer.LogDomain = 'http://log.videofly.vn';
 
+  var ApiLocal = 'local.videofly.vn:7277/';
+  vfplayer.StaticBase = (typeof CONFIG == 'undefined' || !CONFIG.BASE_STATIC) ? '//' + ApiLocal + '/v2/' : CONFIG.BASE_STATIC + '/v2/';
+  vfplayer.ApiBase = (typeof CONFIG == 'undefined' || !CONFIG.API_BASE) ? '//' + ApiLocal + 'api/' : CONFIG.API_BASE + 'api/';
+  vfplayer.ApiLog = (typeof CONFIG == 'undefined' || !CONFIG.API_LOG) ? '//log.' + ApiLocal : CONFIG.API_LOG;
+  vfplayer.ApiAds = (typeof CONFIG == 'undefined' || !CONFIG.API_ADS) ? '//' + ApiLocal : CONFIG.API_ADS;
+  vfplayer.LogDomain = 'http://log.videofly.vn';
 }
 
 /**
@@ -44110,6 +44116,8 @@ var utils = {
   },
 
   reloadInfoVideo: function (objV) {
+    $('#video-playing-video-id').val(objV.id);
+    $('#video-playing-video-id-change-playnextvideo').val(objV.id);
     $('#vf_info header .title').text(objV.name);
     var build_link = 'background-image: url(' + objV.profile.avatarUrl + '); height: 100%;';
     $('#vf_info_owner_avatar p').attr('style', build_link);
@@ -45208,10 +45216,10 @@ var hrefVideoId = 0;
 var firstLoadPlaylist = true;
 
 $(document).ready(function () {
-  hrefVideoId = 621347836433382811;
+  hrefVideoId = page_id()
 })
 
-function bindDataPlaylist(player) {
+function bindDataPlaylist(player, playlistIds) {
 
   var cbBindDataPromise = function (playlistData) {
     if (playlistData && playlistData.data && playlistData.data.videos) {
@@ -45262,7 +45270,10 @@ function bindDataPlaylist(player) {
         arrVideoItems.push(videoItem);
         videosAdd.push(videoItem);
       });
-      if(firstLoadPlaylist) {
+
+      // Check video exist in playlist
+      var isVideoInPlaylist = playlistIds.indexOf(QueryString().playlist);
+      if(firstLoadPlaylist && isVideoInPlaylist > 0) {
         if (expectPosPlay == -1) {
           page++;
           getVideosInPlaylistAjax(player, page).done(cbBindDataPromise);
@@ -45273,6 +45284,7 @@ function bindDataPlaylist(player) {
           player.playlist.currentItem(arrVideoItems.findIndex(function(x) { return x.id == hrefVideoId })); // play at videoid on url href
         }
       } else {
+        player.playlist.autoadvance(0);
         player.trigger("playlist_addvideos", {videos: videosAdd, currentPage: page, count: count});
         
         // bind data to playlist
@@ -45288,6 +45300,7 @@ function bindDataPlaylist(player) {
       }
     }
   };
+  
   if (page <= 20) {
     getVideosInPlaylistAjax(player, page).done(cbBindDataPromise);
   }
@@ -50832,7 +50845,7 @@ function fixLayout() {
   }
 }
 
-function initVideoflyPlayer(srcMedia, titleVideo) {
+function initVideoflyPlayer(srcMedia, titleVideo, playlistIds) {
 
   function checkPermissionVideo(player) {
     if ($('#embed').attr('data-video-moderated') === "false") {
@@ -51151,7 +51164,7 @@ function initVideoflyPlayer(srcMedia, titleVideo) {
   player.web_endcard();
   
   if (QueryString().playlist) {
-    bindDataPlaylist(player);
+    bindDataPlaylist(player, playlistIds);
     player.playlistUi();
   }
   return player;

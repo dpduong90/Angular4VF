@@ -7,6 +7,14 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { VideodetailComponent } from './components/video/videodetail/videodetail.component';
 import { SuggestvideoComponent } from './components/video/suggestvideo/suggestvideo.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { MusicComponent } from './components/music/music.component';
+import { EntertainmentComponent } from './components/entertainment/entertainment.component';
+import { KnowledgeComponent } from './components/knowledge/knowledge.component';
+import { NewsComponent } from './components/news/news.component';
+import { CommunityComponent } from './components/community/community.component';
+
+import { routes } from './app.router';
 
 @NgModule({
   declarations: [
@@ -14,11 +22,18 @@ import { SuggestvideoComponent } from './components/video/suggestvideo/suggestvi
     HeaderComponent,
     FooterComponent,
     VideodetailComponent,
-    SuggestvideoComponent
+    SuggestvideoComponent,
+    HomepageComponent,
+    MusicComponent,
+    EntertainmentComponent,
+    KnowledgeComponent,
+    NewsComponent,
+    CommunityComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    routes
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]

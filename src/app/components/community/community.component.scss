@@ -1,0 +1,485 @@
+@import '../../../styles.scss';
+.vf-communityPage
+{
+	.bx-wrapper 
+	{
+		max-width: calc(100% + 6px ) !important;
+		.bx-viewport
+		{
+			 left: -6px;
+   			 width: calc(100% + 6px ) !important;
+		}
+	}
+	header.menuSection
+	{
+		margin-bottom: 15px;
+	    padding-bottom: 8px;
+	    border-bottom: 1px solid #cccccc;
+		.title 
+		{
+			font-size: 18px;
+			margin-bottom: 0;
+			a
+			{
+				font-size: 18px;
+			}
+		}
+	} 
+	.sectioncontent
+	{
+		border: none;
+		margin-bottom: 15px;
+	}
+	.vf-slider
+	{
+		margin-top: 30px;
+		margin-bottom: 15px;	
+		overflow: hidden;
+		max-height: 328px;
+		.community-slider
+		{
+			width: 100%;
+			>li 
+			{
+				float: left;
+				width: 100%;
+				a 
+				{
+					display: block;
+				}
+			}
+		}	
+		.cover-slider
+		{
+			width: 100% ;
+			height: 328px;
+			@extend %styleimg ;
+		}
+		.bx-wrapper 
+		{
+			max-width: 100% !important;
+			.bx-viewport
+			{
+				 left: 0;
+	   			max-width: 100% !important;
+			}
+		}
+		.bx-wrapper .bx-controls-direction
+		{
+			a
+			{
+				top: auto;
+				bottom: 16px;
+				width: 50px;
+				height: 50px;
+				z-index: 100;
+			}
+			.bx-prev
+			{
+				left: 14px;
+			}
+			.bx-next
+			{
+				right: 18px;
+			}
+		} 
+
+	}
+
+	.vf-playlist-suggest
+	{
+		padding-bottom: 15px;
+		padding-top: 0;
+		
+		.playlist-slides
+		{
+			
+			ul.bxslider
+			{
+				overflow: hidden;
+				max-height: 342px;
+				>li 
+				{
+					margin: 0 6px;
+					float: left;
+					.video 
+					{
+						margin: 0;
+					}
+				}	
+			} 	
+			.bx-wrapper
+			{
+				ul.bxslider
+				{
+					overflow: initial ;
+					max-height: auto;
+				}
+			}	
+			.videoPlaylist
+			{
+				@include sizeVideo(196px, 327px);
+				background: #e7e7e7;
+				padding: 0;								
+				.thumbnail
+				{
+					background-size: cover;
+					background-position: 50% 50%;
+					@include sizeVideo(100%, 195px);
+					a 
+					{
+						display: $display-block;
+						height: 195px;
+					}
+
+				}
+				.meta
+				{
+					padding: 0 10px;
+					margin: 10px 0 5px;
+					.title 
+					{
+						a 
+						{
+							@include styleText(#171717, 14px);
+							display: $display-block;
+						    text-overflow: ellipsis;
+						    overflow: $overflow-hidden;
+						     white-space: nowrap;
+						}						
+						
+					}
+				}
+				.desc-intro
+				{
+					@include styleText(#757575, 13px);
+					max-height: 50px;
+					overflow: $overflow-hidden;
+					padding: 0 10px;
+					line-height: 17px;
+					h1,h2,h3,h4,h5,h6 
+					{
+						@include styleText(#757575, 13px);
+						line-height: 16px;
+						font-weight: normal;
+					}
+				}
+
+				.desc-intro + ul 
+				{
+					position: absolute;
+					bottom: 10px;
+					width: 100%;
+					left: 10px;
+					li 
+					{
+						@include styleText(#818181, 12px);
+						display: $display-inlinebl;
+						padding-right: 15px;
+						span.arrow-right
+						{
+							@extend %arrow-right;
+							border-left: 11px solid #c1c1c1;
+							display: $display-inlinebl;
+						}
+						.ti-eye
+						{
+							font-size: 14px;
+							color:#c1c1c1;
+							padding-right: 2px;
+						}
+					}
+					.videoTotal
+					{
+						@include styleText(#818181, 12px);
+						background: none;
+						position: relative;
+						bottom: 0;
+						left: 0;
+					}
+					.watch-count
+					{
+						
+						@include styleText(#818181, 12px);
+					}
+				}
+
+			}
+		}
+
+		.bx-wrapper
+		{
+			max-width: calc(100% + 6px ) !important;
+		}
+		.bx-wrapper .bx-controls-direction a
+		{
+			top: 80px;
+		}
+		.bx-wrapper .bx-prev
+		{
+			left: -30px;
+		}
+		.bx-wrapper .bx-next
+		{
+			right: -30px;
+		}
+		.bx-wrapper .bx-viewport
+		{
+			left: -6px;
+			width: calc(100% + 6px ) !important;
+		}
+	}
+	.vf-channel-suggest
+	{
+		margin-bottom: 15px;
+		.vf-headersection
+		{
+			margin-bottom: 15px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #cccccc;
+			.namesection
+			{
+				.title 
+				{
+					@include styleText(#707378, 18px);
+					line-height: 28px;
+					display: inline-block;
+					text-transform: uppercase;
+					a 
+					{
+						@include styleText(#707378, 18px);
+					}
+				}
+				.notpadms
+				{
+					@include styleText(#777777, 13px);
+					display: inline-block;
+				}
+			}
+		}
+		.vf-list-channel
+		{		
+			.channelsuggestslides
+			{
+				overflow: $overflow-hidden;
+				max-height: 282px;
+				> li 
+				{
+					margin: 0 6px;
+					float: left;
+					&:first-child
+					{
+						margin-left: 0;
+					}
+				}
+
+				.vf-channel
+				{					
+					width: 196px;
+					margin: 0 6px;	
+					position: relative;			
+					&:nth-child(6n + 1)
+					{
+						margin-left: 0;
+					}
+					&:nth-child(6n)
+					{
+						// margin-right: 0;
+					}
+					.thumbnail 
+					{
+						height: 196px;
+						width: 100%;					
+						// border: 1px solid #000;		
+						background-size: cover;
+						background-position: 50% 50%;	
+						margin-bottom: 10px;	
+						a 
+						{
+							display: block;
+							width: 100%;
+							height: 100%;
+						}					
+					}
+					.meta .title a
+					{
+						@include styleText(#333333, 14px);
+					}
+					.followchannel
+					{
+						margin-top: 10px;
+						.wrapbox 
+						{
+							width: 100%;
+							top:auto !important;
+							bottom: 0;
+							.arrow_box
+							{
+								&::before, &::after 
+								{
+									display: none;
+								}
+							}
+						}
+					}
+					
+				}
+			}
+
+			.bx-wrapper
+			{
+				.channelsuggestslides
+				{
+					overflow: initial ;
+					max-height: auto;
+				}
+			}
+			
+		}
+
+		.bx-wrapper .bx-controls-direction a
+		{
+			top:30%;
+		}
+		.bx-wrapper .bx-controls-direction .bx-next
+		{
+			right: -40px;
+		}
+		.bx-wrapper .bx-controls-direction .bx-prev
+		{
+			left: -28px;
+		}
+
+	}
+	.vf-banner-advesting
+	{
+		overflow: hidden;
+		margin: 15px 0 30px;
+		.vf-mediumbanner
+		{
+			width: 50%;
+			.thumbnail
+			{
+				background-position: 50% 50%;
+				background-size: cover;
+				// banner size: 25:9
+				width: 100%;
+				height: calc((612px *9) / 25);
+				display: block;
+			}
+		}
+		.vf-smallbanner
+		{
+			width: calc(100% / 3 );			
+			&:first-child
+			{
+				padding-right: 12px;
+			}
+			.thumbnail
+			{
+				background-position: 50% 50%;
+				background-size: cover;
+				// banner size: 202:89
+				width: 100%;
+				height: calc((400px * 89) /202);
+				display: block;
+			}
+		}
+		.left 
+		{
+			float: left;
+			padding-right: 6px;
+		}
+		.right 
+		{
+			float: right;
+			padding-left: 6px;
+		}
+	}
+	.vf-videoofchannel
+	{
+		position: relative;
+		margin: 10px 0;
+		margin-bottom: 20px;
+		.vf-channel-shortinfo
+		{
+			margin-bottom: 15px;
+			padding-bottom: 8px;
+			border-bottom: 1px solid #cccccc;			
+			.vf-avatarandtitle
+			{
+				.small-avatar
+				{
+					float: left;
+					width: 24px;
+					height: 24px;
+					overflow: hidden;
+					margin-right: 5px;
+					background-size: cover;
+					background-position: 50% 50%;
+				}
+				.title
+				{
+					@include styleText(#707378, 18px);
+					line-height: 28px;
+					a 
+					{
+						@include styleText(#707378, 18px);
+					}
+				}
+			}
+			.followchannel
+			{
+				position: absolute;
+				right: 0;
+				top: 4px;
+			}
+		}
+		.listvideo 
+		{
+			
+			.slidesshow 
+			{
+				overflow: hidden;
+				max-height: 170px;
+
+				> li 
+				{
+					margin: 0 6px;
+					float: left;
+					.video 
+					{
+						margin:0 !important;
+						li 
+						{
+							margin: 0;
+						}
+					}
+				}
+				
+			}
+			.bx-wrapper
+			{
+				.slidesshow
+				{
+					overflow: initial ;
+					max-height: auto;
+				}
+			}
+		}
+
+		.bx-wrapper .bx-controls-direction a
+		{
+			top:30%;
+		}
+		.bx-wrapper .bx-controls-direction .bx-next
+		{
+			right: -40px;
+		}
+		.bx-wrapper .bx-controls-direction .bx-prev
+		{
+			left: -28px;
+		}
+	}
+	
+}

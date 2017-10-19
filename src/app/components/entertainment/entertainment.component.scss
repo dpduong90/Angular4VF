@@ -1,0 +1,544 @@
+@import '../../../styles.scss';
+.category
+{
+	padding-top: 0;	
+	//class chung
+	.playlistitems 
+	{
+		.desc-intro + ul .watch-count
+		{
+			top: 0;
+		}
+		
+	}
+	header.menuSection .title, header.menuSection .title
+	{
+	  font-size: 16px;
+	  a 
+	  {
+	  	color: #eb4335;
+	  	 font-size: 16px;
+	  }
+	}
+	#category-header
+	{		
+		padding: 13px 0 0;
+		margin-bottom: 20px;		
+		.menuSection
+		{
+			padding-bottom: 0;
+			overflow: $overflow-hidden;			
+			.submenu
+			{
+				display: $display-block;
+				bottom:0;
+				li 
+				{
+					padding:0 6px;
+					&:first-child 
+					{
+						padding-left: 0;
+					}
+					a 
+					{
+						padding: 0;
+						height: 30px;
+						line-height: 30px;
+						display: $display-block;
+						@include styleText(#707378, 14px);
+						background: #e5e6ec;
+						border-radius: 3px;
+						padding: 0 10px;
+						&:hover 
+						{
+							color:#ffffff;							
+							background: #eb4335;
+							text-decoration: none;
+						}
+
+					}
+
+											
+				}
+				.active 
+				{
+					a 
+					{	
+						color:#ffffff;							
+						background: #eb4335;
+	
+					}
+				}
+			}
+		}
+	}
+	.vf-slider
+	{
+		margin-bottom: 15px;	
+		max-height: 328px;
+		overflow: hidden;	
+		.cover-slider
+		{
+			width: 100% ;
+			height: 328px;
+			@extend %styleimg ;
+		}
+		.bx-wrapper .bx-controls-direction
+		{
+			a
+			{
+				top: auto;
+				bottom: 16px;
+				width: 50px;
+				height: 50px;
+				z-index: 100;
+			}
+			.bx-prev
+			{
+				left: 14px;
+			}
+			.bx-next
+			{
+				right: 18px;
+			}
+		} 
+		.category-slider
+		{
+			width: 100%;
+			>li 
+			{
+				float: left;
+				width: 100%;
+				>a 
+				{
+					width: 100%;
+					display: block;
+				}
+			}
+		}
+	}
+	.ttIntroduce
+	{
+		margin: 35px 0;
+		@include styleText(#707378, 30px);
+		font-family: "Roboto light";
+		font-weight: normal;
+		h2	
+		{
+			@include styleText(#707378, 30px);
+			font-family: "Roboto light";
+			font-weight: normal;
+		}
+	}
+	.vf-communitynewPlaylist
+	{
+		margin-bottom: 20px;
+		header.menuSection .title
+		{
+			margin-bottom: 0;
+		}
+	}
+	.vf-communitynewvideo
+	{
+		.slidesshow
+		{
+			overflow: hidden;
+			max-height: 170px;
+			> li 
+			{
+				float: left;
+				margin: 0 6px;
+			}
+		}	
+		.bx-wrapper
+		{
+			.slidesshow
+			{
+				overflow: initial;
+				max-height: auto;
+			}
+		}
+
+		header.menuSection .title
+		{
+			margin-bottom: 0;
+		}
+	}
+	.categorySection
+	{
+		overflow: $overflow-hidden;
+		position: $position-relative;
+		margin-bottom: 10px;
+		header.menuSection
+		{
+			border-bottom: 1px solid #eaeaea;
+			padding-bottom: 0;
+			margin-bottom: 16px;
+		}
+		aside.infoCategoryList
+		{
+			width: 196px;	
+			position: $position-absolute;
+			left: 0;
+			top:0;
+			height: calc(100% - 12px);
+			background:#f1ecec;
+			padding: 18px 10px 18px 16px;
+
+			.ttCategory
+			{
+				margin-bottom: 5px;
+				@include styleText(#707378, 18px);
+				font-weight: normal;
+				text-transform: capitalize;
+				font-family: "Roboto";
+				h3 
+				{
+					@include styleText(#707378, 18px);
+					font-weight: normal;
+					text-transform: capitalize;
+					font-family: "Roboto";
+				}
+			}
+			.totalVideo
+			{
+				@include styleText(#707378, 13px);
+			}
+			.viewall
+			{
+				position: $position-absolute;
+				left: 16px;
+				bottom:18px;
+				@include styleText(#707378, 13px);
+			}
+
+			.filtershow
+			{
+				text-align: justify;
+				margin-top: 10px;
+				a 
+				{
+					display: $display-inlinebl;
+					margin: 0 7px 16px;
+					@include styleText(#707378, 13px);
+					font-weight: bold;
+					text-transform: uppercase;
+					&:nth-child(7n)
+					{
+						@extend %marginright;
+					}
+					&:nth-child(7n + 1)
+					{
+						@extend %marginleft;
+					}
+					&:hover 
+					{
+						color: #ea4a9f;
+					}
+
+				}
+				.filter-active
+				{
+					color: #ea4a9f;
+				}
+			}
+		}
+
+		.contentCategory
+		{
+			// float: $float-right;
+			overflow: $overflow-hidden;
+			width: 100%;	
+
+			.vf-category
+			{
+				@include sizeVideo(196px, 327px);
+				background: #e7e7e7;
+				padding: 0;				
+				.thumbnail
+				{
+					background-size: cover;
+					background-position: 50% 50%;
+					@include sizeVideo(100%, 196px);
+					a 
+					{
+						display: $display-block;
+						height: 195px;
+					}
+
+				}
+				.meta
+				{
+					padding: 0 10px;
+					margin: 10px 0 5px;
+					.title 
+					{
+						a 
+						{
+							@include styleText(#171717, 14px);
+							display: $display-block;
+						    text-overflow: ellipsis;
+						    overflow: $overflow-hidden;
+						     white-space: nowrap;
+						}						
+						
+					}
+				}
+				.desc-intro
+				{
+					@include styleText(#757575, 13px);
+					max-height: 50px;
+					overflow: $overflow-hidden;
+					padding: 0 10px;
+					line-height: 17px;
+					h1,h2,h3,h4,h5,h6 
+					{
+						@include styleText(#757575, 13px);
+						line-height: 16px;
+						font-weight: normal;
+					}
+				}
+
+				.desc-intro + ul 
+				{
+					position: absolute;
+					bottom: 10px;
+					width: 100%;
+					left: 10px;
+					li 
+					{
+						@include styleText(#818181, 12px);
+						display: $display-inlinebl;
+						padding-right: 15px;
+						span.arrow-right
+						{
+							@extend %arrow-right;
+							border-left: 11px solid #c1c1c1;
+							display: $display-inlinebl;
+							margin-right: 5px;
+						}
+						.ti-eye
+						{
+							font-size: 14px;
+							color:#c1c1c1;
+							padding-right: 2px;
+						}
+					}
+					.videoTotal
+					{
+						@include styleText(#818181, 12px);
+						background: none;
+						position: relative;
+						bottom: 0;
+						left: 0;
+					}
+					.watch-count
+					{
+						
+						@include styleText(#818181, 12px);
+					}
+				}
+
+			}
+		}	
+	}
+	
+
+	.golfList
+	{
+		border: none;
+	}
+	.sectioncontent
+	{
+		.newvideolist
+		{			
+			.video:nth-child(n+13)
+			{
+				display: block; 
+			}
+		}
+	}
+
+	.sectioncontent
+	{
+		.listPlaylist
+		{			
+			@extend .listvideo;
+			.videocatepl
+			{
+				height: 280px;
+				.thumbnail
+				{
+					height: 196px;
+				}
+			}
+		}
+	}
+
+	.sectioncontent
+	{
+		.subPlaylist
+		{
+			.videocatepl
+			{
+				height: 280px;
+				.thumbnail
+				{
+					height: 196px;
+				}
+			}
+		}
+	}
+
+}
+.hotPlaylistSection
+{
+	padding-bottom: 20px;
+	padding-top: 0;	
+	header.menuSection
+	{
+		padding-bottom: 10px;
+	}	
+	.hotPlaylistvideo
+	{		
+		.bxslider
+		{
+			overflow: hidden;
+			max-height: 342px;
+		}
+		.bx-wrapper
+		{
+			.bxslider
+			{
+				overflow: initial ;
+				max-height: auto;
+			}
+		}
+		ul.bxslider li 
+		{
+			margin: 0 6px;
+			float: left;
+			.video 
+			{
+				margin: 0;
+			}
+		}			
+		.video
+		{
+			@include sizeVideo(196px, 327px);
+			background: #e7e7e7;
+			padding: 0;								
+			.thumbnail
+			{
+				background-size: cover;
+				background-position: 50% 50%;
+				@include sizeVideo(100%, 195px);
+				a 
+				{
+					display: $display-block;
+					height: 195px;
+				}
+
+			}
+			.meta
+			{
+				padding: 0 10px;
+				margin: 10px 0 5px;
+				.title 
+				{
+					a 
+					{
+						@include styleText(#171717, 14px);
+						display: $display-block;
+					    text-overflow: ellipsis;
+					    overflow: $overflow-hidden;
+					     white-space: nowrap;
+					}						
+					
+				}
+			}
+			.desc-intro
+			{
+				@include styleText(#757575, 13px);
+				max-height: 50px;
+				overflow: $overflow-hidden;
+				padding: 0 10px;
+				line-height: 17px;
+				h1,h2,h3,h4,h5,h6 
+				{
+					@include styleText(#757575, 13px);
+					line-height: 16px;
+					font-weight: normal;
+				}
+			}
+
+			.desc-intro + ul 
+			{
+				position: absolute;
+				bottom: 10px;
+				width: 100%;
+				left: 10px;
+				li 
+				{
+					@include styleText(#818181, 12px);
+					display: $display-inlinebl;
+					padding-right: 15px;
+					span.arrow-right
+					{
+						@extend %arrow-right;
+						border-left: 11px solid #c1c1c1;
+						display: $display-inlinebl;							
+					}
+					.ti-eye
+					{
+						font-size: 14px;
+						color:#c1c1c1;
+						padding-right: 2px;
+					}
+				}
+				.videoTotal
+				{
+					@include styleText(#818181, 12px);
+					background: none;
+					position: relative;
+					bottom: 0;
+					left: 0;
+				}
+				.watch-count
+				{
+					
+					@include styleText(#818181, 12px);
+				}
+			}
+
+		}
+	}
+
+	.bx-wrapper
+	{
+		max-width: calc(100% + 6px ) !important;
+	}
+	.bx-wrapper .bx-controls-direction a
+	{
+		top: 80px;
+	}
+	.bx-wrapper .bx-prev
+	{
+		left: -30px;
+	}
+	.bx-wrapper .bx-next
+	{
+		right: -30px;
+	}
+	.bx-wrapper .bx-viewport
+	{
+		left: -6px;
+		width: calc(100% + 6px ) !important;
+	}
+}
+
+.vf-newupdatemusic-section, .vf-newmusic-section
+{
+	@extend .hotPlaylistSection;
+}	
+

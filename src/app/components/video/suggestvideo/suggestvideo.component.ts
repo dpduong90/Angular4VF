@@ -13,14 +13,14 @@ declare var $ :any;
 export class SuggestvideoComponent implements OnInit {
   listVideos: Video[];
   constructor(private suggestvideoService: SuggestvideoService) {
+    
+  }
+
+  ngOnInit() {
     this.suggestvideoService.getVideosFavorites('381221311779798465').subscribe(result => {
       console.log(result);
       this.listVideos = result;
     });
-  }
-
-  ngOnInit() {
-    
   }
 
   

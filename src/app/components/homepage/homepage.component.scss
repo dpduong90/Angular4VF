@@ -1,0 +1,516 @@
+@import '../../../styles.scss';
+#home-page
+{	
+	padding-top: 20px;
+	/* class chung */
+	.bx-wrapper .bx-loading
+	{
+		display: $display-none;
+	}
+
+	.loading 
+	{
+		height: 426px;
+		line-height: 426px;
+		text-align: center;
+		img 
+		{
+			margin: 0 auto;
+		}
+	}	 
+
+	/* section 1 */
+	.newListvideo 
+	{
+		overflow: $overflow-hidden;
+		border-bottom: 1px solid #e4e4e4;
+		margin-bottom: 20px;
+		.vf-suggest-playlist
+		{
+			@include sizeVideo(612px, 344px);
+			margin-left: 0;	
+			.big-thumbnail
+			{
+				display: block;				
+				width: 100%;
+				height: 100%;				
+				background-size: cover;
+				background-position: 50% 50%;
+				-webkit-filter: blur(2px);
+				-moz-filter: blur(2px);
+				-ms-filter: blur(2px);
+				-o-filter: blur(2px);
+				filter: blur(2px);
+				// opacity: 0.9;
+				background-color: #f9d6e9;
+				a 
+				{
+					background: rgba(0,0,0,0.5);
+					width: 100%;
+					height: 100%;
+					display: block;					
+				}
+
+			}
+			.thumbnail
+			{
+				@include sizeVideo(235px !important, 235px !important) ;				
+				position: absolute;
+				top:0;
+				bottom: 0;
+				left: 60px;
+				margin: auto;
+				.videoTotal
+				{
+					display: none;
+				}
+				
+			}
+			.vf-intro-playlist
+			{
+				position: absolute;
+				top:0;
+				right: 60px;
+				width: 196px;
+				height: 100%;
+				text-align: center;
+				
+				.wrap-table
+				{
+					display: table;
+					width: 100%;
+					height: 100%;
+					position: relative;									
+					.wrap 
+					{
+						display: table-cell;
+						vertical-align: middle;
+						position: relative;
+						 > * 
+						 {
+						 	position: relative;	
+							z-index: 2;	
+						 }
+						 a.link-playlist 
+						{
+							position: absolute;
+							top:0;
+							left: 0;
+							display: block;
+							height: 100%;
+							width: 100%;
+							z-index: 1;
+						}
+					}
+				}
+				.meta 
+				{
+					margin-bottom: 15px;
+					.title 
+					{
+						text-align: center;
+						max-height: 40px;
+						overflow: hidden;
+						a 
+						{
+							@include styleText(#ffffff, 18px);
+							text-align: center;
+							text-transform: uppercase;	
+							line-height: 20px;
+							&:hover 
+							{
+								text-decoration: none;
+								color: yellow;
+							}										
+						}
+					}
+					a 
+					{
+						text-decoration: none !important;
+						&:hover 
+						{
+							text-decoration: none;
+							.type-category
+							{
+								color: yellow;
+							}
+						}
+						.type-category
+						{
+							font-weight: bold;
+							@include styleText(#ffffff, 14px);
+						}	
+					}
+					
+				}
+				.vf-desc-playlist
+				{
+					@include styleText(#ffffff, 16px);	
+					line-height: 20px;
+					text-align: center;
+					max-height: 100px;
+					overflow: hidden;	
+					margin-bottom: 20px;	
+					*
+					{
+						@include styleText(#ffffff, 16px);
+						line-height: 20px;	
+					}		
+					a:hover 
+					{
+						text-decoration: none;
+					}
+				}
+				.vf-explication
+				{
+					@include styleText(#ffffff, 12px);
+					font-weight: bold;
+					margin: 0 auto;
+
+				}
+			}
+		}
+		.video 
+		{
+			&:nth-child(n+8) 
+			{
+				display: $display-none;
+			}
+			&.vf-suggest-playlist-unauto
+			{				
+    			@include sizeVideo(612px, 344px);
+    			margin-left: 0;			
+				.thumbnail 
+				{					
+					@include sizeVideo(100%, 344px);
+					.duration
+					{
+						display: $display-none;
+					}
+				}
+				.meta 
+				{
+					padding: 5px 10px;
+					padding-top: 10px;
+					position: $position-absolute;
+					left: 0;
+					bottom:0;
+					width: 100%;
+					background: #000;
+					background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Safari 5.1 to 6.0 */
+				    background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%);/* For Opera 11.1 to 12.0 */
+				    background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Firefox 3.6 to 15 */
+				    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* Standard syntax (must be last) */
+					
+					.title
+					{
+						float: left;
+						width: 70%;	
+						font-size: 18px;
+						height: 48px;
+						max-height: 44px;						
+						a 
+						{
+							line-height: 22px;
+							font-size: 18px;
+							@include styleText(#ffffff, 18px);
+							.playlisticon 
+							{
+								display: $display-none;
+							}
+						}										
+					}
+					.uploader,ul
+					{
+						display: $display-none;
+					}					
+				}
+				.videoTotal
+				{
+					display: $display-none;
+				}
+			}
+			
+			.meta 
+			{				
+				.title 
+				{
+					a 
+					{
+						color: #2b2b2b;						
+					}
+				}				
+			}
+			.desc-ct
+			{
+				display: none;
+			}				
+		}
+		
+
+	}
+	.vf-following-playlist.sectioncontent
+	{
+		border: none;
+		margin-top: 30px;
+		overflow: inherit;	
+		.bx-wrapper
+		{
+			margin-left: 0;
+		}	
+		.bx-wrapper .bx-prev
+		{
+			left: -24px;
+		}
+		.bx-wrapper .bx-next
+		{
+			right: -38px;
+		}
+		.menuSection
+		{
+			.title 
+			{
+				font-size: 16px;
+				color: #eb4335;
+			}
+		}
+		.videoPlaylist
+		{
+			float: $float-left;	
+			width: 196px;
+			height: 196px;
+			padding: 0;
+			margin: 0;
+			// margin: 0 6px 12px;						
+			>a 
+			{
+				display: $display-block;
+				position: $position-relative;
+				height: 100%;
+				background-color: #e5e6ec ;
+				.thumbnail
+				{
+					width: 196px;
+					height: 196px;
+					&::before 
+					{
+						background: rgba(0, 0, 0, 0.4);
+						opacity: 0;
+						position: $position-absolute;
+						left: 0;
+						top:0;
+						width: 100%;
+						height: 100%;
+						z-index: 10;
+						content: '';
+						-webkit-transition: opacity 0.2s;
+						-moz-transition: opacity 0.2s;
+						-ms-transition: opacity 0.2s;
+						-o-transition: opacity 0.2s;
+						transition: opacity 0.2s;
+
+					}
+				}
+				&:hover 
+				{
+					.thumbnail::before 
+					{
+						opacity: 1;
+					}
+				}
+				.meta
+				{
+					bottom: 0;
+				    left: 0;
+				    z-index: 11;
+				    padding: 10px 9px 5px;
+				    position: absolute;
+				    width: 100%;
+				    background: #000;
+					background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Safari 5.1 to 6.0 */
+				    background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%);/* For Opera 11.1 to 12.0 */
+				    background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Firefox 3.6 to 15 */
+				    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* Standard syntax (must be last) */
+					.title
+					{
+						@include styleText(#ffffff, 15px);
+						line-height: 16px;
+						@extend %styleinline;
+						font-weight: bold;
+						margin-bottom: 0;
+						&:hover 
+						{
+							text-decoration: underline;
+						}
+					}
+					.watch-count
+					{
+						@include styleText(#bbbdc1, 13px);
+						line-height: 13px;	
+						@extend %styleinline;
+					}
+				}
+			}
+			
+		}
+	}
+	.vf-musicSection
+	{
+		.listvideo 
+		{
+			.videotopic 
+			{
+				.wraptitle
+				{
+					.titletoppic
+					{
+						display: none;
+					}
+				}
+			}
+		}
+	}
+	.transportSection
+	{
+		border-bottom: none;
+		padding-bottom: 23px;		
+	}
+
+	/* slides home */
+	.hotchanelSection
+	{
+		.hotPlaylistvideo
+		{
+			min-height: 108px;
+			.bx-wrapper
+			{
+				max-width: 1250px !important;
+				.bx-pager
+				{
+					display: $display-none;					
+				}
+				.bx-prev 
+				{
+					left: -30px;
+				}
+				.bx-next
+				{
+					right: -30px;
+				}
+			} 
+			.bxslider
+			{
+				li 
+				{
+					//margin-right: 16px;
+				}
+			}
+		}
+	}	
+
+	.sectioncontent
+	{
+		.menuSection
+		{
+			.submenu
+			{
+				li 
+				{
+					padding: 0 3px;
+					a 
+					{
+						background: #dcdde3;
+						border-radius: 3px;
+					}
+				}
+				li.activesubmenu 
+				{
+					a 
+					{
+						background: #eb4335 ;
+					    border-radius: 3px;
+					    color: #fff;
+					    &:hover 
+					    {
+					    	text-decoration: none !important;
+					    }
+					}
+				}
+			}
+		}
+	} 
+
+	.sectioncontent 
+	{
+		.listvideo
+		{
+			.videotopic 
+			{
+				width: 196px ;
+				height: 196px ;				
+				.thumbnail 
+				{
+					 height: 100% ;
+   					 width: 100%;
+   					 a 
+   					 {
+   					 	position: $position-relative;
+   					 }
+				}	
+
+				.wraptitle
+				{
+					position: $position-absolute;
+					left: 0;
+					width: 100%;
+					padding: 15px 5px 5px;
+					bottom:0;	
+					background: #000;					
+				    background: -webkit-linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,0.11) 26%, rgba(0,0,0,0.63) 81%, rgba(0,0,0,0.65) 83%);
+				    background: -o-linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,0.11) 26%, rgba(0,0,0,0.63) 81%, rgba(0,0,0,0.65) 83%);
+				    background:-moz-linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,0.11) 26%, rgba(0,0,0,0.63) 81%, rgba(0,0,0,0.65) 83%); /* FF3.6-15 */
+				    background: linear-gradient(to bottom, rgba(0,0,0,0) 15%, rgba(0,0,0,0.11) 26%, rgba(0,0,0,0.63) 81%, rgba(0,0,0,0.65) 83%);
+					 .update-time
+					{
+						
+						@include styleText(#bbbdc1, 12px);
+						z-index: 100;	
+					    display: block;
+					    overflow: hidden;
+					    text-overflow: ellipsis;
+					    white-space: nowrap;
+					    text-shadow: 1px 1px 3px #000;	
+					    font-weight: normal;				    
+					}	
+					.titletoppic
+					{
+						@extend .update-time;
+						@include styleText(#ffffff, 13px);
+						line-height: 18px;
+						font-weight: bold;
+						a 
+						{
+							@include styleText(#ffffff, 13px);
+						}						
+					}
+				}
+
+				&:hover 
+				{
+					.wraptitle
+					{
+						.titletoppic
+						{
+							text-overflow : initial;
+							 white-space: normal;
+							 max-height: 40px;							 
+						}
+					}
+				}	
+
+			}
+		}
+	}
+
+	
+}

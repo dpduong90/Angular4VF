@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { By }              from '@angular/platform-browser';
+import { DebugElement }    from '@angular/core';
 import { VideodetailComponent } from './videodetail.component';
 
 describe('VideodetailComponent', () => {
@@ -20,6 +21,6 @@ describe('VideodetailComponent', () => {
   });
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    expect(component).toBeDefined();
   });
 });

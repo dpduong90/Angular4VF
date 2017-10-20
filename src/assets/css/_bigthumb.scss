@@ -1,0 +1,144 @@
+.vf-suggest-playlist
+{
+	@include sizeVideo(612px, 344px);
+	margin-left: 0;	
+	.big-thumbnail
+	{
+		display: block;				
+		width: 100%;
+		height: 100%;				
+		background-size: cover;
+		background-position: 50% 50%;
+		-webkit-filter: blur(2px);
+		-moz-filter: blur(2px);
+		-ms-filter: blur(2px);
+		-o-filter: blur(2px);
+		filter: blur(2px);
+		// opacity: 0.9;
+		background-color: #f9d6e9;
+		a 
+		{
+			background: rgba(0,0,0,0.5);
+			width: 100%;
+			height: 100%;
+			display: block;					
+		}
+
+	}
+	.thumbnail
+	{
+		@include sizeVideo(235px !important, 235px !important) ;				
+		position: absolute;
+		top:0;
+		bottom: 0;
+		left: 60px;
+		margin: auto;
+		.videoTotal
+		{
+			display: none;
+		}
+		
+	}
+	.vf-intro-playlist
+	{
+		position: absolute;
+		top:0;
+		right: 60px;
+		width: 196px;
+		height: 100%;
+		text-align: center;
+		
+		.wrap-table
+		{
+			display: table;
+			width: 100%;
+			height: 100%;
+			position: relative;									
+			.wrap 
+			{
+				display: table-cell;
+				vertical-align: middle;
+				position: relative;
+				 > * 
+				 {
+				 	position: relative;	
+					z-index: 2;	
+				 }
+				 a.link-playlist 
+				{
+					position: absolute;
+					top:0;
+					left: 0;
+					display: block;
+					height: 100%;
+					width: 100%;
+					z-index: 1;
+				}
+			}
+		}
+		.meta 
+		{
+			margin-bottom: 15px;
+			.title 
+			{
+				text-align: center;
+				max-height: 40px;
+				overflow: hidden;
+				a 
+				{
+					@include styleText(#ffffff, 18px);
+					text-align: center;
+					text-transform: uppercase;	
+					&:hover 
+					{
+						text-decoration: none;
+						color: yellow;
+					}										
+				}
+			}
+			a 
+			{
+				text-decoration: none !important;
+				&:hover 
+				{
+					text-decoration: none;
+					.type-category
+					{
+						color: yellow;
+					}
+				}
+				.type-category
+				{
+					font-weight: bold;
+					@include styleText(#ffffff, 14px);
+				}	
+			}
+			
+		}
+		.vf-desc-playlist
+		{
+			@include styleText(#ffffff, 16px);	
+			line-height: 20px;
+			text-align: center;
+			max-height: 100px;
+			overflow: hidden;	
+			margin-bottom: 20px;	
+			*
+			{
+				@include styleText(#ffffff, 16px);
+				line-height: 20px;	
+			}		
+			a:hover 
+			{
+				text-decoration: none;
+			}
+		}
+		.vf-explication
+		{
+			@include styleText(#ffffff, 12px);
+			font-weight: bold;
+			margin: 0 auto;
+
+		}
+	}
+}

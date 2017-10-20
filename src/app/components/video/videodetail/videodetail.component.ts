@@ -21,11 +21,12 @@ export class VideodetailComponent implements OnInit {
   subCategories: Catelogory[];
   videoDetail = new Video(this.user, this.subCategories);
   constructor(private videoServices: VideoService) { 
-    this.videoServices.getVideoDetail('381221311779798465').subscribe(result => {
-      this.videoDetail = result;
-      initVideoflyPlayer(this.videoDetail.videoUrl, this.videoDetail.title);
-      console.log(this.videoDetail.description);
-    });
+    // this.videoServices.getVideoDetail('381221311779798465').subscribe(result => {
+    //   this.videoDetail = result;
+    //   initVideoflyPlayer(this.videoDetail.videoUrl, this.videoDetail.title);
+    //   console.log(this.videoDetail.description);
+    // });
+    this.videoServices.getVideoDetail('381221311779798465');
   }
 
   ngOnInit() {

@@ -15,6 +15,17 @@ import { NewsComponent } from './components/news/news.component';
 import { CommunityComponent } from './components/community/community.component';
 
 import { routes } from './app.router';
+import { PlaylistitemComponent } from './components/section/items/playlistitem/playlistitem.component';
+import { VideoitemComponent } from './components/section/items/videoitem/videoitem.component';
+import { GenreitemComponent } from './components/section/items/genreitem/genreitem.component';
+import { SvideoChannelSlideComponent } from './components/section/svideo-channel-slide/svideo-channel-slide.component';
+import { SplaylistSlideComponent } from './components/section/splaylist-slide/splaylist-slide.component';
+import { SvideoSlideComponent } from './components/section/svideo-slide/svideo-slide.component';
+import { SvideoComponent } from './components/section/svideo/svideo.component';
+import { SchannelComponent } from './components/section/schannel/schannel.component';
+import { SgenreComponent } from './components/section/sgenre/sgenre.component';
+import { StopSlideComponent } from './components/section/stop-slide/stop-slide.component';
+import { SplaylistComponent } from './components/section/splaylist/splaylist.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +39,18 @@ import { routes } from './app.router';
     EntertainmentComponent,
     KnowledgeComponent,
     NewsComponent,
-    CommunityComponent
+    CommunityComponent,
+    PlaylistitemComponent,
+    VideoitemComponent,
+    GenreitemComponent,
+    SvideoChannelSlideComponent,
+    SplaylistSlideComponent,
+    SvideoSlideComponent,
+    SvideoComponent,
+    SchannelComponent,
+    SgenreComponent,
+    StopSlideComponent,
+    SplaylistComponent
   ],
   imports: [
     BrowserModule,

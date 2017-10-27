@@ -1,6 +1,8 @@
 import { User } from './User'
 import { Catelogory } from './Catelogory'
+import { Injectable } from '@angular/core';
 
+@Injectable()
 export class Video {
      public videoId: number;
      public videoUrl: string;
@@ -15,11 +17,7 @@ export class Video {
      public shortUrl: String;
      public subtitleLanguages: String[];
      public tags: String[];
-     public subCategories: Catelogory[];
-     public userProfile: User;
-    constructor(userProfile: User, subCategories: Catelogory[]) {
-        this.userProfile = userProfile;
-        this.subCategories = subCategories;
+    constructor(public userProfile: User, public subCategories: Catelogory[]) {
     }
     
 }

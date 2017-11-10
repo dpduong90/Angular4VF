@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
+import { CommunityPageComponent } from './community-page.component';
 
-@NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
-})
-export class CommunityPageRoutingModule { }
+const COMMUNITY_ROUTER: Routes = [
+  {
+    path: '',
+    component: CommunityPageComponent
+  }
+];
+
+export const communityRouter = RouterModule.forRoot(COMMUNITY_ROUTER);

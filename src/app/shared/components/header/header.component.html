@@ -56,7 +56,7 @@
       <nav id="navigation" class="menu-main-menu-container">
         <ul id="menu-main-menu" class="channels wrapper">
           <li class="active home">
-            <a routerLink="homepage" title="Trang chủ">Trang chủ</a>
+            <a routerLink="" [routerLinkActive]="['router-link-active']" title="Trang chủ">Trang chủ</a>
           </li>
 
           <li><a routerLink="am-nhac" title="Âm nhạc">Âm nhạc </a></li>
@@ -69,10 +69,10 @@
               <li><a href="#">Sitcom</a> </li>
             </ul>
           </li>
-          <li><a routerLink="kien-thuc" title="Kiến thức">Kiến thức </a></li>
-          <li><a routerLink="tin-tuc" title="Tin tức">Tin tức </a></li>
-          <li><a routerLink="cong-dong" title="Cộng đồng">Cộng đồng </a></li>
-          <li><a routerLink="video" title="Âm nhạc">Video </a></li>
+          <li><a routerLink="kien-thuc" [routerLinkActive]="['router-link-active']" title="Kiến thức">Kiến thức </a></li>
+          <li><a routerLink="tin-tuc" [routerLinkActive]="['router-link-active']" title="Tin tức">Tin tức </a></li>
+          <li><a routerLink="cong-dong" [routerLinkActive]="['router-link-active']" title="Cộng đồng">Cộng đồng </a></li>
+          <li><a routerLink="video" [routerLinkActive]="['router-link-active']" title="Âm nhạc">Video </a></li>
         </ul>
       </nav>
 

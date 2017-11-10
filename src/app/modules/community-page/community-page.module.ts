@@ -4,7 +4,7 @@ import { CommunityPageComponent } from './community-page.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
   ],
   declarations: [CommunityPageComponent]
 })

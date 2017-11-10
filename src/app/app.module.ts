@@ -3,10 +3,10 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './shared/components/header/header.component';
+import { FooterComponent } from './shared/components/footer/footer.component';
+import { AppRoutingModule } from './app-routing.module';
 
-import { routes } from './app.router';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { routes } from './app.router';
   imports: [
     BrowserModule,
     HttpClientModule,
-    routes
+    AppRoutingModule
   ],
   providers: [AppComponent],
   bootstrap: [AppComponent]

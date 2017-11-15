@@ -8,4 +8,4 @@ const COMMUNITY_ROUTER: Routes = [
   }
 ];
 
-export const communityRouter = RouterModule.forRoot(COMMUNITY_ROUTER);
+export const communityRouter = RouterModule.forChild(COMMUNITY_ROUTER);

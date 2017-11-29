@@ -1,0 +1,50 @@
+// scroll bar in banner internal
+.mCS-rounded.mCSB_scrollTools 
+{
+	.mCSB_dragger_bar
+	{
+		opacity: 0.8;
+	}
+	.mCSB_draggerRail
+	{
+		width: 3px;
+	}
+	
+}
+
+// slides button next, prev
+.slick-slider
+{
+	.slick-arrow
+	{
+		position: absolute;
+		top: 80px;
+		display: block;
+		width: 30px;
+		height: 32px;
+		z-index: 100;
+		font-size: 0;
+		-webkit-transition: all 0.3s;
+		-moz-transition: all 0.3s;
+		-ms-transition: all 0.3s;
+		-o-transition: all 0.3s;
+		transition: all 0.3s;
+		&:hover 
+		{
+			-webkit-transform: scale(1.5);
+			-moz-transform: scale(1.5);
+			-ms-transform: scale(1.5);
+			-o-transform: scale(1.5);
+			transform: scale(1.5);
+
+		}
+		&.slick-prev
+		{
+			left: -22px;
+		}
+		&.slick-next
+		{
+			right: -19px;
+		}
+	}
+}

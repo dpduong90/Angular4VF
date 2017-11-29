@@ -1,0 +1,163 @@
+#footer 
+{
+    padding: 28px 0 30px ;
+    position: $position-relative;
+    text-align: left;
+    background: #f1f3f7  none repeat scroll 0 0;
+    border-top: 1px solid #e5e7ec;   
+    z-index: 0;
+    .container
+    {
+    	position: relative;
+    	.logo
+    	{
+    		color: #e50000;
+		    display: $display-inlinebl;
+		    height: 50px;
+		    line-height: 50px;
+		    margin: 0;		    
+		    position: $position-relative;
+		    text-transform: none;
+		   
+		    a
+		    { 
+		    	color: #e50000;
+		    	display: block;
+		    	img{ max-height: 50px;}
+		    }
+    	}
+    	.search
+    	{    		
+		    display: $display-inlinebl;		    
+		    max-width: 90%;
+		    overflow: $overflow-hidden;
+		    border-radius: 0;		    
+		    height: 40px;
+		    margin-top: 18px;
+		    overflow: visible;
+		    padding-right: 70px;
+		    position: $position-relative;
+		    width: 480px;		    
+		    input[type="text"]
+		    {
+		    	background: $bg-white;
+			    border: 1px solid #ced1d7;
+			    border-right: none;			    		    
+			    box-shadow: none;
+			    @include styleText(#000000, 13px);	
+			    height: 30px;
+			    margin: 0;
+			    overflow: hidden;
+			    padding: 0 10px;
+			    width: 100%;
+		    }
+		    button
+		    {
+		    	background-color: #eb4335;
+				border: 1px solid #eb4335;
+			    @include styleText(#fff, 13px);
+			    height: 30px;
+			    margin: 0;
+			    overflow: $overflow-hidden;
+			    padding: 0;
+			    position: $position-absolute;
+			    right: 0;
+			    text-transform: $text-uppercase;
+			    top: 0;
+			    width: 70px;
+			    text-align: center;
+		    }
+    	}
+    	.copyright
+    	{    		
+		    text-align: $align-left;	
+		    padding-left: 4px;
+		    padding-top: 15px;
+		    position: relative;
+		    .vf-company
+		    {
+		       	margin-bottom: 7px;
+		    	.title 
+		    	{
+		    		@include styleText(#303030, 16px);
+		    		text-transform: uppercase;
+		    	}
+		    }	   
+		    p 
+		    {
+		    	@include styleText(#303030, 14px);
+		    	margin-bottom: 2px;
+		    	line-height: 20px;
+		    }
+		    a 
+		    {
+		    	color: #444;
+		    	&:hover 
+		    	{
+		    		color: $color-hover;
+		    	}
+		    }
+		   
+		    ul.contactus
+		    {
+		    	padding-top: 4px;
+		    	li 
+		    	{
+		    		display: inline-block;
+		    		list-style: none;
+		    		@include styleText(#303030, 14px);
+		    		&::after 
+		    		{
+		    			content: "-";
+		    			display: inline-block;
+		    			padding-left: 7px;
+		    			position: relative;
+		    			top: -2px;
+		    		}
+		    		&:last-child
+		    		{
+		    			.fonticons
+		    			{
+		    				position: relative;
+		    				top: 2px;
+		    			}
+		    			&::after 
+		    			{
+		    				display: none;
+		    			}
+		    			
+		    		}
+		    		.icon-webs
+		    		{
+		    			height: 18px;
+		    		}
+		    	}
+		    }
+    	}
+    	.wrap-videoflyapp
+    	{
+    		position: absolute;
+    		right: 0;
+    		top:-40px;    		
+    		margin: auto;
+    		
+    		a 
+    		{
+    			display: block;
+    			width: 136px;
+    			margin-bottom: 8px;
+    		}
+    	}
+    }
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+	#footer .container .search input[type="text"]
+	{
+		border: 1px solid #ced1d7  ;
+		border-right: none;
+		height: 30px;
+		top:0;
+		position: $position-relative;
+	}
+}

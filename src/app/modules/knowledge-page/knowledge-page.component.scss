@@ -1,0 +1,251 @@
+@import '../../../styles.scss';
+
+
+
+.category 
+{
+    header.menuSection .title, header.menuSection .title
+	{
+	  font-size: 16px;
+	  a 
+	  {
+	  	color: #eb4335;
+	  	 font-size: 16px;
+	  }
+	}
+	#category-header
+	{		
+		padding: 13px 0 0;
+		margin-bottom: 20px;		
+		.menuSection
+		{
+			padding-bottom: 0;
+			overflow: $overflow-hidden;			
+			.submenu
+			{
+				display: $display-block;
+				bottom:0;
+				li 
+				{
+					padding:0 6px;
+					&:first-child 
+					{
+						padding-left: 0;
+					}
+					a 
+					{
+						padding: 0;
+						height: 30px;
+						line-height: 30px;
+						display: $display-block;
+						@include styleText(#707378, 14px);
+						background: #e5e6ec;
+						border-radius: 3px;
+						padding: 0 10px;
+						-webkit-transition: background 0.2s;
+						-moz-transition: background 0.2s;
+						-ms-transition: background 0.2s;
+						-o-transition: background 0.2s;
+						transition: background 0.2s;
+						&:hover 
+						{
+							color:#ffffff;							
+							background: #eb4335;
+							text-decoration: none;
+						}
+
+					}
+
+											
+				}
+				.active 
+				{
+					a 
+					{	
+						color:#ffffff;							
+						background: #eb4335;
+	
+					}
+				}
+			}
+		}
+	}
+    .categorySection
+	{
+		overflow: $overflow-hidden;
+		position: $position-relative;
+		margin-bottom: 10px;
+		header.menuSection
+		{
+			border-bottom: 1px solid #eaeaea;
+			padding-bottom: 0;
+			margin-bottom: 16px;
+		}
+		aside.infoCategoryList
+		{
+			width: 196px;	
+			position: $position-absolute;
+			left: 0;
+			top:0;
+			height: calc(100% - 12px);
+			background:#f1ecec;
+			padding: 18px 10px 18px 16px;
+
+			.ttCategory
+			{
+				margin-bottom: 5px;
+				@include styleText(#707378, 18px);
+				font-weight: normal;
+				text-transform: capitalize;
+				font-family: "Roboto";
+				h3 
+				{
+					@include styleText(#707378, 18px);
+					font-weight: normal;
+					text-transform: capitalize;
+					font-family: "Roboto";
+				}
+			}
+			.totalVideo
+			{
+				@include styleText(#707378, 13px);
+			}
+			.viewall
+			{
+				position: $position-absolute;
+				left: 16px;
+				bottom:18px;
+				@include styleText(#707378, 13px);
+			}
+
+			.filtershow
+			{
+				text-align: justify;
+				margin-top: 10px;
+				a 
+				{
+					display: $display-inlinebl;
+					margin: 0 7px 16px;
+					@include styleText(#707378, 13px);
+					font-weight: bold;
+					text-transform: uppercase;
+					&:nth-child(7n)
+					{
+						@extend %marginright;
+					}
+					&:nth-child(7n + 1)
+					{
+						@extend %marginleft;
+					}
+					&:hover 
+					{
+						color: #ea4a9f;
+					}
+
+				}
+				.filter-active
+				{
+					color: #ea4a9f;
+				}
+			}
+		}
+
+		.contentCategory
+		{
+			// float: $float-right;
+			overflow: $overflow-hidden;
+			width: 100%;	
+
+			.vf-category
+			{
+				@include sizeVideo(196px, 327px);
+				background: #e7e7e7;
+				padding: 0;				
+				.thumbnail
+				{
+					background-size: cover;
+					background-position: 50% 50%;
+					@include sizeVideo(100%, 196px);
+					a 
+					{
+						display: $display-block;
+						height: 195px;
+					}
+
+				}
+				.meta
+				{
+					padding: 0 10px;
+					margin: 10px 0 5px;
+					.title 
+					{
+						a 
+						{
+							@include styleText(#171717, 14px);
+							display: $display-block;
+						    text-overflow: ellipsis;
+						    overflow: $overflow-hidden;
+						     white-space: nowrap;
+						}						
+						
+					}
+				}
+				.desc-intro
+				{
+					@include styleText(#757575, 13px);
+					max-height: 50px;
+					overflow: $overflow-hidden;
+					padding: 0 10px;
+					line-height: 17px;
+					h1,h2,h3,h4,h5,h6 
+					{
+						@include styleText(#757575, 13px);
+						line-height: 16px;
+						font-weight: normal;
+					}
+				}
+
+				.desc-intro + ul 
+				{
+					position: absolute;
+					bottom: 10px;
+					width: 100%;
+					left: 10px;
+					li 
+					{
+						@include styleText(#818181, 12px);
+						display: $display-inlinebl;
+						padding-right: 15px;
+						span.arrow-right
+						{
+							@extend %arrow-right;
+							border-left: 11px solid #c1c1c1;
+							display: $display-inlinebl;
+							margin-right: 5px;
+						}
+						.ti-eye
+						{
+							font-size: 14px;
+							color:#c1c1c1;
+							padding-right: 2px;
+						}
+					}
+					.videoTotal
+					{
+						@include styleText(#818181, 12px);
+						background: none;
+						position: relative;
+						bottom: 0;
+						left: 0;
+					}
+					.watch-count
+					{
+						
+						@include styleText(#818181, 12px);
+					}
+				}
+
+			}
+		}	
+	}
+}

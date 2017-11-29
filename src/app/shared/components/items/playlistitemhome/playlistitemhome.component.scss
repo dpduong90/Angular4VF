@@ -1,0 +1,80 @@
+@import '../../../../../styles.scss';
+.videoPlaylist
+{
+    float: $float-left;	
+    width: 196px;
+    height: 196px;
+    padding: 0;
+    margin: 0;
+    // margin: 0 6px 12px;						
+    >a 
+    {
+        display: $display-block;
+        position: $position-relative;
+        height: 100%;
+        background-color: #e5e6ec ;
+        .thumbnail
+        {
+            width: 196px;
+            height: 196px;
+            &::before 
+            {
+                background: rgba(0, 0, 0, 0.4);
+                opacity: 0;
+                position: $position-absolute;
+                left: 0;
+                top:0;
+                width: 100%;
+                height: 100%;
+                z-index: 10;
+                content: '';
+                -webkit-transition: opacity 0.2s;
+                -moz-transition: opacity 0.2s;
+                -ms-transition: opacity 0.2s;
+                -o-transition: opacity 0.2s;
+                transition: opacity 0.2s;
+
+            }
+        }
+        &:hover 
+        {
+            .thumbnail::before 
+            {
+                opacity: 1;
+            }
+        }
+        .meta
+        {
+            bottom: 0;
+            left: 0;
+            z-index: 11;
+            padding: 10px 9px 5px;
+            position: absolute;
+            width: 100%;
+            background: #000;
+            background: -webkit-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Safari 5.1 to 6.0 */
+            background: -o-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%);/* For Opera 11.1 to 12.0 */
+            background: -moz-linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* For Firefox 3.6 to 15 */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0.01) 2%, rgba(0, 0, 0, 0.01) 3%, rgba(0, 0, 0, 0.04) 11%, rgba(0, 0, 0, 0.51) 33%, rgba(0, 0, 0, 0.8) 73%, rgba(0, 0, 0, 0.9) 100%); /* Standard syntax (must be last) */
+            .title
+            {
+                @include styleText(#ffffff, 15px);
+                line-height: 16px;
+                @extend %styleinline;
+                font-weight: bold;
+                margin-bottom: 0;
+                &:hover 
+                {
+                    text-decoration: underline;
+                }
+            }
+            .watch-count
+            {
+                @include styleText(#bbbdc1, 13px);
+                line-height: 13px;	
+                @extend %styleinline;
+            }
+        }
+    }
+    
+}

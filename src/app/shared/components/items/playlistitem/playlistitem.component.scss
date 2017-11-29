@@ -1,0 +1,226 @@
+@import '../../../../../styles.scss';
+.playlistitems
+{
+	@include sizeVideo(196px, 327px);			
+	padding: 0;	
+	margin: 0;	
+	background: none;
+	border:1px solid #ededed;
+	height: 342px;	
+	position: relative;	
+	&.playlistmusicitems
+	{
+		.wrap-thumb
+		{
+			width: 196px;
+			height: 196px;
+			overflow: hidden;
+			position: relative;
+			.wrap-box
+			{
+				position: absolute;
+				left: -200px;
+				right: -200px;
+				top: -200px;
+				bottom: -200px;
+				margin:auto;
+				width: 516px;
+				height: 303px;
+
+				.wrapper
+				{
+					position: relative;
+					width: 516px;
+					height: 303px;
+					overflow: hidden;
+					-webkit-transform: rotate(45deg);
+					-moz-transform: rotate(45deg);
+					-ms-transform: rotate(45deg);
+					-o-transform: rotate(45deg);
+					transform: rotate(45deg);
+
+					span 
+					{
+						background-size: cover;
+						background-position: 50% 50%;
+						display: block;
+						width: 150px;
+						height: 150px;
+						position: absolute;
+						margin: auto;
+						&:first-child
+						{
+							left: 0;
+							top:0;
+							bottom: 0;
+							width: 180px;
+							height: 180px;
+						}
+						&:last-child
+						{
+							right: 0;
+							top:0;
+							bottom: 0;
+							width: 180px;
+							height: 180px;
+						}
+						&:nth-child(2)
+						{
+							top: 0;
+							left: 0;
+							right:0;
+							margin: 0 auto;
+						}
+						&:nth-child(3)
+						{
+							bottom: 0;
+							left: 0;
+							right:0;						
+						}
+					}
+				}
+
+			}
+			
+		}
+	}				
+	.thumbnail
+	{
+		background-size: cover;
+		background-position: 50% 50%;
+		@include sizeVideo(100%, 195px);
+		position: relative;
+		border-bottom: 1px solid #ededed;
+		a 
+		{
+			display: $display-block;
+			height: 195px;
+		}
+
+	}
+	.meta
+	{
+		padding: 0 10px;
+		margin: 10px 0 5px;
+		.title 
+		{
+			max-height: 36px;
+			overflow: hidden;
+			a 
+			{
+				@include styleText(#1e1e1e, 15px);
+				display: $display-block;					    
+			}						
+			
+		}				
+	}
+	.uploader
+	{
+		padding: 0 10px;
+		margin-bottom: 5px;
+		max-height: 30px;
+		overflow: hidden;
+		a
+		{
+			@include styleText(#828282, 11px);
+			text-transform: uppercase;			
+			line-height: 12px;
+			&:hover 
+			{
+				color: #527afa;
+				text-decoration: none;
+			}					
+		    
+		}
+	}
+	.vf-followplbtn
+	{
+		display: none;
+	}
+	&:hover 
+	{
+		.playitems
+		{
+			opacity:1;
+		}		
+		.vf-followplbtn
+		{
+			display: block;					
+		}
+	}
+	.desc-intro
+	{
+		@include styleText(#828282, 13px);
+		max-height: 33px;
+		overflow: $overflow-hidden;
+		padding: 0 10px;
+		line-height: 17px;
+
+		h1,h2,h3,h4,h5,h6 
+		{
+			@include styleText(#828282, 13px);
+			line-height: 16px;
+			font-weight: normal;
+		}
+	}
+
+	.desc-intro + ul 
+	{
+		position: absolute;
+		bottom: 10px;
+		width: 100%;
+		padding: 0 10px;		
+		li 
+		{
+			@include styleText(#818181, 12px);
+			display: $display-inlinebl;
+			float: none !important;
+			// padding-right: 15px;
+			margin:0 6px;
+			
+			&:first-child
+			{
+				margin-left: 0;
+			}
+			span.arrow-right
+			{
+				@extend %arrow-right;
+				border-left: 11px solid #c1c1c1;
+				display: $display-inlinebl;							
+			}
+			&.rating 
+			{
+				float: right !important;
+				margin: 0;
+				padding-top: 1px;
+				>span 
+				{
+					float: left;
+					margin:0 0.9px;
+				}
+			}
+			
+		}
+		.videoTotal
+		{
+			@include styleText(#818181, 12px);
+			background: none;
+			// position: relative;
+			// bottom: 0;
+			// left: 0;
+		}
+		.watch-count
+		{
+			// position: relative;
+			// top:-1px;			
+			@include styleText(#818181, 12px);
+			.fonticons 
+			{
+				font-size: 14px;
+				position: relative;
+				top:1px;
+			}
+		}
+	}
+
+}	

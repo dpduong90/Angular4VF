@@ -1,0 +1,14 @@
+.vf-genresallplaylists
+{
+	margin-bottom: 20px;
+	.listplaylists 
+	{
+		overflow: hidden;
+		.playlistitems
+		{
+			float: left;
+			margin: 0 6px;
+			margin-bottom: 12px;
+		}
+	}
+}

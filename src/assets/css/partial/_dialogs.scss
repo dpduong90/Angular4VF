@@ -1,0 +1,86 @@
+
+.dialog-overlay { display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 99999 }
+.dialog-overlay.black { background: rgba(0, 0, 0, 0.5) }
+.dialog-overlay.white { background: rgba(255, 255, 255, 0.5) }
+.dialog-overlay .dialog { display: none; background: #fff; border-radius: 3px; box-shadow: 0 3px 15px rgba(0, 0, 0, 0.4), 0 0 5px rgba(0, 0, 0, 0.4); overflow: hidden; width: 600px; height: 500px; margin: 20px auto; -webkit-animation-duration: 0.3s; position: fixed; top: 50%; left: 50%; margin-left: -300px; margin-top: -250px }
+.dialog-overlay .dialog .dialog-header { float: left; width: 100%; height: 40px; padding: 0 40px 0 20px; border-bottom: 1px solid #ddd; position: relative }
+.dialog-overlay .dialog .dialog-header h1 { font-weight: normal; font-size: 17px; font-family: Arial, sans-serif; text-transform: uppercase; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; line-height: 40px; margin: 0; padding: 0 }
+.dialog-overlay .dialog .dialog-header h1 span { margin-right: 10px; margin-left: -5px; position: relative; top: 2px }
+.dialog-overlay .dialog .dialog-header .btnClose { color:#444; font-size: 16px; position: absolute; top: 0; right: 0; bottom: 0; display: block; width: 40px; height: 40px; text-align: center; line-height: 40px }
+.dialog-overlay .dialog .dialog-content { position: relative; top: 0; left: 0; right: 0; bottom: 58px; padding: 0; float: left; width: 100%; overflow: hidden; padding: 10px 20px }
+.dialog-overlay .dialog .dialog-content>* { font: 1em Arial, sans-serif; font-weight: 300; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; margin: 10px 0 }
+.dialog-overlay .dialog .dialog-content .spinner { position: absolute; top: 50%; left: 50%; margin-top: -30px; margin-left: -30px }
+.dialog-overlay .dialog .dialog-content .icon { text-align: center; margin-bottom: 20px }
+.dialog-overlay .dialog .dialog-content .icon span[class*="ti-"] { display: inline-block; width: 102px; height: 102px; border-radius: 100%; line-height: 102px; font-size: 3em; background: #1ba238; color: #fff; font-weight: bold; }
+.dialog-overlay .dialog .dialog-action { background: #fafafa; border-top: 1px solid #e2e2e2; float: left; width: 100%; padding: 10px 10px; position: absolute; bottom: 0; left: 0; height: 50px; font: 0.9em Arial, sans-serif; text-transform: uppercase; margin: 0; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale }
+.dialog-overlay .dialog .dialog-action a { font-size: 16px; display: block; margin: 0 5px; border-radius: 3px; overflow: hidden; color: #333; padding: 3px 10px; white-space: nowrap }
+.dialog-overlay .dialog .dialog-action a span[class*="ti-"] { display: inline-block; position: relative; top: 1px; margin-right: 5px }
+.dialog-overlay .dialog .dialog-action a.btnDefault { float: right; background: #E50000; color: #fff; border: 1px solid #E50000; text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.2) }
+.dialog-overlay .dialog .dialog-action a.btnAlternative { float: right; background: #fff; border: 1px solid #E50000; text-shadow: none; color: #E50000 }
+.dialog-overlay .dialog .dialog-action a.btnCancel { float: right; background: #f0f0f0; border: 1px solid #ddd; color: #999; text-shadow: 0 1px 1px rgba(255, 255, 255, 0.6) }
+.dialog-overlay .dialog .dialog-action a.btnCancel:hover { background: #ddd; color: #666 }
+#dialog-upload .dialog-content #submit_loading { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(255, 255, 255, 0.8); display: none }
+#dialog-upload .dialog-content #submit_error { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 100px 10px; display: none; background: #FFF; margin: 0; text-align: center }
+#dialog-upload .dialog-content #submit_error span[class*="ti-"] { font-size: 3em }
+#dialog-upload .dialog-content #submit_error #submit_error_code { color: #888 }
+#dialog-upload .dialog-content #submit_success { position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 0px 30px; background: #FFF; margin: 0; text-align: center; display: none }
+#dialog-upload .dialog-content #submit_success span[class*="ti-"] { font-size: 1.4em; border: 1px solid #7A9B00; border-radius: 100%; padding: 10px; display: inline-block; color: #7A9B00; margin-bottom: 10px }
+#dialog-upload .dialog-content #submit_success p { margin: 20px 0 }
+#dialog-upload .dialog-content #submit_success iframe { width: 320px; height: 180px; border: 0 }
+#dialog-upload .dialog-content #submit_success a { font-weight: bold; color: #E50000 }
+#dialog-upload .dialog-content .message { border: 2px dashed #eee; border-radius: 10px; height: 200px; line-height: 200px; text-align: center; color: #888 }
+#dialog-upload .dialog-content div.loading { width: 100%; float: left; height: 200px; border: 2px dashed #eee; border-radius: 10px; position: relative }
+#dialog-upload .dialog-content p { clear: both }
+#dialog-upload .dialog-content .video_thumb_preview { width: 200px; height: 135px; float: left; background-size: cover; background-repeat: no-repeat; background-position: 50% 50%; background-color: #000 }
+#dialog-upload .dialog-content .video_meta { background: #eee; float: left; width: 360px; height: 135px; overflow: hidden; padding: 10px }
+#dialog-upload .dialog-content .video_meta p { margin: 0 }
+#dialog-upload .dialog-content .video_meta p.duration { font-size: 0.9em; color: #888; margin-top: 10px }
+#dialog-upload .dialog-content .video_meta input { margin: 0 0 5px }
+#dialog-upload .dialog-content .video_meta input[disabled] { background-color: #FFF !important; padding: 0 !important; border: 0 !important }
+#dialog-upload .dialog-content textarea { width: 100%; height: 100px }
+#dialog-embed .dialog-content label { display: inline-block; margin-bottom: 3px; color: #888 }
+#dialog-embed .dialog-content #embed_preview { width: 360px; height: 203px; border: 0; float: right; margin-left: 15px }
+#dialog-embed .dialog-content .options input { margin-bottom: 0 }
+#dialog-embed .dialog-content .options input[type="radio"], #dialog-embed .dialog-content .options input[type="checkbox"] { position: relative; top: -1px; margin-right: 5px }
+#dialog-embed .dialog-content .options label { display: block }
+#dialog-embed .dialog-content .options p strong { font-size: 16px; font-weight: bold; margin-bottom: 5px; }
+#dialog-embed .dialog-content .options p:first-child{ margin-bottom: 20px;}
+.dialog-overlay p label
+{  
+	color: #4d4d4d;
+    cursor: pointer;
+    display: block;
+    font-size: 15px;
+    font-family: $font-Arial;
+    font-weight: normal;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+.dialog-overlay
+{
+	input[type="text"], input[type="password"], input[type="date"], input[type="datetime"],
+	 input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], 
+	 input[type="number"], input[type="search"], input[type="tel"], input[type="time"],
+	  input[type="url"], input[type="color"], textarea
+	{
+		 background-color: #fff;
+	    border: 1px solid #ccc;
+	    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+	    box-sizing: border-box;
+	    color: rgba(0, 0, 0, 0.75);
+	    display: block;
+	    font-family: Arial;
+	    font-size: 15px;
+	    line-height: 23px;
+	    height: 2.3125rem;
+	    margin: 0 0 15px;
+	    padding: 0.5rem;
+	    transition: box-shadow 0.45s ease 0s, border-color 0.45s ease-in-out 0s;
+	    width: 100%;
+	}
+}
+.dialog-overlay #dialog-feedback .dialog-content>*
+{
+	text-align: center;
+	line-height: 22px;
+}

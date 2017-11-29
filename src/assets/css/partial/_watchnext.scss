@@ -1,0 +1,190 @@
+#player 
+{
+    position: $position-relative;
+}
+.ytp-upnext
+{
+    bottom: 0;
+    opacity: 1;
+    overflow: hidden;
+    position: absolute;
+    transition: all 0.1s cubic-bezier(0.4, 0, 1, 1) 0s;
+    vertical-align: top;
+    width: 100%;
+    z-index: 9999;
+    display: block;
+    top: 0;
+    left: 0;
+    color: #e6e6e6;
+    text-align: center;
+    .ytp-thumbnail-overlay-image
+    {
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+    }
+    .ytp-thumbnail-overlay-curtain
+    {
+        background: rgba(0, 0, 0, 0.7) none repeat scroll 0 0;
+        height: 100%;
+        left: 0;
+        position: $position-absolute;
+        top: 0;
+        width: 100%;
+    }
+    .ytp-upnext-top
+    {
+        bottom: 50%;
+        margin-bottom: 52px;
+        margin-left: auto;
+        margin-right: auto;
+        position: $position-absolute;
+        width: 90%;
+        left: 0;
+        right:0;
+        .ytp-upnext-header
+        {
+            display: $display-block;
+            font-size: 140%;
+            padding-bottom: 7px;                                
+            font-size: 16px;
+            text-decoration: underline;
+        }
+        .ytp-upnext-title
+        {
+            display: $display-block;                
+            font-weight: 500;
+            overflow: hidden;
+            padding: 10px 10px 2px;             
+            text-overflow: ellipsis;                
+            word-wrap: normal;
+            font-size: 24px;
+            max-height: 78px;
+            margin-bottom: 5px;
+        }
+        .ytp-upnext-author
+        {
+             color: #d0d0d0;
+            display: $display-block;
+            font-size: 130%;
+            line-height: 1em;
+            overflow: $overflow-hidden;
+            padding: 0 10px 10px;
+        }                   
+    }
+   
+    .ytp-upnext-bottom
+    {
+         margin-left: auto;
+        margin-right: auto;
+        margin-top: 40px;
+        position: $position-absolute;
+        left: 0;
+        top: 50%;
+        width: 100%;
+        .ytp-upnext-cancel
+        {
+            display: block;
+            float: none;
+            text-align: center;             
+            color: #b7b7b7;
+            font-size: 16px;
+            .ytp-button
+            {
+                background-color: transparent;
+                border: none;
+                text-transform: none;
+                color: #b7b7b7;
+                font-size: 16px;               
+                &:hover 
+                {
+                    color: #fff;                    
+                }
+            }
+        }
+    }
+    .ytp-upnext-close
+    {
+        position: $position-absolute;
+        right: 7px;
+        top: 7px;
+
+        button
+        {
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDI0IDI0IiB3aWR0aD0iMTAwJSI+PHBhdGggZD0iTTE5IDYuNDFMMTcuNTkgNSAxMiAxMC41OSA2LjQxIDUgNSA2LjQxIDEwLjU5IDEyIDUgMTcuNTkgNi40MSAxOSAxMiAxMy40MSAxNy41OSAxOSAxOSAxNy41OSAxMy40MSAxMnoiIGZpbGw9IiNmZmYiIC8+PC9zdmc+");
+            height: 24px;
+            width: 24px;
+            background-color: transparent;  
+            border: none;                       
+        }
+    }
+    .vf-upnext-autoplay
+    {
+        position: absolute; 
+        left: 0; 
+        right:0; 
+        margin: 0 auto; 
+        top:36%;
+        .wrap 
+        {
+            position: relative;            
+            .playupnext-icon
+            {
+                position: absolute;
+                top: 2px;
+                left: 0;
+                right:0;
+                margin: 0 auto; 
+                width: 70px;
+                height: 70px;  
+                border-radius: 50%;
+                //background-image: url("../images/upnext-icon.png") ;    
+                 display: block; 
+                 padding-top: 25px;
+                 background-color: #eb4335;                
+                 
+                    #triangle-right {
+                        width: 0;
+                        height: 0;
+                        border-top: 10px solid transparent;
+                        border-left: 20px solid #ffffff;
+                        border-bottom: 10px solid transparent;
+                        display: block;
+                    }
+    
+                 
+                
+            }
+        }
+    }
+    
+}
+
+// #svg .bar-loading {
+//   stroke-dashoffset: 0;
+//   transition: stroke-dashoffset 5s linear;
+//   stroke: #fff; 
+//   stroke-width: 5px;
+//    -ms-transform: scale(0.45,0.45); /* IE 9 */
+//     -webkit-transform: scale(0.45,0.45); /* Safari */
+//     transform: scale(0.45,0.45); /* Standard syntax */
+// }
+// #svg #bar {
+//   stroke: #e50000;
+//   stroke-width: 7px;
+ 
+// }
+
+/* up next */
+.pie_progress {
+  width: 74px;
+  margin: 10px auto;
+}          
+
+.pie_progress__number
+{
+    font-size: 0 !important;
+}
+

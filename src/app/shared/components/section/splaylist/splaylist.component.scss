@@ -1,0 +1,39 @@
+
+    .listplaylists 
+    {
+        app-playlistitem
+        {
+            float: left;               
+            overflow: hidden;
+            position: relative;			
+            margin: 0 6px;
+            margin-bottom: 10px;            
+            .playlistitems
+            {
+                float: none;
+                margin: 0;
+            }
+            
+           
+        }
+     
+    }
+
+
+@media only screen and (min-width: 1236px)
+{
+    .listplaylists 
+    {
+        app-playlistitem
+        {
+            &:nth-child(6n)
+            {
+                margin-right: 0 ;
+            }
+            &:nth-child(6n + 1) 
+            {
+                margin-left: 0 ;
+            }
+        }
+    }    
+}

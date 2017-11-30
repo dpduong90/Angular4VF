@@ -6,7 +6,7 @@ import { HomePageComponent } from './home-page.component';
 import { VideoitemComponent } from "../../shared/components/items/videoitem/videoitem.component";
 import { PlaylistitemComponent } from "../../shared/components/items/playlistitem/playlistitem.component";
 import { SplaylistComponent } from "../../shared/components/section/splaylist/splaylist.component";
-
+import { SvideoComponent } from "../../shared/components/section/svideo/svideo.component";
 @NgModule({
   imports: [
     CommonModule,
@@ -16,7 +16,8 @@ import { SplaylistComponent } from "../../shared/components/section/splaylist/sp
     HomePageComponent,
     VideoitemComponent,
     PlaylistitemComponent,
-    SplaylistComponent
+    SplaylistComponent,
+    SvideoComponent
     
     
   ]

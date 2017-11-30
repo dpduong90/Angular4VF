@@ -24,6 +24,7 @@
       ],
       "scripts": [
         "./assets/js/jquery-1.12.4.min.js",
+        "./assets/js/jquery.bxslider.min.js",
         "./assets/js/moment-with-locales.js",
         "./assets/js/main.js",
         "./assets/js/vfplayer.js"

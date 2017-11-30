@@ -1,7 +1,7 @@
 <div id="home-page" class="wrapper full-width">
   <div class="container">
-    <div class="wrap-banner">
-      <article class="video videoPlaylist vf-suggest-playlist" >
+    <div class="section newListvideo">
+      <article class="videoPlaylist vf-suggest-playlist" >
         <div class="big-thumbnail" style="background-image: url(../assets/images/Dinner.jpg)" >							
           <a title="Today top hits" rel="bookmark" href="#">	
 
@@ -45,40 +45,36 @@ Nội dung thường xoay quanh những sự kiện nổi bật trong showbiz, p
       <app-videoitem></app-videoitem>
       <app-videoitem></app-videoitem>
       <app-videoitem></app-videoitem>
-
       <app-videoitem></app-videoitem>
 
       
     </div> <!-- newListvideo -->	
 
-    <div class="sectioncontent vf-playlist">
+    <div class="sectioncontent vf-following-playlist ">
         <header class="menuSection">
           <h2 class="title">
-            Playlist theo dõi
+            <a href="#">Playlist theo dõi</a> 
           </h2>
         </header>
         <ul class="bxslider">
           <li>
-            <!-- <article class="video videoPlaylist">
-              <a href="#">
-                <p style="background-image: url(../assets/images/thumbnail.jpg)" class="thumbnail">
-                  <span class="playitems">
-                  <span class="icon-webs playicon"></span>								
-                </span>
-                </p>
-                <header class="meta">
-                  <h3 class="title">
-                      Nhân Tố Bí Ẩn 
-                  </h3>									
-                </header>
-                <div class="desc">
-                  <p>Heartbroken? These songs might just help...</p>
-                </div>
-              </a>						
-            </article> -->
-
-            <!-- <app-playlistitem></app-playlistitem> -->
+            <app-playlistitem></app-playlistitem>
           </li>
+          <li>
+              <app-playlistitem></app-playlistitem>
+          </li>
+          <li>
+            <app-playlistitem></app-playlistitem>
+          </li>
+          <li>
+              <app-playlistitem></app-playlistitem>
+            </li>
+            <li>
+              <app-playlistitem></app-playlistitem>
+            </li>
+            <li>
+                <app-playlistitem></app-playlistitem>
+              </li>
           
         </ul>
 
@@ -89,432 +85,55 @@ Nội dung thường xoay quanh những sự kiện nổi bật trong showbiz, p
       <header class="menuSection">
         <h2 class="title">
           <a title="GIẢI TRÍ" href="#">Âm nhạc</a>
-        </h2>
-
-        <ul class="submenu">
-          <li><a href="#">Truyền hình thực tế </a></li>
-          <li><a href="#">TV Show </a></li>
-          <li><a href="#">Hài Sitcom </a></li>						
-        </ul>
+        </h2>        
       </header>
      
       <app-splaylist></app-splaylist>
-
-    </div><!-- section -->
-
-    <div class=" sectioncontent listVideo entertainmentSection">
-      <header class="menuSection">
-        <h2 class="title">
-          <a title="GIẢI TRÍ" href="#">GIẢI TRÍ</a>
-        </h2>
-
-        <ul class="submenu">
-          <li><a href="#">Truyền hình thực tế </a></li>
-          <li><a href="#">TV Show </a></li>
-          <li><a href="#">Hài Sitcom </a></li>						
-        </ul>
-      </header>
-
-      <div class="loading">
-        <img src="images/loading-icon.svg" alt="loading"/>
-      </div>
       
+
     </div><!-- section -->
 
-    <div class="section sectioncontent listVideo filmSection">
-      <header class="menuSection">
-        <h2 class="title">
-          <a title="PHIM" href="#">PHIM</a>
-        </h2>
 
-        <ul class="submenu">
-          <li><a href="#">Hoạt hình </a></li>
-          <li><a href="#">Phim ngắn </a></li>							
-        </ul>
-      </header>
 
-      <div  class="listvideo ">
-        <article class="video videoPlaylist videotopic" >
-          <p class="thumbnail" style="background-image: url(../assets/images/demo.png)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">		
-              <span class="playitems">
-                <span class="icon-webs playicon"></span>								
-              </span>								
-            </a>
-          </p>	
-          <header class="wraptitle">
-            <h3 class="titletoppic">
-              <a href="#">Giong hat Viet nam 2016 season 1 Giong hat Viet nam 2016 season 1</a> 		
-            </h3>
-            <h4 class="update-time">Cập nhật: 3 ngày trước</h4>
-          </header> 																	
-        </article>
-      </div>	
-    </div><!-- section -->
-
-    <div class="section sectioncontent listVideo transportSection">
+    <div class=" sectioncontent listVideos ">
       <header class="menuSection">
         <h2 class="title">
           <a title="Xe" href="#">XE</a>
         </h2>					
       </header>
 
-      <div class="listvideo">
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video videoPlaylist" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            <span class="videoTotal">999 video</span>
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> <span class="icon-webs playlisticon"></span>Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-
-        <article class="video" >
-          <p class="thumbnail" style="background-image: url(../assets/images/thumb-larger.jpg)">
-            <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#">
-              <img  alt="Lorem Ipsum is simply dummy text of the printing and typesetting industry" src="url(../assets/images/thumb-larger.jpg)">
-            </a>
-            <span class="duration">17:30</span>
-            
-          </p>
-          <header class="meta">
-            <h3 class="title">
-              <a title="Lorem Ipsum is simply dummy text of the printing and typesetting industry" rel="bookmark" href="#"> Lorem Ipsum is simply dummy text of the printing and typesetting industry </a>
-            </h3>	
-            <p class="uploader">
-            <a title="videofly" href="#">Video fly</a>
-            </p>
-            <ul>
-              <li class="watch-count">
-                3.000.000 lượt xem
-              </li>
-              <li class="datetime">
-                3 ngày trước
-              </li>
-            </ul>						
-          </header>
-        </article>
-      </div> <!-- listvideo -->
+      <app-svideo></app-svideo>
     </div><!-- section -->
 
+    <div class=" sectioncontent newsSection">
+        <header class="menuSection">
+          <h2 class="title">
+            <a title="GIẢI TRÍ" href="#">Tin tức</a>
+          </h2>        
+        </header>
+       
+        <app-splaylist></app-splaylist>
+        
+  
+      </div><!-- section -->
+
   </div> <!-- container -->
+
+  <!-- <script src="../assets/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript">  
+    $(document).ready(function()
+    {
+       alert("abc");
+      // $(' #home-page .sectioncontent .bxslider').bxSlider({
+      //   minSlides: 1,
+      //   maxSlides: 6,
+      //   slideWidth: 196,
+      //   slideMargin: 12,
+      //   auto: false,
+      //   speed: 3000,
+      //   moveSlides: 4,
+      //   // infiniteLoop: true
+      // });
+    });
+  </script> -->
 </div> <!-- home-page -->

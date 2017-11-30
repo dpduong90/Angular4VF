@@ -1,0 +1,42 @@
+
+    .listvideos
+    {
+        app-videoitem
+        {
+            float: left;               
+            overflow: hidden;
+            position: relative;			
+            margin: 0 6px;
+            margin-bottom: 10px;
+            width: 196px;
+            
+            ::ng-deep 
+            {
+                .video 
+                {
+                    float: none;
+                    margin:0;
+                }
+            }
+        }
+     
+    }
+
+
+@media only screen and (min-width: 1236px)
+{
+    .listvideos 
+    {
+        app-videoitem
+        {
+            &:nth-child(6n)
+            {
+                margin-right: 0 ;
+            }
+            &:nth-child(6n + 1) 
+            {
+                margin-left: 0 ;
+            }
+        }
+    }    
+}

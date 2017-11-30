@@ -8,82 +8,7 @@
 	border:1px solid #ededed;
 	height: 342px;	
 	position: relative;	
-	&.playlistmusicitems
-	{
-		.wrap-thumb
-		{
-			width: 196px;
-			height: 196px;
-			overflow: hidden;
-			position: relative;
-			.wrap-box
-			{
-				position: absolute;
-				left: -200px;
-				right: -200px;
-				top: -200px;
-				bottom: -200px;
-				margin:auto;
-				width: 516px;
-				height: 303px;
-
-				.wrapper
-				{
-					position: relative;
-					width: 516px;
-					height: 303px;
-					overflow: hidden;
-					-webkit-transform: rotate(45deg);
-					-moz-transform: rotate(45deg);
-					-ms-transform: rotate(45deg);
-					-o-transform: rotate(45deg);
-					transform: rotate(45deg);
-
-					span 
-					{
-						background-size: cover;
-						background-position: 50% 50%;
-						display: block;
-						width: 150px;
-						height: 150px;
-						position: absolute;
-						margin: auto;
-						&:first-child
-						{
-							left: 0;
-							top:0;
-							bottom: 0;
-							width: 180px;
-							height: 180px;
-						}
-						&:last-child
-						{
-							right: 0;
-							top:0;
-							bottom: 0;
-							width: 180px;
-							height: 180px;
-						}
-						&:nth-child(2)
-						{
-							top: 0;
-							left: 0;
-							right:0;
-							margin: 0 auto;
-						}
-						&:nth-child(3)
-						{
-							bottom: 0;
-							left: 0;
-							right:0;						
-						}
-					}
-				}
-
-			}
-			
-		}
-	}				
+					
 	.thumbnail
 	{
 		background-size: cover;
@@ -110,7 +35,11 @@
 			{
 				@include styleText(#1e1e1e, 15px);
 				display: $display-block;					    
-			}						
+			}	
+			.update-time
+			{
+				display: none;				
+			}					
 			
 		}				
 	}

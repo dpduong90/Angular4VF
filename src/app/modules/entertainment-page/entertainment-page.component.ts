@@ -24,14 +24,6 @@ export class EntertainmentPageComponent implements OnInit {
     //   // infiniteLoop: true
     // });
 
-    //  $('.category-slider').bxSlider({  
-    //   speed: 500, 
-    //   mode: 'fade',
-    //   auto:true,  
-    //   easing:'linear',
-    //   infiniteLoop: true
-    // });
-
   }
 
 }

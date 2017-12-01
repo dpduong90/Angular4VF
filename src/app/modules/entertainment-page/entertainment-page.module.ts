@@ -3,18 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { entertainmentRouter } from './entertainment-page-routing.module';
 import { EntertainmentPageComponent } from './entertainment-page.component';
-//import { PlaylistitemComponent } from "../../shared/components/items/playlistitem/playlistitem.component";
-// import { SplaylistSlideComponent } from "../../shared/components/section/splaylist-slide/splaylist-slide.component";
-
+import { SharedComponentsModule } from '../../shared/components/shared-components.module';
 @NgModule({
   imports: [
     CommonModule,
-    entertainmentRouter
+    entertainmentRouter,
+    SharedComponentsModule
   ],
   declarations: [
     EntertainmentPageComponent,
-    //PlaylistitemComponent
-    // SplaylistSlideComponent
   ]
 })
 export class EntertainmentPageModule { }

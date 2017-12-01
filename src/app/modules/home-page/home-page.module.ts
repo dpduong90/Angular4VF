@@ -3,22 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { homeRouter } from './home-page-routing.module';
 import { HomePageComponent } from './home-page.component';
-import { VideoitemComponent } from "../../shared/components/items/videoitem/videoitem.component";
-import { PlaylistitemComponent } from "../../shared/components/items/playlistitem/playlistitem.component";
-import { SplaylistComponent } from "../../shared/components/section/splaylist/splaylist.component";
-import { SvideoComponent } from "../../shared/components/section/svideo/svideo.component";
+import { SharedComponentsModule } from '../../shared/components/shared-components.module';
 @NgModule({
   imports: [
     CommonModule,
-    homeRouter
+    homeRouter,
+    SharedComponentsModule
   ],
   declarations: [
     HomePageComponent,
-    VideoitemComponent,
-    PlaylistitemComponent,
-    SplaylistComponent,
-    SvideoComponent
-    
     
   ]
 })

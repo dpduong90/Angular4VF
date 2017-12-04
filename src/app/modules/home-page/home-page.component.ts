@@ -13,15 +13,14 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {
     $('#home-page .bxslider').bxSlider({
-    minSlides: 1,
-    maxSlides: 6,
-    slideWidth: 196,
-    slideMargin: 12,
-    auto: false,
-    speed: 3000,
-    moveSlides: 4,
-    // infiniteLoop: true
-  });
+      minSlides: 1,
+      maxSlides: 6,
+      slideWidth: 196,
+      slideMargin: 12,
+      auto: false,
+      speed: 3000,
+      moveSlides: 4,
+    });
 
   }
 

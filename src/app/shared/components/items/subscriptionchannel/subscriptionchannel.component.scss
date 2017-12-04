@@ -1,0 +1,192 @@
+@import '../../../../../styles.scss';
+
+.subscription-container
+{
+	position: $position-relative;
+	min-height: 25px;	
+	.wrapbox 
+	{
+		top: calc(100% + 10px);
+		z-index: 110;
+		.arrow_box::after, .arrow_box::before 
+		{
+			left: 40px;
+		}
+	}
+	.vf-subscription
+	{
+		display: $display-inlinebl;
+		@include styleText(#ffffff, 11px);
+		// background: #eb4335;
+		background: #929292;
+		height: 24px;
+		width: auto;
+		line-height: 27px;
+		text-align: $align-center;
+		float: $float-left;
+		font-weight: bold;
+		border-radius: 2px 0 0 2px;
+		&.vf-mysubscription
+		{
+			background: #eb4335;	
+		}
+	}
+	.vf-subscription.btnFollowactive
+	{
+		background: #eb4335;
+	}
+	.vf-subscription.active
+	{
+		background: #eb4335;	
+		&:hover 
+		{
+			background: #c61a0c;
+			.vf-activity.vf-activityfl 
+			{
+				span.vf-iconFlclear
+				{
+					display: $display-block;
+					
+				}
+				span.vf-iconFladd
+				{
+					display: $display-none;									
+				}
+				span.vf-iconFldone
+				{
+					display: $display-none !important;									
+				}
+				.disfollow 
+				{
+					display: $display-inlinebl;
+				}
+				.following
+				{
+					display: none !important;
+				}
+			}
+		}
+	}						
+	.textFollow 
+	{
+		@include styleText(#ffffff, 12px);
+		font-weight: bold;
+		position: $position-relative;
+		top:-1px;							
+	}
+	.total-subscription
+	{
+		display: $display-inlinebl;
+		@include styleText(#828282, 12px);
+		height: 24px;
+		line-height: 24px;
+		width: 30px;
+		text-align: center;
+		border: 1px solid #ced1d7;
+		border-left:0;
+		float: $float-left;
+		border-radius: 0 2px 2px 0;
+	}
+
+	.vf-activity
+	{
+		@include styleText(#ffffff, 12px);		
+		overflow: $overflow-hidden;
+		display: $display-inlinebl;
+		height: 24px;
+		line-height: 27px;	
+		position: $position-relative;
+		left: 0;		
+		top: 0;
+		padding-right: 6px;																	
+		span.iconFont
+		{
+			background: transparent;			
+			display: $display-inlinebl;
+			height: 100%;			
+			text-align: center;			
+			float: $float-left;	
+			margin: 1px 2px;
+				margin-right: 6px;
+			.icon-webs 
+			{
+				width: 25px;
+			}
+			.fonticons
+			{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				line-height: 22px;
+				background: #fff;
+				
+				font-size: 16px;
+				color: #969696;
+
+			}
+		}
+		span.vf-iconFldone
+		{			
+			display: $display-none;	
+			.fonticons
+			{
+				color: #eb4335;
+			}														
+		}
+		span.vf-iconFlclear
+		{			
+			display: $display-none;
+			.fonticons
+			{
+				color: #c61a0c;
+			}	
+				
+		}
+		span.vf-iconmyaccount
+		{
+			display: $display-inlinebl;
+			.fonticons
+			{
+				color: #eb4335;
+			}	
+		}
+		span.vf-iconFladd
+		{		
+			display: $display-inlinebl;			
+		}
+
+		.following
+		{
+			display: $display-none;
+		}
+		.disfollow 
+		{
+			display: $display-none;
+		}
+
+		.myfollow
+		{
+			display: $display-inlinebl;
+		}
+
+	}	
+	.vf-mysubscription 
+	{
+		pointer-events: none;
+		.following 
+		{
+			display: $display-inlinebl ;
+		}
+	}					
+}	
+
+@-moz-document url-prefix() {
+	.subscription-container .vf-activity span.iconFont .fonticons
+	{
+		>i 
+		{
+			position: relative;
+			top:-1px;
+		}
+	}
+}

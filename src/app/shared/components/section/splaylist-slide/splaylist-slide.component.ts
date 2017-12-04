@@ -13,6 +13,7 @@ export class SplaylistSlideComponent implements OnInit {
 
   ngOnInit() {
     
+    
   }
 
 }

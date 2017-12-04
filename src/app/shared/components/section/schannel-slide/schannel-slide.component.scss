@@ -1,4 +1,4 @@
-.listvideos 
+.vf-list-channel 
 {
     ::ng-deep
     {
@@ -9,7 +9,7 @@
             {
                 left: -6px;
                 width: calc(100% + 6px ) !important;
-                .videoslider
+                .channelslider
                 {
                     overflow: initial;
                     max-height: 342px;
@@ -22,7 +22,7 @@
             }
             .bx-controls-direction > a 
             {               
-                top: 52px;
+                top: 100px;
                 &.bx-prev
                 {
                     left: -24px;
@@ -30,7 +30,7 @@
                 }
                  &.bx-next
                 {
-                    right: -22px;
+                    right: -27px;
                     background-position: 14px -425px ;
                    
                 }
@@ -40,12 +40,19 @@
         
     }
 
+    .channelslider
+    {
+        >li 
+        {
+            float: left;
+            margin: 0 6px;
+        }
+    }
     ::ng-deep 
     {
-        .video 
+        .subscription-container
         {
-            float: none;
-            margin: 0;
+            display: inline-block;
         }
     }
 }

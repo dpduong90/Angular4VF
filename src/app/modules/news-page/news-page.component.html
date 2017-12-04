@@ -1,3 +1,60 @@
-<p>
-  news-page works!
-</p>
+<div class="internalPage vf-newspage">    
+  <div class="container">
+      <app-sbanner-slide></app-sbanner-slide>
+
+      <div class="sectioncontent ">
+          <header class="menuSection">
+              <h2 class="title">
+                <a title="Video mới tạo" href="#">Video Mới Thêm Vào</a>
+              </h2>
+             				
+            </header>
+
+            <app-svideo></app-svideo>
+      </div>
+
+      <div class="containersection ">
+          <header class="menuSection">
+              <h2 class="title">
+                <a title="Video mới tạo" href="#">Playlist Mới Tạo</a>
+              </h2>
+             				
+            </header>
+
+            <app-splaylist-slide></app-splaylist-slide>
+      </div>
+
+      <div class="section containersection ">
+          <header class="menuSection">
+              <h2 class="title">
+                <a title="Video mới tạo" href="#">KÊNH ĐỀ CỬ</a>
+              </h2>
+              						
+            </header>           
+
+            <app-schannel-slide></app-schannel-slide>
+      </div>
+
+      <div class="section containersection">				
+          <div class="vf-channel-shortinfo">
+            <div class="vf-avatarandtitle">
+              <a href="#" title="Cặp đôi hài hước">
+                <span class="small-avatar" style="background-image: url(../assets/images/smallavatar.jpg)"></span>
+                <h2 class="title" title="Cặp đôi hài hước">
+                  Cặp đôi hài hước
+                  <span class="vf-confirm" title="Đã xác nhận">
+                    <i class="fa fa-check-square" aria-hidden="true"></i>
+                    </span>	
+                </h2>
+              </a>
+              <div class="followchannel">
+                <app-subscriptionchannel></app-subscriptionchannel>
+              </div>	<!-- followchannel --> 
+            </div>
+  
+          </div>	
+
+          <app-svideo-slide></app-svideo-slide>
+
+  </div>
+</div>      

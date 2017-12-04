@@ -12,6 +12,10 @@
 		}
 		
 	}
+	.section 
+	{
+		margin-bottom: 30px;
+	}
 	header.menuSection .title, header.menuSection .title
 	{
 	  font-size: 16px;
@@ -136,40 +140,32 @@
 			font-weight: normal;
 		}
 	}
-	.vf-communitynewPlaylist
+
+	.wrap-container
 	{
 		margin-bottom: 20px;
-		header.menuSection .title
-		{
-			margin-bottom: 0;
-		}
 	}
-	.vf-communitynewvideo
+	.community-section
 	{
-		.slidesshow
+		margin-bottom: 20px;
+		.menuSection
 		{
-			overflow: hidden;
-			max-height: 170px;
-			> li 
+			.title 
 			{
-				float: left;
-				margin: 0 6px;
-			}
-		}	
-		.bx-wrapper
-		{
-			.slidesshow
-			{
-				overflow: initial;
-				max-height: auto;
+				a  
+				{
+					font-size: 13px;
+
+					span 
+					{
+						font-size: 18px;
+					}
+				}
 			}
 		}
 
-		header.menuSection .title
-		{
-			margin-bottom: 0;
-		}
 	}
+	
 	.categorySection
 	{
 		overflow: $overflow-hidden;

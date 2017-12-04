@@ -1,4 +1,4 @@
-.category-slider
+.banner-slider
 {
     width: 100%;
     >li 
@@ -44,10 +44,12 @@
                 &.bx-prev
                 {
                     left: 14px;
+                    background-position: -7px -1576px;
                 }
                 &.bx-next 
                 {
                     right: 18px;
+                    background-position: -6px -1650px;
                 }
             }
         

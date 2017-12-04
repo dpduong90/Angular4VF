@@ -12,7 +12,7 @@ export class SbannerSlideComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $('.category-slider').bxSlider({  
+    $('.banner-slider').bxSlider({  
       speed: 800, 
       mode: 'fade',
       auto:true,  

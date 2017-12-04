@@ -9,11 +9,22 @@ import { SVideoChannelSlideComponent,
   StopSlideComponent,
   SvideoComponent,
   SvideoSlideComponent,
-  SbannerSlideComponent
+  SbannerSlideComponent,  
+  SchannelSlideComponent
   
  } from './section/index';
-  import { PlaylistitemComponent, VideoitemComponent, GenreitemComponent, PlaylistitemhomeComponent} from './items/index';
-// import { SbannerSlideComponent } from './section/sbanner-slide/sbanner-slide.component';
+
+  import { PlaylistitemComponent, 
+    VideoitemComponent, 
+    GenreitemComponent, 
+    PlaylistitemhomeComponent, 
+    SubscriptionchannelComponent,
+    ChannelitemComponent
+  } from './items/index';
+
+
+
+
 
 @NgModule({
   imports: [
@@ -31,7 +42,11 @@ import { SVideoChannelSlideComponent,
     StopSlideComponent,
     SvideoComponent,
     SvideoSlideComponent,
-    SbannerSlideComponent
+    SbannerSlideComponent,
+    ChannelitemComponent,
+    SubscriptionchannelComponent,    
+    SchannelSlideComponent
+    
    ],
   exports: [ PlaylistitemComponent, 
     VideoitemComponent, 
@@ -46,7 +61,10 @@ import { SVideoChannelSlideComponent,
     SvideoComponent,
     SvideoSlideComponent,
     SbannerSlideComponent,
-    CommonModule 
+    CommonModule ,
+    SubscriptionchannelComponent,
+    ChannelitemComponent,
+    SchannelSlideComponent
   ]
 })
 export class SharedComponentsModule { }

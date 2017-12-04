@@ -10,6 +10,7 @@ export class SchannelComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  
   }
 
 }

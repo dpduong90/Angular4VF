@@ -1,271 +1,40 @@
-
-
-
-@import '../../../styles.scss';
-
-.genre-items
+.wrap-section 
 {
-	width: 404px;
-	float: left;
-	margin: 0 6px;
-	margin-bottom: 12px;
-	// padding-bottom: 12px;
-	// border-bottom: 1px solid #cecece;
-	background: #ffffff;
-	.wrap-thumb
-	{
-		width: 100%;		
-		.thumbnail 
+	margin-top: 20px;
+	.menuSection
+	{		
+		font-size: 18px;
+		#tab_PlaylistUpdated
 		{
-			background-size: cover;
-			background-position: 50% 50%;
-			//size: 80 / 45
-			width: 100%;
-			height: calc((404px *45 ) /80);
-			overflow: hidden;
-			display: block;
+			color:#000;
+			display: inline-block;
+			font-weight: bold;
+		}
+		#tab_PlaylistAdded
+		{
+			color: #999;
+			display: inline-block;
+		}
+		
+	}
+}
+
+
+.wrapcontent
+{
+	overflow: hidden;
+	app-genreitem
+	{
+		float: left;
+		margin: 0 6px;
+		margin-bottom: 12px;
+		&:nth-child(3n)
+		{
+			margin-right: 0;
+		}
+		&:nth-child(3n + 1)
+		{
+			margin-left: 0;
 		}
 	}
-	.wrap-introgenre
-	{
-		border: 1px solid #ededed;
-		border-top: none;
-		padding: 10px 20px;
-		.wrap-title
-		{
-			border-bottom: 1px solid #ededed;
-			padding: 10px 0;
-			.title 
-			{				
-				text-align: center;
-				font-weight: normal;
-				text-overflow: ellipsis;
-			    overflow: hidden;
-			    word-wrap: break-word;
-			    max-height: 32px;
-				a 
-				{
-					@include styleText(#969696, 27px);
-					text-align: center;
-				    text-overflow: ellipsis;
-				    overflow: hidden;
-				    max-height: 32px;
-				    word-wrap: break-word;
-				    white-space: nowrap;
-				    display: block;				   
-					text-transform: capitalize;
-					&:hover 
-					{
-						text-decoration: none;
-						color: #eb4335;
-					}
-				}
-			}
-		}
-		.vf-mainofgenres
-		{
-			padding: 10px 10px 0;
-			.wrap 
-			{
-				text-align: center;
-				height: 100px;
-				overflow: hidden;
-				margin-bottom: 10px;
-				a 
-				{
-					@include styleText(#527afa, 14px);
-					display: inline-block;
-					margin:5px ;
-					&:hover 
-					{
-						text-decoration: underline;						
-					}
-				}
-			}
-			// .vf-viewplaylist
-			// {
-			// 	a 
-			// 	{
-			// 		@include styleText(#646464, 14px);
-			// 		display: block;
-			// 		height: 40px;
-			// 		line-height: 40px;
-			// 		text-align: center;
-			// 		background: #f1f3f7;
-			// 		border-radius: 3px;
-			// 		-webkit-transition: background 0.3s;
-			// 		-moz-transition: background 0.3s;
-			// 		-ms-transition: background 0.3s;
-			// 		-o-transition: background 0.3s;
-			// 		transition: background 0.3s;
-
-			// 		&:hover 
-			// 		{
-			// 			background: #eb4335;
-			// 			color: #fff;
-			// 			text-decoration: none;
-			// 		}
-			// 	}
-				
-			// }
-		}
-
-	}
-	
-}
-.vf-genrespage
-{	
-	header.menuSection 
-	{
-		position: relative;
-		.title
-		{
-			font-size: 18px;
-			color:#323232;
-			text-transform: none;
-			width: 50%;
-			a 
-			{
-				font-size: 18px;
-				text-transform: none;
-			}
-			span 
-			{
-				font-weight: normal;
-				font-size: 14px;
-				color: #969696;
-			}
-			.medium-txt 
-			{
-				color:#323232;
-			}
-		}		
-		.wrap-viewall
-		{
-			position: absolute;
-			right: 30px;
-			top: 2px;
-			&.absolutess
-			{
-				right: 0;
-				top: 0;
-			}
-			a
-			{
-				display: inline-block;
-				&.showall
-				{
-					@include styleText(#828282,12px);
-					&:hover 
-					{
-						color: #527afa;
-					}
-				}
-				&.hide 
-				{
-					position: relative;
-					top: 6px;
-				}
-			}
-		}
-	}
-	.wrap-topsidebar
-	{
-		padding-top: 0;
-	}
-	.wrapcontainer
-	{
-		// background: -webkit-linear-gradient(rgba(204, 204, 204, 0.5), #f5f5f5 3%);
-		// background: -moz-linear-gradient(rgba(204, 204, 204, 0.5), #f5f5f5 3%);
-		// background: -ms-linear-gradient(rgba(204, 204, 204, 0.5), #f5f5f5 3%);
-		// background: -o-linear-gradient(rgba(204, 204, 204, 0.5), #f5f5f5 3%);
-		// background: linear-gradient(rgba(204, 204, 204, 0.5), #f5f5f5 3%);
-
-		// border-top: 1px solid rgba(204, 204, 204, 0.5);
-		padding: 20px 0;
-	}
-	.wrapcontent
-	{
-		overflow: hidden;
-	}
-
-	.vf-playlist
-	{
-		margin-bottom: 20px;
-		padding-bottom: 20px;
-		border-bottom: 1px solid #dcdcdc;
-		.hotPlaylistvideo.slides-section ul li .video
-		{
-			background: none;
-			border:1px solid #ededed;
-			height: 340px;
-			.meta .title a
-			{
-				color: #1e1e1e;
-				font-size: 15px;
-				text-overflow: inherit;
-			    overflow: hidden;
-			    white-space: normal;
-			}
-			.uploader
-			{
-				padding: 0 10px;
-				margin-bottom: 10px;
-				a
-				{
-					@include styleText(#828282, 11px);
-					text-transform: uppercase;	
-					&:hover 
-					{
-						color: #527afa;
-						text-decoration: none;
-					}				
-				    
-				}
-			}
-			
-			.vf-followplbtn
-			{
-				display: none;
-			}
-			&:hover 
-			{
-				.vf-followplbtn
-				{
-					display: block;					
-				}
-			}
-			.desc-intro
-			{
-				max-height: 33px;
-				* 
-				{
-					@include styleText(#828282, 13px);
-				}
-			}
-			.desc-intro + ul
-			{
-				li 
-				{
-					padding-right: 0;
-				}
-				
-				
-			}
-		} 
-	}
-}
-
-// anh Phúc Phạm
-.vfBold{
-    font-weight:bold;
-}
-.vfGray{
-    color:#999;
-}
-.vfHide{
-    display:none;
-}
-.vfTabPlaylistHomeMusic{
-    display:inline-block;font-size:18px;cursor:pointer;
 }

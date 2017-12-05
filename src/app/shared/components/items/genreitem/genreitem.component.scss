@@ -1,0 +1,82 @@
+@import '../../../../../styles.scss';
+
+.genre-items
+{
+	width: 404px;	
+	background: #ffffff;
+	.wrap-thumb
+	{
+		width: 100%;		
+		.thumbnail 
+		{
+			background-size: cover;
+			background-position: 50% 50%;
+			//size: 80 / 45
+			width: 100%;
+			height: calc((404px *45 ) /80);
+			overflow: hidden;
+			display: block;
+		}
+	}
+	.wrap-introgenre
+	{
+		border: 1px solid #ededed;
+		border-top: none;
+		padding: 10px 20px;
+		.wrap-title
+		{
+			border-bottom: 1px solid #ededed;
+			padding: 10px 0;
+			.title 
+			{				
+				text-align: center;
+				font-weight: normal;
+				text-overflow: ellipsis;
+			    overflow: hidden;
+			    word-wrap: break-word;
+			    max-height: 32px;
+				a 
+				{
+					@include styleText(#969696, 27px);
+					text-align: center;
+				    text-overflow: ellipsis;
+				    overflow: hidden;
+				    max-height: 32px;
+				    word-wrap: break-word;
+				    white-space: nowrap;
+				    display: block;				   
+					text-transform: capitalize;
+					&:hover 
+					{
+						text-decoration: none;
+						color: #eb4335;
+					}
+				}
+			}
+		}
+		.vf-mainofgenres
+		{
+			padding: 10px 10px 0;
+			.wrap 
+			{
+				text-align: center;
+				height: 100px;
+				overflow: hidden;
+				margin-bottom: 10px;
+				a 
+				{
+					@include styleText(#527afa, 14px);
+					display: inline-block;
+					margin:5px ;
+					&:hover 
+					{
+						text-decoration: underline;						
+					}
+				}
+			}
+			
+		}
+
+	}
+	
+}

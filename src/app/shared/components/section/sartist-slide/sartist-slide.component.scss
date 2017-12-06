@@ -1,0 +1,58 @@
+.listartist
+{
+    ::ng-deep
+    {
+        .bx-wrapper
+        {           
+            max-width: calc(100% + 6px ) !important;
+            .bx-viewport
+            {
+                left: -6px;
+                width: calc(100% + 6px ) !important;
+                .artistslider
+                {
+                    overflow: initial;
+                    max-height: 342px;
+                    li  
+                    {
+                        margin: 0 6px;
+
+                    }
+                }
+            }
+            .bx-controls-direction > a 
+            {               
+                top: 100px;
+                &.bx-prev
+                {
+                    left: -24px;
+                    background-position: 0 -467px  ;
+                }
+                 &.bx-next
+                {
+                    right: -27px;
+                    background-position: 14px -425px ;
+                   
+                }
+            }
+            
+        }	
+        
+    }
+
+    .artistslider
+    {
+        >li 
+        {
+            float: left;
+            margin: 0 6px;
+        }
+    }
+    ::ng-deep 
+    {
+        .subscription-container
+        {
+            display: inline-block;
+        }
+    }
+}

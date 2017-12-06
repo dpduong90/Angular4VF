@@ -21,6 +21,8 @@ import { SVideoChannelSlideComponent,
     SubscriptionchannelComponent,
     ChannelitemComponent
   } from './items/index';
+import { ArtistitemComponent } from './items/artistitem/artistitem.component';
+import { SartistSlideComponent } from './section/sartist-slide/sartist-slide.component';
 
 
 
@@ -45,7 +47,7 @@ import { SVideoChannelSlideComponent,
     SbannerSlideComponent,
     ChannelitemComponent,
     SubscriptionchannelComponent,    
-    SchannelSlideComponent
+    SchannelSlideComponent, ArtistitemComponent, SartistSlideComponent
     
    ],
   exports: [ PlaylistitemComponent, 

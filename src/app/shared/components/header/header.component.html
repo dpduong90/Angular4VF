@@ -55,13 +55,15 @@
     <div class="container">
       <nav id="navigation" class="menu-main-menu-container">
         <ul id="menu-main-menu" class="channels wrapper">
-          <li routerLink="" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" title="Trang chủ">
-            <a  >Trang chủ</a>
+          <li  [routerLinkActive]="['active']" [routerLinkActiveOptions]="{ exact: true }" title="Trang chủ">
+            <a routerLink="" title="Trang chủ">Trang chủ</a>
           </li>
 
-          <li routerLink="am-nhac" [routerLinkActive]="['active']"><a title="Âm nhạc">Âm nhạc </a></li>
-          <li routerLink="giai-tri" [routerLinkActive]="['active']" title="Giải trí">
-            <a>Giải trí </a>
+          <li  [routerLinkActive]="['active']">
+            <a title="Âm nhạc" routerLink="am-nhac" >Âm nhạc </a>
+          </li>
+          <li  [routerLinkActive]="['active']" title="Giải trí">
+            <a title="Giải trí" routerLink="giai-tri" >Giải trí </a>
             <ul>
               <li><a href="#">Hài</a> </li>
               <li><a href="#">TV Show</a> </li>
@@ -69,10 +71,19 @@
               <li><a href="#">Sitcom</a> </li>
             </ul>
           </li>
-          <li routerLink="kien-thuc" [routerLinkActive]="['active']" title="Kiến thức"><a >Kiến thức </a></li>
-          <li routerLink="tin-tuc" [routerLinkActive]="['active']" atitle="Tin tức"><a >Tin tức </a></li>
-          <li routerLink="cong-dong" [routerLinkActive]="['active']" title="Cộng đồng"><a >Cộng đồng </a></li>
-          <li routerLink="video" [routerLinkActive]="['active']" title="Âm nhạc"><a >Video </a></li>
+          <li  [routerLinkActive]="['active']" title="Kiến thức">
+            <a routerLink="kien-thuc" title="Kiến thức"  >Kiến thức </a>
+          </li>
+
+          <li  [routerLinkActive]="['active']" title="Tin tức">
+            <a  routerLink="tin-tuc"  title="Tin tức" >Tin tức </a>
+          </li>
+          <li  [routerLinkActive]="['active']" title="Cộng đồng">
+            <a  title="Cộng đồng" routerLink="cong-dong" href="cong-dong">Cộng đồng </a>
+          </li>
+          <li  [routerLinkActive]="['active']" title="Âm nhạc">
+            <a title="Âm nhạc" routerLink="video" >Video </a>
+          </li>
         </ul>
       </nav>
 

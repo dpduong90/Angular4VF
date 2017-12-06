@@ -1,0 +1,100 @@
+@import '../../../../../styles.scss';
+
+.artist-item
+{
+	width: 298px;
+	height: calc(298px + 50px) ;
+	background: #ffffff;
+	border:1px solid #ededed;
+	float: left;
+	margin: 6px ;
+	position: relative;
+	
+	.thumbnail 
+	{
+		background-size: cover;
+		background-position: 50% 50%;
+		width: 100%;
+		height: 298px;
+		display: block;
+		position: relative;		
+		a 
+		{
+			display: block;
+			width: 100%;
+			height: 100%;
+			background-color: transparent;
+			-webkit-transition: background 0.3s;
+			-moz-transition: background 0.3s;
+			-ms-transition: background 0.3s;
+			-o-transition: background 0.3s;
+			transition: background 0.3s;
+
+			&:hover 
+			{
+				background-color: rgba(0, 0, 0, 0.4);
+			}
+		}		
+		
+	}
+	.wrap-thumb
+	{
+		border-bottom: 1px solid #ededed;
+		.vf-followplbtn
+		{
+			opacity: 0;
+			-webkit-transition: opacity 0.3s;
+			-moz-transition: opacity 0.3s;
+			-ms-transition: opacity 0.3s;
+			-o-transition: opacity 0.3s;
+			transition: opacity 0.3s;
+
+		}
+		&:hover 
+		{
+			.vf-followplbtn
+			{
+				opacity: 1;
+			}
+		}
+	}
+	.wrap-title
+	{
+		padding: 10px;
+		.title 
+		{
+			@include styleText(#333333, 16px);
+			font-weight: 600;						
+			a 
+			{
+				@include styleText(#333333, 16px);
+				white-space: nowrap;
+				overflow: hidden;
+    			text-overflow: ellipsis;
+    			display: block; 
+
+				&:hover 
+				{
+					color: #eb4335;
+					text-decoration: none;
+				}
+			}
+		}
+		.totalAlbums
+		{
+			@include styleText(#666666, 14px);	
+			 					
+			&:hover 
+			{
+				text-decoration: none;
+			}
+		}
+	}
+	&:hover 
+	{
+		.wrap-title .title a 
+		{
+			color: #eb4335;
+		}
+	}
+}

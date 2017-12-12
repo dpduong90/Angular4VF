@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Routes, RouterModule } from '@angular/router';
 
 import { SVideoChannelSlideComponent,
   SchannelComponent,
@@ -10,27 +11,23 @@ import { SVideoChannelSlideComponent,
   SvideoComponent,
   SvideoSlideComponent,
   SbannerSlideComponent,  
-  SchannelSlideComponent
+  SchannelSlideComponent,
+  SartistSlideComponent
   
  } from './section/index';
 
   import { PlaylistitemComponent, 
     VideoitemComponent, 
     GenreitemComponent, 
+    ArtistitemComponent,
     PlaylistitemhomeComponent, 
     SubscriptionchannelComponent,
     ChannelitemComponent
   } from './items/index';
-import { ArtistitemComponent } from './items/artistitem/artistitem.component';
-import { SartistSlideComponent } from './section/sartist-slide/sartist-slide.component';
-
-
-
-
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, RouterModule
   ],
   declarations: [ PlaylistitemComponent, 
     VideoitemComponent, 
@@ -47,7 +44,9 @@ import { SartistSlideComponent } from './section/sartist-slide/sartist-slide.com
     SbannerSlideComponent,
     ChannelitemComponent,
     SubscriptionchannelComponent,    
-    SchannelSlideComponent, ArtistitemComponent, SartistSlideComponent
+    SchannelSlideComponent,
+    ArtistitemComponent, 
+    SartistSlideComponent
     
    ],
   exports: [ PlaylistitemComponent, 
@@ -66,7 +65,9 @@ import { SartistSlideComponent } from './section/sartist-slide/sartist-slide.com
     CommonModule ,
     SubscriptionchannelComponent,
     ChannelitemComponent,
-    SchannelSlideComponent
+    SchannelSlideComponent,
+    ArtistitemComponent ,
+    SartistSlideComponent
   ]
 })
 export class SharedComponentsModule { }

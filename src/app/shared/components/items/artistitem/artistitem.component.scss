@@ -2,44 +2,41 @@
 
 .artist-item
 {
-	width: 298px;
-	height: calc(298px + 50px) ;
-	background: #ffffff;
-	border:1px solid #ededed;
-	float: left;
-	margin: 6px ;
+	width: 196px;
+	height: 256px;
+	border:1px solid #ededed;	
 	position: relative;
 	
-	.thumbnail 
-	{
-		background-size: cover;
-		background-position: 50% 50%;
-		width: 100%;
-		height: 298px;
-		display: block;
-		position: relative;		
-		a 
-		{
-			display: block;
-			width: 100%;
-			height: 100%;
-			background-color: transparent;
-			-webkit-transition: background 0.3s;
-			-moz-transition: background 0.3s;
-			-ms-transition: background 0.3s;
-			-o-transition: background 0.3s;
-			transition: background 0.3s;
-
-			&:hover 
-			{
-				background-color: rgba(0, 0, 0, 0.4);
-			}
-		}		
-		
-	}
 	.wrap-thumb
 	{
 		border-bottom: 1px solid #ededed;
+		.thumbnail 
+		{
+			background-size: cover;
+			background-position: 50% 50%;
+			width: 100%;
+			height: 196px;
+			display: block;
+			position: relative;		
+			a 
+			{
+				display: block;
+				width: 100%;
+				height: 100%;
+				background-color: transparent;
+				-webkit-transition: background 0.3s;
+				-moz-transition: background 0.3s;
+				-ms-transition: background 0.3s;
+				-o-transition: background 0.3s;
+				transition: background 0.3s;
+	
+				&:hover 
+				{
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+			}		
+			
+		}
 		.vf-followplbtn
 		{
 			opacity: 0;
@@ -63,11 +60,11 @@
 		padding: 10px;
 		.title 
 		{
-			@include styleText(#333333, 16px);
+			@include styleText(#1e1e1e, 15px);
 			font-weight: 600;						
 			a 
 			{
-				@include styleText(#333333, 16px);
+				@include styleText(#1e1e1e, 15px);
 				white-space: nowrap;
 				overflow: hidden;
     			text-overflow: ellipsis;
@@ -78,16 +75,36 @@
 					color: #eb4335;
 					text-decoration: none;
 				}
+				.art-birthday
+				{
+					@include styleText(#ffffff, 0);
+					font-style: italic;
+					text-align: center;
+					display: block;
+					font-weight: normal;
+					display: none;
+					-webkit-transition: font-size 0.2s;
+					-moz-transition: font-size 0.2s;
+					-ms-transition: font-size 0.2s;
+					-o-transition: font-size 0.2s;
+					transition: font-size 0.2s;
+
+				}
 			}
 		}
 		.totalAlbums
 		{
 			@include styleText(#666666, 14px);	
-			 					
+			display: none; 					
 			&:hover 
 			{
 				text-decoration: none;
 			}
+		}
+
+		.rating 
+		{
+			margin-top: 5px;
 		}
 	}
 	&:hover 

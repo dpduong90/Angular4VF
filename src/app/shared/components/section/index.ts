@@ -1,5 +1,6 @@
 export * from './schannel/schannel.component';
 export * from './sgenre/sgenre.component';
+export * from './sartist-slide/sartist-slide.component';
 export * from './splaylist/splaylist.component';
 export * from './splaylist-slide/splaylist-slide.component';
 export * from './stop-slide/stop-slide.component';

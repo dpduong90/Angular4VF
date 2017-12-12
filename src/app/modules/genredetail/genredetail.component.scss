@@ -1,0 +1,165 @@
+@import '../../../styles.scss';
+
+header.menuSection 
+{
+    position: relative;
+    .title
+    {
+        font-size: 18px;
+        color:#323232;
+        text-transform: capitalize;
+        width: 50%;
+        a 
+        {
+            color:#323232;
+            font-size: 18px;
+            text-transform: capitalize;
+        }
+        span 
+        {
+            font-weight: normal;
+            font-size: 14px;
+            color: #969696;
+        }
+        .medium-txt 
+        {
+            color:#323232;
+        }
+    }		
+    .wrap-viewall
+    {
+        position: absolute;
+        right: 30px;
+        top: 2px;
+        &.absolutess
+        {
+            right: 0;
+            top: 0;
+        }
+        a
+        {
+            display: inline-block;
+            &.showall
+            {
+                @include styleText(#828282,12px);
+                &:hover 
+                {
+                    color: #527afa;
+                }
+            }
+            &.hide 
+            {
+                position: relative;
+                top: 6px;
+            }
+        }
+    }
+}
+.wrap-dayofartist
+{
+    header.menuSection .title
+    {
+        color: #eb4335;        
+    }
+    ::ng-deep
+    {
+        .artist-item
+        {   
+            height: 196px;        
+            .wrap-title 
+            {
+                position: absolute;
+                bottom: 0px;
+                left: 0;
+                width: 100%;
+                padding: 10px 5px;
+
+                background: -webkit-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                background: -moz-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                background: -ms-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                background: -o-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                background: linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+
+
+                .title 
+                {
+                    text-align: center !important;
+                    display: block;
+                    color: #ffffff !important;
+                    a
+                    {
+                        color: #ffffff!important;
+                        font-size: !important;
+                        text-align: center!important;
+                        text-shadow:0 1px 5px rgba(0,0,0,0.25);
+                        &:hover 
+                        {
+                            text-decoration: none;
+                        }
+                    } 
+                }
+                .art-birthday
+                {
+                    display: none;
+                }	
+                
+                .rating 
+                {
+                    display: none;
+                }
+            }
+            &:hover 
+            {
+                .thumbnail a
+                {
+                    background: rgba(0,0,0,0.4);
+                }
+                .vf-followplbtn
+                {
+                    opacity: 1;
+                }
+                .wrap-title .title  .art-birthday
+                {
+                    display: block !important;
+                    font-size: 18px !important;
+                }
+
+            }
+        }
+    }
+}
+
+.box-loading
+{
+	width: 100%;	
+	text-align: center;
+	display: table;
+	margin-bottom: 30px;
+	&.for-artists
+	{
+		height: 329px;
+	}
+	&.for-birthdayartists
+	{
+		height: 275px;
+	}
+	&.for-playlists
+	{
+		height: 415px;
+	}
+	&.for-trackthreeline
+	{
+		height: 418px;
+	}
+
+	&.for-trackfourline
+	{
+		height: 540px;
+	}
+	.loadingdata
+	{
+		text-align: center;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}

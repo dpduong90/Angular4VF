@@ -5,20 +5,25 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component';
-import { AppRoutingModule } from './app-routing.module';
+
+
 import { SharedComponentsModule } from './shared/components/shared-components.module';
+import { AppRoutingModule } from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent
+    
+    
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
-    AppRoutingModule,
+    HttpClientModule,    
     SharedComponentsModule,
+    AppRoutingModule
 
   ],
   providers: [AppComponent],

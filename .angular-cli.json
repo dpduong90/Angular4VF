@@ -27,7 +27,8 @@
         "./assets/js/jquery.bxslider.min.js",
         "./assets/js/moment-with-locales.js",
         "./assets/js/main.js",
-        "./assets/js/vfplayer.js"
+        "./assets/js/vfplayer.js",
+        "./assets/js/jquery.mCustomScrollbar.concat.min.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

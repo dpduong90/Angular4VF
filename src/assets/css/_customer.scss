@@ -302,114 +302,114 @@ body
 	
 }
 
-.video
-{	
-    float: $float-left;
-    overflow: $overflow-hidden;
-    position: $position-relative;
-    width: 196px;
-    height: 170px;
-    margin: 0 5px;
-    margin-bottom: 10px;    
-    .thumbnail 
-    {
-    	background-position: 50% 50%;
-	    background-repeat: no-repeat;
-	    background-size: cover;
-	    display: $display-block;
-	    position: $position-relative;
-	    height: 110px;
-    	width: 100%;
-    	a 
-    	{
-    		display: $display-block;;
-		    height: 100%;
-		    width: 100%;
-		    img 
-		    {
-		    	display: $display-none;
-		    }
-    	}
-    }
-    .duration
-	{
-		@include infosubvideo(#ebebeb,rgba(0,0,0, 0.75)); 
-		right: 5px;   	
-	}
-	.videoTotal
-	{
-		@include infosubvideo(#ffffff,#1769b5); 
-		right: 5px;
-	}
-	li.videoTotal
-	{
-		padding: 2px 0;
-		margin-left: 0 !important;
-	}
-    .meta 
-    {
-    	// overflow: $overflow-hidden;	
-    	padding-top: 5px;
-    	.title
-    	{
-    		@include styleText(#303234, 13px);
-    		overflow: $overflow-hidden;
-    		max-height: 38px;    		
-    		font-weight: bold;    		
-    		a 
-    		{
-    			@include styleText(#303234, 13px);
-    			display: $display-inlinebl;
-    			line-height: 19px;    			
-    		}
-    	}
-    	.uploader
-    	{
-    		display: $display-none;
-    		a 
-    		{
-    			@include styleText(#8e8e8e, 12px);
-    			display: $display-inlinebl;    			
-    		}    		
-    	}
-    	ul 
-    	{
-    		li 
-    		{
-    			list-style: none;
-    			display: $display-inlinebl;
-    			padding-right: 4px;
-    			@include styleText(#707378, 11px);
-    			&:last-child 
-    			{
-    				padding-right: 0;
-    			}
-    		}
-    		.watch-count
-    		{
-    			&:after 
-    			{
-    				content: '';
-    				display: $display-inlinebl;
-    				width: 3px;
-    				height: 3px;
-    				background: #d7d7d7;
-    				margin-left: 8px;
-    				position: relative;
-    				bottom: 2px;
-    			}
-    		}
-    	}
-    }
-    .desc-ct
-    {
-    	display: none;
-    	@include styleText(#707378, 13px);
-    	line-height: 20px;
-    	overflow: $overflow-hidden;
+// .video
+// {	
+//     float: $float-left;
+//     overflow: $overflow-hidden;
+//     position: $position-relative;
+//     width: 196px;
+//     height: 170px;
+//     margin: 0 5px;
+//     margin-bottom: 10px;    
+//     .thumbnail 
+//     {
+//     	background-position: 50% 50%;
+// 	    background-repeat: no-repeat;
+// 	    background-size: cover;
+// 	    display: $display-block;
+// 	    position: $position-relative;
+// 	    height: 110px;
+//     	width: 100%;
+//     	a 
+//     	{
+//     		display: $display-block;;
+// 		    height: 100%;
+// 		    width: 100%;
+// 		    img 
+// 		    {
+// 		    	display: $display-none;
+// 		    }
+//     	}
+//     }
+//     .duration
+// 	{
+// 		@include infosubvideo(#ebebeb,rgba(0,0,0, 0.75)); 
+// 		right: 5px;   	
+// 	}
+// 	.videoTotal
+// 	{
+// 		@include infosubvideo(#ffffff,#1769b5); 
+// 		right: 5px;
+// 	}
+// 	li.videoTotal
+// 	{
+// 		padding: 2px 0;
+// 		margin-left: 0 !important;
+// 	}
+//     .meta 
+//     {
+//     	// overflow: $overflow-hidden;	
+//     	padding-top: 5px;
+//     	.title
+//     	{
+//     		@include styleText(#303234, 13px);
+//     		overflow: $overflow-hidden;
+//     		max-height: 38px;    		
+//     		font-weight: bold;    		
+//     		a 
+//     		{
+//     			@include styleText(#303234, 13px);
+//     			display: $display-inlinebl;
+//     			line-height: 19px;    			
+//     		}
+//     	}
+//     	.uploader
+//     	{
+//     		display: $display-none;
+//     		a 
+//     		{
+//     			@include styleText(#8e8e8e, 12px);
+//     			display: $display-inlinebl;    			
+//     		}    		
+//     	}
+//     	ul 
+//     	{
+//     		li 
+//     		{
+//     			list-style: none;
+//     			display: $display-inlinebl;
+//     			padding-right: 4px;
+//     			@include styleText(#707378, 11px);
+//     			&:last-child 
+//     			{
+//     				padding-right: 0;
+//     			}
+//     		}
+//     		.watch-count
+//     		{
+//     			&:after 
+//     			{
+//     				content: '';
+//     				display: $display-inlinebl;
+//     				width: 3px;
+//     				height: 3px;
+//     				background: #d7d7d7;
+//     				margin-left: 8px;
+//     				position: relative;
+//     				bottom: 2px;
+//     			}
+//     		}
+//     	}
+//     }
+//     .desc-ct
+//     {
+//     	display: none;
+//     	@include styleText(#707378, 13px);
+//     	line-height: 20px;
+//     	overflow: $overflow-hidden;
 
-    }
-}
+//     }
+// }
 
 /* list video */
 header.menuSection

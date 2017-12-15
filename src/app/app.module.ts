@@ -11,12 +11,12 @@ import { SharedComponentsModule } from './shared/components/shared-components.mo
 import { AppRoutingModule } from './app-routing.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
-    
+    FooterComponent    
     
   ],
   imports: [

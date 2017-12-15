@@ -12,7 +12,7 @@ export class MusicPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    $(' .playlistslider').bxSlider({
+    $('.playlistslider').bxSlider({
       minSlides: 1,
       maxSlides: 6,
       slideWidth: 196,

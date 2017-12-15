@@ -1,0 +1,85 @@
+@import '../../../../../styles.scss';
+
+.similar-artist
+{
+    width: 237px;
+    height: 135px;
+    // float: left;
+    // margin:0 6px;
+    // margin-bottom: 12px;
+    position: relative;
+   
+    .wrap 
+    {
+        .wrapthumb
+        {
+            background: #212c4d;
+            overflow: hidden;
+            width: 100%;
+            .thumbnail 
+            {
+                display: block;
+                width: 100%;
+                height: 135px;
+                background-size: cover;
+                background-position: 50% 50%;
+                opacity: 0.35;
+                -webkit-filter: grayscale(100%);
+                -moz-filter: grayscale(100%);
+                -ms-filter: grayscale(100%);
+                -o-filter: grayscale(100%);
+                filter: grayscale(100%);               
+
+            }
+        }
+        .name-art
+        {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            height: 50px;
+            width: 100%;
+            margin: auto;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -ms-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+
+            > p 
+            {
+                @include styleText(#ffffff, 13px);
+                font-style: italic;
+                text-align: center;
+                margin-bottom: 5px;
+                
+                a 
+                {
+                    @include styleText(#ffffff, 13px);
+                    font-style: italic;
+                    text-align: center;
+                    display: block;
+                    &:hover 
+                    {
+                        text-decoration: none;
+                    }
+                }
+            }
+            h4 
+            {
+                @include styleText(#ffffff, 18px);
+                font-weight: normal;
+                text-align: center;
+                a 
+                {
+                    @include styleText(#ffffff, 18px);									
+                    &:hover 
+                    {
+                        text-decoration: none;
+                    }
+                }
+            }
+
+        }
+    }
+}

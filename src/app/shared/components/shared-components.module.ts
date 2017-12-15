@@ -12,7 +12,8 @@ import { SVideoChannelSlideComponent,
   SvideoSlideComponent,
   SbannerSlideComponent,  
   SchannelSlideComponent,
-  SartistSlideComponent
+  SartistSlideComponent,
+  StrackvideosComponent
   
  } from './section/index';
 
@@ -22,8 +23,11 @@ import { SVideoChannelSlideComponent,
     ArtistitemComponent,
     PlaylistitemhomeComponent, 
     SubscriptionchannelComponent,
-    ChannelitemComponent
+    ChannelitemComponent,
+    SimilarartistitemComponent
   } from './items/index';
+
+
 
 @NgModule({
   imports: [
@@ -46,7 +50,9 @@ import { SVideoChannelSlideComponent,
     SubscriptionchannelComponent,    
     SchannelSlideComponent,
     ArtistitemComponent, 
-    SartistSlideComponent
+    SartistSlideComponent, 
+    StrackvideosComponent, 
+    SimilarartistitemComponent
     
    ],
   exports: [ PlaylistitemComponent, 
@@ -67,7 +73,9 @@ import { SVideoChannelSlideComponent,
     ChannelitemComponent,
     SchannelSlideComponent,
     ArtistitemComponent ,
-    SartistSlideComponent
+    SartistSlideComponent,
+    StrackvideosComponent,
+    SimilarartistitemComponent
   ]
 })
 export class SharedComponentsModule { }

@@ -5,3 +5,4 @@ export * from './artistitem/artistitem.component';
 export * from './playlistitemhome/playlistitemhome.component';
 export * from './channelitem/channelitem.component';
 export * from './subscriptionchannel/subscriptionchannel.component';
+export * from './similarartistitem/similarartistitem.component';

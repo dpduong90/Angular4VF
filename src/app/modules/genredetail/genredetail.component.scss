@@ -117,7 +117,7 @@ header.menuSection
                     a
                     {
                         color: #ffffff!important;
-                        font-size: !important;
+                        font-size: 14px!important;
                         text-align: center!important;
                         text-shadow:0 1px 5px rgba(0,0,0,0.25);
                         &:hover 
@@ -181,76 +181,22 @@ header.menuSection
                 @include styleText(#000000, 18px);
             }
         }
-        .listvideo
+       
+    }
+    ::ng-deep 
+    {
+        app-videoitem
         {
-            overflow: hidden;
-            .video 
+            float: left;
+            width: calc(50% - 10px);
+            margin-bottom: 12px;
+             &:nth-child(2n) 
             {
-                overflow: hidden;
-                width: calc(50% - 10px );
-                height: 110px;
-                margin:0;
-                margin-bottom: 12px;					
-                float: left;
-                position: relative;
-                padding-right: 100px;
-                &:nth-child(2n) 
-                {
-                    margin-left: 20px;
-                }
-                .thumbnail
-                {
-                    float: left;
-                    margin-right: 10px;
-                    width: 196px;
-                }
-                .meta 
-                {
-                    .title 
-                    {
-                        margin-bottom: 5px;
-                        a
-                        {
-                            font-size: 15px;
-                        }
-                        
-                    }
-                    .uploader
-                    {
-                        display: block;
-                        margin: 6px 0;
-                        a 
-                        {
-                            @include styleText(#828282, 11px);
-                            text-transform: uppercase;
-                        }
-                    }
-                }
-
-
-                .composed-art
-                {
-                    *
-                    {
-                        @include styleText(#666666, 13px);
-                    }
-                    @include styleText(#666666, 13px);
-                    a 
-                    {
-                        color: #6666ff;
-                    }
-                }
-                .wrapPlaynow
-                {
-                    position: absolute;
-                    right: 10px;
-                    top: 0;
-                    bottom: 0;
-                    margin:auto;
-                }
+                margin-left: 20px;
             }
         }
     }
+    
 }
 
 

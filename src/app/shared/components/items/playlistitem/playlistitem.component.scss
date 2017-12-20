@@ -1,4 +1,6 @@
-@import '../../../../../styles.scss';
+// @import '../../../../../styles.scss';
+@import '../../../../../assets/css/partial/_setting.scss';
+
 .playlistitems
 {
 	@include sizeVideo(196px, 327px);			

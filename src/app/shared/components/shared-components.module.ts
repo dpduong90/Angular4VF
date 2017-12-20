@@ -24,8 +24,10 @@ import { SVideoChannelSlideComponent,
     PlaylistitemhomeComponent, 
     SubscriptionchannelComponent,
     ChannelitemComponent,
-    SimilarartistitemComponent
+    SimilarartistitemComponent,
+    BannergenreComponent
   } from './items/index';
+
 
 
 
@@ -52,7 +54,8 @@ import { SVideoChannelSlideComponent,
     ArtistitemComponent, 
     SartistSlideComponent, 
     StrackvideosComponent, 
-    SimilarartistitemComponent
+    SimilarartistitemComponent, 
+    BannergenreComponent
     
    ],
   exports: [ PlaylistitemComponent, 
@@ -75,7 +78,8 @@ import { SVideoChannelSlideComponent,
     ArtistitemComponent ,
     SartistSlideComponent,
     StrackvideosComponent,
-    SimilarartistitemComponent
+    SimilarartistitemComponent,
+    BannergenreComponent
   ]
 })
 export class SharedComponentsModule { }

@@ -1,4 +1,5 @@
-@import '../../../../../styles.scss';
+// @import '../../../../../styles.scss';
+@import '../../../../../assets/css/partial/_setting.scss';
 
 .artist-item
 {
@@ -81,8 +82,7 @@
 					font-style: italic;
 					text-align: center;
 					display: block;
-					font-weight: normal;
-					display: none;
+					font-weight: normal;					
 					-webkit-transition: font-size 0.2s;
 					-moz-transition: font-size 0.2s;
 					-ms-transition: font-size 0.2s;

@@ -15,39 +15,33 @@ export class ArtistdetailComponent implements OnInit {
 
     // show info artist detail
    function showInfArtist()
-   {
-     var wthumb = $('.wrap-thumbitems .thumbitem').width();
-     $('.thumbitem').css('height', wthumb);
-
-     $(window).resize(function(event) {
-       var wthumb = $('.wrap-thumbitems .thumbitem').width();
-       $('.thumbitem').css('height', wthumb);
-     });
+   {     
 
      $('.readmore a').click(function()
-     {						
-       $('.intro-box .sort-desc').toggleClass("full");	
-       return false;
-       
+     {
+        $(this).toggleClass("active");							
+          $('.biography-art .sort-desc').toggleClass("full");														
+
+          return false;
      });
 
-     $('.readmore a').bind('click', function(){
-       if($('.wrap-bannerinner .sort-desc').hasClass("full"))				
-         {
-           $(".wrap-bannerinner .sort-desc").removeClass('unscroll');
-           
-           $(".wrap-bannerinner .sort-desc").mCustomScrollbar({
-             autoHideScrollbar:true,															
-             theme:"rounded"
-           });
-         }
-       else 
-       {
-         $(".wrap-bannerinner .sort-desc").addClass('unscroll');
-         
-       }	
-       
-     });
+     $('.wrap-aboutartist .readmore a').bind('click', function(){
+        if($('.wrap-aboutartist .sort-desc').hasClass("full"))				
+          {
+            $(".wrap-aboutartist .sort-desc").removeClass('unscroll');
+            
+            $(".wrap-aboutartist .sort-desc").mCustomScrollbar({
+              autoHideScrollbar:true,															
+              theme:"rounded"
+            });
+          }
+        else 
+        {
+          $(".wrap-aboutartist .sort-desc").addClass('unscroll');
+          
+        }	
+        
+      });
      
    
    }

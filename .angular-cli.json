@@ -19,8 +19,15 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.scss",
-        "./assets/css/vfplayer.css"
+        "styles.scss",       
+        "./assets/css/vfplayer.css",
+        "./assets/css/font-awesome.min.css",
+        "./assets/css/glyphicons.min.css",
+        "./assets/css/simple-line-icons.css",
+        "./assets/css/jquery.mCustomScrollbar.css",
+        "./assets/css/jquery.bxslider.css"
+        
+
       ],
       "scripts": [
         "./assets/js/jquery-1.12.4.min.js",
@@ -28,7 +35,8 @@
         "./assets/js/moment-with-locales.js",
         "./assets/js/main.js",
         "./assets/js/vfplayer.js",
-        "./assets/js/jquery.mCustomScrollbar.concat.min.js"
+        "./assets/js/jquery.mCustomScrollbar.concat.min.js",
+        "./assets/js/selectoption.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

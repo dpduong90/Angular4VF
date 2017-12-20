@@ -34,46 +34,7 @@ export class GenredetailComponent implements OnInit {
       infiniteLoop: true
     });
 
-  // show info genre detail
-   function showInfoGenre()
-    {
-      var wthumb = $('.wrap-thumbitems .thumbitem').width();
-      $('.thumbitem').css('height', wthumb);
-
-      $(window).resize(function(event) {
-        var wthumb = $('.wrap-thumbitems .thumbitem').width();
-        $('.thumbitem').css('height', wthumb);
-      });
-
-      $('.readmore a').click(function()
-      {						
-        $('.intro-box .sort-desc').toggleClass("full");	
-        return false;
-        
-      });
-
-      $('.readmore a').bind('click', function(){
-        if($('.wrap-bannerinner .sort-desc').hasClass("full"))				
-          {
-            $(".wrap-bannerinner .sort-desc").removeClass('unscroll');
-            
-            $(".wrap-bannerinner .sort-desc").mCustomScrollbar({
-              autoHideScrollbar:true,															
-              theme:"rounded"
-            });
-          }
-        else 
-        {
-          $(".wrap-bannerinner .sort-desc").addClass('unscroll');
-          
-        }	
-        
-      });
-      
-    
-    }
-
-    showInfoGenre();
+  
 
   }
 

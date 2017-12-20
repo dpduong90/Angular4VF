@@ -1,236 +1,239 @@
-@import '../../../styles.scss';
+// @import '../../../styles.scss';
+@import '../../../assets/css/partial/_setting.scss';
 
-header.menuSection 
+.genredetailpage
 {
-   
-    .title
+    header.menuSection 
     {
-        font-size: 18px;
-        color:#323232;
-        text-transform: capitalize;
-        width: 50%;
-        a 
+       
+        .title
         {
-            color:#323232;
             font-size: 18px;
-            text-transform: capitalize;
-        }
-        span 
-        {
-            font-weight: normal;
-            font-size: 14px;
-            color: #969696;
-        }
-        .medium-txt 
-        {
             color:#323232;
-        }
-    }		
-    .wrap-viewall
-    {
-        position: absolute;
-        right: 30px;
-        top: 2px;
-        &.absolutess
-        {
-            right: 0;
-            top: 0;
-        }
-        a
-        {
-            display: inline-block;
-            &.showall
+            text-transform: capitalize;
+            width: 50%;
+            a 
             {
-                @include styleText(#828282,12px);
-                &:hover 
+                color:#323232;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+            span 
+            {
+                font-weight: normal;
+                font-size: 14px;
+                color: #969696;
+            }
+            .medium-txt 
+            {
+                color:#323232;
+            }
+        }		
+        .wrap-viewall
+        {
+            position: absolute;
+            right: 30px;
+            top: 2px;
+            &.absolutess
+            {
+                right: 0;
+                top: 0;
+            }
+            a
+            {
+                display: inline-block;
+                &.showall
                 {
-                    color: #527afa;
+                    @include styleText(#828282,12px);
+                    &:hover 
+                    {
+                        color: #527afa;
+                    }
+                }
+                &.hide 
+                {
+                    position: relative;
+                    top: 6px;
                 }
             }
-            &.hide 
-            {
-                position: relative;
-                top: 6px;
-            }
         }
-    }
-}
-.wrap-bannerinnerHD
-{
-    margin-bottom: 20px;
-    .wrap-thumbitems
-    {
-        width: 100%;
-        overflow: hidden;
-        .thumbitem
-        {
-            width: 10%;
-            height: 10vw;
-            background-size: cover;
-            background-position: 50% 50%;
-            display: block;
-            float: left;
-        }
-    }
-}
-
-
-.wrap-section
-{
-    position: relative;
-    opacity: 1;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #dcdcdc;
-    padding-bottom: 30px;
-}
-.wrap-dayofartist
-{
-    header.menuSection .title
-    {
-        color: #eb4335;        
     }
     ::ng-deep
     {
-        .artist-item
-        {   
-            height: 196px;        
-            .wrap-title 
+        .wrap-bannerinnerHD
+        {
+            margin-bottom: 20px;
+            .wrap-thumbitems
             {
-                position: absolute;
-                bottom: 0px;
-                left: 0;
                 width: 100%;
-                padding: 10px 5px;
-
-                // background: -webkit-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
-                // background: -moz-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
-                // background: -ms-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
-                // background: -o-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
-                // background: linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
-
-
+                overflow: hidden;
+                .thumbitem
+                {
+                    width: 10%;
+                    height: 10vw;
+                    background-size: cover;
+                    background-position: 50% 50%;
+                    display: block;
+                    float: left;
+                }
+            }
+        }
+    
+    }
+    .wrap-section
+    {
+        position: relative;
+        opacity: 1;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #dcdcdc;
+        padding-bottom: 30px;
+    }
+    .wrap-dayofartist
+    {
+        header.menuSection .title
+        {
+            color: #eb4335;        
+        }
+        ::ng-deep
+        {
+            .artist-item
+            {   
+                height: 196px;        
+                .wrap-title 
+                {
+                    position: absolute;
+                    bottom: 0px;
+                    left: 0;
+                    width: 100%;
+                    padding: 10px 5px;
+    
+                    // background: -webkit-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                    // background: -moz-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                    // background: -ms-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                    // background: -o-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                    // background: linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+    
+    
+                    .title 
+                    {
+                        text-align: center ;
+                        display: block;
+                        color: #ffffff ;
+                        font-size: 16px;
+                        a
+                        {
+                            color: #ffffff!important;
+                            font-size: 16px;
+                            text-align: center !important;
+                            text-shadow:0 1px 5px rgba(0,0,0,0.25);
+                            &:hover 
+                            {
+                                text-decoration: none;
+                            }
+                        } 
+                    }                	
+                    
+                    .rating 
+                    {
+                        display: none;
+                    }
+                }
+                &:hover 
+                {
+                    .thumbnail a
+                    {
+                        background: rgba(0,0,0,0.4);
+                    }
+                    .vf-followplbtn
+                    {
+                        opacity: 1;
+                    }
+                    .wrap-title .title  .art-birthday
+                    {
+                        display: block !important;
+                        font-size: 18px !important;
+                    }
+    
+                }
+            }
+        }
+    }
+    
+    .vf-main-track
+    {
+        padding-bottom: 10px;
+        
+        .wrap-haftsection
+        {
+            width: 100%;
+            &.left 
+            {
+                float: left;
+                padding-right: 10px;
+            }
+            &.right 
+            {
+                float: right;
+                padding-left: 10px;
+            }
+            > header 
+            {
                 .title 
                 {
-                    text-align: center !important;
-                    display: block;
-                    color: #ffffff !important;
-                    a
-                    {
-                        color: #ffffff!important;
-                        font-size: 14px!important;
-                        text-align: center!important;
-                        text-shadow:0 1px 5px rgba(0,0,0,0.25);
-                        &:hover 
-                        {
-                            text-decoration: none;
-                        }
-                    } 
-                }
-                .art-birthday
-                {
-                    display: none;
-                }	
-                
-                .rating 
-                {
-                    display: none;
+                    @include styleText(#000000, 18px);
                 }
             }
-            &:hover 
+           
+        }
+        ::ng-deep 
+        {
+            app-videoitem
             {
-                .thumbnail a
+                float: left;
+                width: calc(50% - 10px);
+                margin-bottom: 12px;
+                 &:nth-child(2n) 
                 {
-                    background: rgba(0,0,0,0.4);
+                    margin-left: 20px;
                 }
-                .vf-followplbtn
-                {
-                    opacity: 1;
-                }
-                .wrap-title .title  .art-birthday
-                {
-                    display: block !important;
-                    font-size: 18px !important;
-                }
-
             }
         }
-    }
-}
-
-.vf-main-track
-{
-    padding-bottom: 10px;
-    
-    .wrap-haftsection
-    {
-        width: 100%;
-        &.left 
-        {
-            float: left;
-            padding-right: 10px;
-        }
-        &.right 
-        {
-            float: right;
-            padding-left: 10px;
-        }
-        > header 
-        {
-            .title 
-            {
-                @include styleText(#000000, 18px);
-            }
-        }
-       
-    }
-    ::ng-deep 
-    {
-        app-videoitem
-        {
-            float: left;
-            width: calc(50% - 10px);
-            margin-bottom: 12px;
-             &:nth-child(2n) 
-            {
-                margin-left: 20px;
-            }
-        }
+        
     }
     
-}
-
-
-.box-loading
-{
-	width: 100%;	
-	text-align: center;
-	display: table;
-	margin-bottom: 30px;
-	&.for-artists
-	{
-		height: 329px;
-	}
-	&.for-birthdayartists
-	{
-		height: 275px;
-	}
-	&.for-playlists
-	{
-		height: 415px;
-	}
-	&.for-trackthreeline
-	{
-		height: 418px;
-	}
-
-	&.for-trackfourline
-	{
-		height: 540px;
-	}
-	.loadingdata
-	{
-		text-align: center;
-		display: table-cell;
-		vertical-align: middle;
-	}
+    
+    .box-loading
+    {
+        width: 100%;	
+        text-align: center;
+        display: table;
+        margin-bottom: 30px;
+        &.for-artists
+        {
+            height: 329px;
+        }
+        &.for-birthdayartists
+        {
+            height: 275px;
+        }
+        &.for-playlists
+        {
+            height: 415px;
+        }
+        &.for-trackthreeline
+        {
+            height: 418px;
+        }
+    
+        &.for-trackfourline
+        {
+            height: 540px;
+        }
+        .loadingdata
+        {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+        }
+    }
 }

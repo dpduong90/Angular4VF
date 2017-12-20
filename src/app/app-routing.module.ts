@@ -8,6 +8,8 @@ export const routes: Routes = [
     {path: 'am-nhac', loadChildren: './modules/music-page/music-page.module.ts#MusicPageModule'},
     {path: 'am-nhac/genre-detail', loadChildren: './modules/genredetail/genredetail.module.ts#GenredetailModule'},
     {path: 'am-nhac/artist-detail', loadChildren: './modules/artistdetail/artistdetail.module.ts#ArtistdetailModule'},
+    {path: 'am-nhac/all-artists', loadChildren: './modules/musicgenre-artists-page/musicgenre-artists-page.module.ts#MusicgenreArtistsPageModule'},
+    {path: 'am-nhac/all-birthdayartists', loadChildren: './modules/musicgenre-bdartists-page/musicgenre-bdartists-page.module.ts#MusicgenreBdartistsPageModule'},
     {path: 'giai-tri', loadChildren: './modules/entertainment-page/entertainment-page.module#EntertainmentPageModule'},
     {path: 'kien-thuc', loadChildren: './modules/knowledge-page/knowledge-page.module#KnowledgePageModule'},
     {path: 'tin-tuc', loadChildren: './modules/news-page/news-page.module#NewsPageModule'},

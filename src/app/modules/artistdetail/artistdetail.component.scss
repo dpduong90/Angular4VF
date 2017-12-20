@@ -206,34 +206,51 @@
 					position: relative;
 
 					// transition:0.4s;
-					.mCustomScrollBox
+					::ng-deep
 					{
-						position: initial;
-						.mCSB_scrollTools
+						.mCustomScrollBox
 						{
-							opacity: 1 !important;
+							position: initial;
+							.mCSB_scrollTools
+							{
+								opacity: 1 !important;
+							}
+						}
+						.mCSB_inside > .mCSB_container
+
+						{
+							margin-right: 0;
 						}
 					}
+					
 					&.full 
 					{
-						max-height: 170px;						
-						.mCustomScrollBox 
+						max-height: 170px;		
+						::ng-deep
 						{
-							max-height: 170px !important;
-						}						
+							.mCustomScrollBox 
+							{
+								max-height: 170px !important;
+							}
+						}				
+												
 					}
 					&.unscroll
 					{
-						.mCSB_container
+						::ng-deep
 						{
-							top:0 !important;
+							.mCSB_container
+							{
+								top:0 !important;
+							}
+							.mCSB_scrollTools
+							{
+								// visibility: hidden ;
+								height: 0 !important;
+								overflow: hidden;
+							}
 						}
-						.mCSB_scrollTools
-						{
-							// visibility: hidden ;
-							height: 0 !important;
-							overflow: hidden;
-						}
+						
 					}
 					* 
 					{
@@ -264,14 +281,18 @@
 				&.full 
 				{
 					max-height: 245px;
-					.mCustomScrollBox 
+					::ng-deep
 					{
-						max-height: 245px !important;
-						&.mCS_no_scrollbar
+						.mCustomScrollBox 
 						{
-						 opacity: 0;
+							max-height: 245px !important;
+							&.mCS_no_scrollbar
+							{
+							 opacity: 0;
+							}
 						}
 					}
+					
 				}
 			}
 		}

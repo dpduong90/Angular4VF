@@ -1,0 +1,277 @@
+@import '../../../assets/css/partial/_setting.scss';
+.vf-genreBirthdayArtists-page
+{
+	::ng-deep 
+	{
+		.wrap-bannerinnerHD
+		{
+			margin-bottom: 20px;
+			.wrap-thumbitems
+			{
+				width: 100%;
+				overflow: hidden;
+				.thumbitem
+				{
+					width: 10%;
+					height: 10vw;
+					background-size: cover;
+					background-position: 50% 50%;
+					display: block;
+					float: left;
+				}
+			}
+		}
+
+	}
+  
+	
+	.wrap-topsidebar
+	{
+		background: #fff;
+		padding-bottom: 15px ;
+		.wrap
+		{
+			float: left;
+			li 
+			{
+				@include styleText(#323232, 18px);
+				a 
+				{
+					@include styleText(#323232, 18px);
+				}
+			}
+		}
+		.sapxep 
+		{
+			float: right;
+		}
+		//select 
+		// select box
+
+		  .s-hidden {
+			visibility:hidden !important;
+			padding-right:10px;
+			}
+			.wrap-selecttag .select {
+				cursor:pointer;
+				display:inline-block;
+				position:relative;
+				@include styleText(#707378, 13px);
+				font-style: italic;
+				background: none;	
+				margin-top: 5px;
+				
+			}
+			.styledSelect {
+				position:absolute;
+				top:0;
+				right:0;
+				bottom:0;
+				left:0;    
+				padding:0 10px;
+				@include styleText(#707378, 13px);
+				font-style: italic;
+				background: none;	
+				// min-width: 224px;
+				min-width: 115px;
+			}
+			.styledSelect::after {
+				content:"";
+				width:0;
+				height:0;
+				border:5px solid transparent;
+				border-color:#b7b7b7 transparent transparent transparent;
+				position:absolute;
+				top:6px;
+				right:6px;
+			}
+			.styledSelect:active, .styledSelect.active {
+				background-color:#eee;
+			}
+			
+			.wrap-selecttag .options {
+				display:none;
+				position:absolute;
+				top:100%;
+				right:0;
+				left:0;
+				z-index:999;
+				margin:0 0;
+				padding:5px 0;
+				list-style:none;
+				border:1px solid #ccc;
+				background-color:white;
+				-webkit-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+				-moz-box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+				box-shadow:0 1px 2px rgba(0, 0, 0, 0.2);
+			}
+			.wrap-selecttag .options li {	    
+				margin:0 0;
+				padding:3px 10px;
+			}
+			.wrap-selecttag .options li:hover {
+				background-color:#dcdde3;	   
+			}
+	
+
+	}
+
+    header.menuSection 
+	{
+		position: relative;
+		.title
+		{
+			font-size: 18px;
+			color:#323232;
+			text-transform: none;
+			width: 50%;
+			a 
+			{
+				font-size: 18px;
+				text-transform: none;
+			}
+			span 
+			{
+				font-weight: normal;
+				font-size: 14px;
+				color: #969696;
+			}
+			.medium-txt 
+			{
+				color:#323232;
+			}
+		}		
+		.wrap-viewall
+		{
+			position: absolute;
+			right: 30px;
+			top: 2px;
+			&.absolutess
+			{
+				right: 0;
+				top: 0;
+			}
+			a
+			{
+				display: inline-block;
+				&.showall
+				{
+					@include styleText(#828282,12px);
+					&:hover 
+					{
+						color: #527afa;
+					}
+				}
+				&.hide 
+				{
+					position: relative;
+					top: 6px;
+				}
+			}
+		}
+	}
+	.wrap-allartists
+	{
+		margin-bottom: 20px ;		
+		.birthartists-section
+		{
+			.wrap-listitems
+			{
+                overflow: hidden;
+                app-artistitem
+                {
+                    float: left;
+                    margin:0 6px;
+                    margin-bottom: 12px;
+                    ::ng-deep 
+                    {
+                        .artist-item
+                        {   
+                            height: 196px;        
+                            .wrap-title 
+                            {
+                                position: absolute;
+                                bottom: 0px;
+                                left: 0;
+                                width: 100%;
+                                padding: 10px 5px;
+                
+                                // background: -webkit-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                                // background: -moz-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                                // background: -ms-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                                // background: -o-linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                                // background: linear-gradient(top, transparent 15%, rgba(0, 0, 0, 0.11) 26%, rgba(0, 0, 0, 0.63) 81%, rgba(0, 0, 0, 0.65) 83%);
+                
+                
+                                .title 
+                                {
+                                    text-align: center ;
+                                    display: block;
+                                    color: #ffffff ;
+                                    font-size: 18px;
+                                    a
+                                    {
+                                        color: #ffffff;
+                                        font-size: 18px;
+                                        text-align: center;
+                                        text-shadow:0 1px 5px rgba(0,0,0,0.25);
+                                        &:hover 
+                                        {
+                                            text-decoration: none;
+                                        }
+                                    } 
+                                }                               	
+                                
+                                .rating 
+                                {
+                                    display: none;
+                                }
+                            }
+                            &:hover 
+                            {
+                                .thumbnail a
+                                {
+                                    background: rgba(0,0,0,0.4);
+                                }
+                                .vf-followplbtn
+                                {
+                                    opacity: 1;
+                                }
+                                .wrap-title .title  .art-birthday
+                                {                                   
+                                    font-size: 18px 
+                                }
+                
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// for responsive
+@media only screen and (min-width: 1236px )
+{
+    .vf-genreBirthdayArtists-page
+    {
+        .wrap-allartists
+        {
+            .birthartists-section
+            {
+                .wrap-listitems app-artistitem
+                {
+                    &:nth-child(6n + 1)
+                    {
+                        margin-left: 0;
+                    }
+                    &:nth-child(6n)
+                    {
+                        margin-right: 0;
+                    }
+                }
+            } 
+        } 
+    } 
+}

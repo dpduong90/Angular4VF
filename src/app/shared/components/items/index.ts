@@ -7,3 +7,4 @@ export * from './channelitem/channelitem.component';
 export * from './subscriptionchannel/subscriptionchannel.component';
 export * from './similarartistitem/similarartistitem.component';
 export * from './bannergenre/bannergenre.component';
+export * from './bannerartist/bannerartist.component';

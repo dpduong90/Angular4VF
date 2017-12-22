@@ -9,6 +9,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
 
 import { SharedComponentsModule } from './shared/components/shared-components.module';
 import { AppRoutingModule } from './app-routing.module';
+// import { ArtistPlaylistsPageComponent } from './modules/artist-playlists-page/artist-playlists-page.component';
+
 
 
 
@@ -18,7 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent       
            
     
   ],

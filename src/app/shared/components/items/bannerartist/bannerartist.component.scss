@@ -1,0 +1,323 @@
+@import '../../../../../assets/css/partial/_setting.scss';
+
+.wrap-aboutartist
+{
+    position: relative;
+    // -webkit-transition: 0.4s;
+    // -moz-transition: 0.4s;
+    // -ms-transition: 0.4s;
+    // -o-transition: 0.4s;
+    // transition: 0.4s;
+    // overflow: hidden;
+    // height: 40vw;
+    
+    &.extend
+    {
+        //height: calc(40vw + 140px );
+        .gradientbg
+        {				
+            background: -webkit-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.29) 14%, rgba(0, 0, 0, 0.8) 54%, rgba(0, 0, 0, 0.9) 66%, black 80%);
+            background: -moz-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.29) 14%, rgba(0, 0, 0, 0.8) 54%, rgba(0, 0, 0, 0.9) 66%, black 80%);
+            background: -ms-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.29) 14%, rgba(0, 0, 0, 0.8) 54%, rgba(0, 0, 0, 0.9) 66%, black 80%);
+            background: -o-linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.29) 14%, rgba(0, 0, 0, 0.8) 54%, rgba(0, 0, 0, 0.9) 66%, black 80%);
+            background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.29) 14%, rgba(0, 0, 0, 0.8) 54%, rgba(0, 0, 0, 0.9) 66%, black 80%);
+
+        }
+    }
+    .gradientbg
+    {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: -webkit-linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.29) 14%,rgba(0,0,0,0.63) 47%,rgba(0,0,0,0.7) 59%,rgba(0,0,0,1) 100%);
+        background: -moz-linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.29) 14%,rgba(0,0,0,0.63) 47%,rgba(0,0,0,0.7) 59%,rgba(0,0,0,1) 100%);
+        background: -ms-linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.29) 14%,rgba(0,0,0,0.63) 47%,rgba(0,0,0,0.7) 59%,rgba(0,0,0,1) 100%);
+        background: -o-linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.29) 14%,rgba(0,0,0,0.63) 47%,rgba(0,0,0,0.7) 59%,rgba(0,0,0,1) 100%);
+        background: linear-gradient(to bottom,transparent 0%,rgba(0,0,0,0.29) 14%,rgba(0,0,0,0.63) 47%,rgba(0,0,0,0.7) 59%,rgba(0,0,0,1) 100%);
+
+    }
+    .vf-coverartist
+    {
+        // height: 700px;
+        overflow: hidden;
+        .coverphoto
+        {
+            display: block;		
+            // 173 x 70		
+            width: 100%;
+            // height: 40vw;	
+            // min-height: 600px;	
+            height: calc(100vw*250/634);		
+            background-size: cover;
+            background-position: 50% 50%;
+            -webkit-filter: blur(24px);
+            -moz-filter: blur(24px);
+            -ms-filter: blur(24px);
+            -o-filter: blur(24px);
+            filter: blur(24px);
+            // opacity: 0.9;
+            background-color: #ccc;
+            overflow: hidden;
+        }				
+    }
+
+    .info-art
+    {
+        position: absolute;
+        top:50% ;
+        margin-top: -244px;			
+        // bottom: 0;
+        // margin: auto;
+        // display: table;
+        left: 0;
+        width: 100%;		
+
+        .avatar-art
+        {
+            overflow: hidden;
+            max-width: 910px;
+            margin-bottom: 30px;
+            display: table;
+            // width: 100%;
+            .thumbnail
+            {
+                display: table-cell;				
+                width: 270px;
+                height: 270px;	
+                float: left;
+                margin-right: 20px;			
+                background-size: cover;
+                background-position: 50% 50%;
+            }
+            .name-artist
+            {
+                @include styleText(#ffffff, 70px);
+                display: table-cell;
+                vertical-align: middle;
+                height: 270px;
+                width: calc(100% - 300px );
+                padding-right: 50px;
+                position: relative;	
+                .title 
+                {
+                    @include styleText(#ffffff, 70px);
+                    font-weight: normal;
+                     text-shadow: 0px 1px 7px rgba(0, 0, 0, 0.5);
+                     max-height: 165px;
+                     overflow: hidden;
+                     text-transform: capitalize;
+                    // text-shadow:
+                 //   -1px -1px 0 #000,  
+                 //    1px -1px 0 #000,
+                 //    -1px 1px 0 #000,
+                 //     1px 1px 0 #000;
+                }
+                .vf-followplbtn
+                {
+                    top: 50%;
+                    margin-top:-30px;
+                    right:0;
+                    
+                    .fa-star-o
+                    {
+                        font-size: 35px;
+                    }
+                }
+            }
+        }
+        .biography-art
+        {		
+            
+            max-width: 990px;
+            margin: 0 auto;
+            
+            .sort-desc
+            {
+                max-height: 120px;
+                padding: 0 26px;					
+                overflow: hidden;
+                 -webkit-transition: all .4s ease-in-out;
+                -moz-transition: all .4s ease-in-out;
+                -ms-transition: all .4s ease-in-out;
+                -o-transition: all .4s ease-in-out;
+                transition: all .4s ease-in-out;
+                position: relative;
+
+                // transition:0.4s;
+                ::ng-deep
+                {
+                    .mCustomScrollBox
+                    {
+                        position: initial;
+                        .mCSB_scrollTools
+                        {
+                            opacity: 1 !important;
+                        }
+                    }
+                    .mCSB_inside > .mCSB_container
+
+                    {
+                        margin-right: 0;
+                    }
+                }
+                
+                &.full 
+                {
+                    max-height: 170px;		
+                    ::ng-deep
+                    {
+                        .mCustomScrollBox 
+                        {
+                            max-height: 170px !important;
+                        }
+                    }				
+                                            
+                }
+                &.unscroll
+                {
+                    ::ng-deep
+                    {
+                        .mCSB_container
+                        {
+                            top:0 !important;
+                        }
+                        .mCSB_scrollTools
+                        {
+                            // visibility: hidden ;
+                            height: 0 !important;
+                            overflow: hidden;
+                        }
+                    }
+                    
+                }
+                * 
+                {
+                    @include styleText(#ffffff, 18px);
+                    line-height: 30px;
+                    text-align: justify;
+                }
+                a 
+                {
+                    @include styleText(#6666ff, 17px);
+                }
+            }
+            
+            
+        }
+    }	
+
+    .readmore
+    {
+        text-align: center;
+        padding-top:10px;
+        a 
+        {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+            padding: 10px;
+            -webkit-transition: 0.4s;
+            -moz-transition: 0.4s;
+            -ms-transition: 0.4s;
+            -o-transition: 0.4s;
+            transition: 0.4s;
+    
+            &:hover 
+            {
+                -webkit-transform: scale(1.5);
+                -moz-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                -o-transform: scale(1.5);
+                transform: scale(1.5);
+    
+            }
+            &.active 
+            {
+                -webkit-transform: rotate(180deg);
+                -moz-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                -o-transform: rotate(180deg);
+                transform: rotate(180deg);
+                
+            }
+            
+        }	
+    }
+}
+.wrap-artistHD
+{
+    
+
+    .info-art
+    {
+        // margin-top: -80px;
+        margin-top: -150px;
+        .biography-art .sort-desc
+        {
+            max-height: 175px;
+            &.full 
+            {
+                max-height: 245px;
+                ::ng-deep
+                {
+                    .mCustomScrollBox 
+                    {
+                        max-height: 245px !important;
+                        &.mCS_no_scrollbar
+                        {
+                         opacity: 0;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    .vf-coverartist
+    {
+        .artphoto
+        {
+            background-size: cover;
+            background-position: 50% 0%;
+            width: 100%;
+            // height: 40vw;
+            // min-height: 600px;	
+            height: calc(100vw*70/173);
+            display: block;
+        }
+    }
+    .name-artist
+    {
+        @include styleText(#ffffff, 72px);
+        display: table;	
+        margin-bottom: 20px;	
+        max-width: 980px;
+        padding-right: 50px;
+        position: relative;				
+        .title 
+        {
+            @include styleText(#ffffff, 72px);
+            text-align: center;
+            font-weight: normal;
+            text-shadow:0px 1px 7px rgba(0,0,0,0.5);
+            text-transform: capitalize;
+            max-height: 154px;
+            overflow: hidden;
+            // text-shadow:
+             //   -1px -1px 0 #000,  
+             //    1px -1px 0 #000,
+             //    -1px 1px 0 #000,
+             //     1px 1px 0 #000;
+        }
+        .vf-followplbtn
+        {
+            right: 0;
+            .fa-star-o, .fa-star
+            {
+                font-size: 35px;
+            }
+        }
+    }
+}

@@ -58,28 +58,7 @@
             }
         }
     }
-    ::ng-deep
-    {
-        .wrap-bannerinnerHD
-        {
-            margin-bottom: 20px;
-            .wrap-thumbitems
-            {
-                width: 100%;
-                overflow: hidden;
-                .thumbitem
-                {
-                    width: 10%;
-                    height: 10vw;
-                    background-size: cover;
-                    background-position: 50% 50%;
-                    display: block;
-                    float: left;
-                }
-            }
-        }
-    
-    }
+  
     .wrap-section
     {
         position: relative;

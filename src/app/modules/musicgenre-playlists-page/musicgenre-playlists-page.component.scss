@@ -1,8 +1,8 @@
+
 @import '../../../assets/css/partial/_setting.scss';
-.vf-genresallartists
+.vf-genre-allplaylists-page
 {
-	
-	.wrap-topsidebar
+    .wrap-topsidebar
 	{
 		background: #fff;
 		padding-bottom: 15px ;
@@ -146,21 +146,19 @@
 				}
 			}
 		}
-	}
-	.wrap-allartists
-	{
-		margin-bottom: 20px ;		
-		.artist-section
-		{
-			.wrap-listitems
-			{
-                overflow: hidden;
-                app-artistitem
-                {
-                    float: left;
-                    margin:0 6px;
-                    margin-bottom: 12px;
-                }
+    }
+    
+    .wrap-playlists
+    {
+        margin-bottom: 50px;
+        .listplaylists
+        {
+            overflow: hidden;
+            app-playlistitem
+            {
+                float: left;
+                margin: 0 6px;
+                margin-bottom: 12px;                
             }
         }
     }
@@ -169,24 +167,54 @@
 // for responsive
 @media only screen and (min-width: 1236px )
 {
-    .vf-genresallartists
+    .vf-genre-allplaylists-page
     {
-        .wrap-allartists
+        .wrap-playlists
         {
-            .artist-section
+            .listplaylists
             {
-                .wrap-listitems app-artistitem
+                overflow: hidden;
+                app-playlistitem
                 {
-                    &:nth-child(6n + 1)
-                    {
-                        margin-left: 0;
-                    }
                     &:nth-child(6n)
                     {
                         margin-right: 0;
                     }
+                    &:nth-child(6n + 1)
+                    {
+                        margin-left: 0;
+                    }
                 }
-            } 
-        } 
-    } 
+            }
+        }
+
+    }   
+}
+
+@media only screen and (max-width: 1235px )
+{
+    .vf-genre-allplaylists-page
+    {
+        .wrap-playlists
+        {
+           
+            .listplaylists
+            {
+                overflow: hidden;
+                app-playlistitem
+                {
+                    &:nth-child(5n)
+                    {
+                        margin-right: 0;
+                    }
+                    &:nth-child(5n + 1)
+                    {
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+    }
+   
 }

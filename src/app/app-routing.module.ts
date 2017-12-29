@@ -17,7 +17,8 @@ export const routes: Routes = [
     {path: 'tin-tuc', loadChildren: './modules/news-page/news-page.module#NewsPageModule'},
     {path: 'cong-dong', loadChildren: './modules/community-page/community-page.module#CommunityPageModule'},
     {path: 'video', loadChildren: './modules/video-page/video-page.module#VideoPageModule'},
-    {path: 'search', loadChildren: './modules/search/search.module#SearchModule'}
+    {path: 'search', loadChildren: './modules/search-page/search-page.module#SearchPageModule'},
+    {path: 'channel-detail', loadChildren: './modules/channeldetail/channeldetail.module#ChanneldetailModule'}
     
     
 ];

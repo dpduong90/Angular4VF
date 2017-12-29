@@ -199,3 +199,17 @@ $font-Roboto: "Roboto";
 		background-color: #f4f4f4 ;
 	}
 }
+%inlineVideos
+{
+	float: $float-none;
+	.thumbnail
+	{
+		float: $float-left;
+		margin-right: 10px;
+	}
+	.meta 
+	{
+		overflow: $overflow-hidden;
+		padding-top: 0;
+	}
+}

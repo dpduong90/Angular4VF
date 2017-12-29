@@ -1,0 +1,609 @@
+@import '../../../assets/css/partial/_setting.scss';
+.pageSearch
+{
+	min-height: calc(100vh - 200px );
+	padding-bottom: 50px;
+	p 
+	{
+		@include styleText(#666666, 14px);
+		line-height: 22px;
+		a 
+		{
+			font-style: italic;
+		}
+	}
+	.subTitelsection
+	{
+		margin-bottom: 10px;
+		.title
+		{
+			display: $display-inlinebl;
+			padding-right: 15px;
+			font-weight: normal;
+			text-transform: uppercase;
+			margin-bottom: 5px;
+			@include styleText(#707378, 22px);
+			a 
+			{
+				@include styleText(#707378, 22px);
+				display: $display-block;
+			}				
+		}
+	}
+	#category-header
+	{		
+		margin-bottom: 15px;		
+		// border-bottom: 1px solid #eaeaea;	
+		padding-top: 18px;	
+		.menuSection
+		{
+			padding-bottom: 0;		
+			.titleSearch
+			{
+				>span 
+				{
+					@include styleText(#484848, 20px);
+				}
+				h1.title 
+				{
+					font-weight: normal;
+					@include styleText(#6e6e6e, 22px);
+					text-transform: none;
+				}
+			}	
+			.submenu
+			{
+				display: $display-block;
+				bottom:0;
+				li 
+				{
+					padding:0 6px;
+					&:first-child 
+					{
+						padding-left: 0;
+					}
+					a 
+					{
+						padding: 0;
+						height: 40px;
+						line-height: 40px;
+						display: $display-block;
+					}
+
+					&:hover 
+					{
+						a 
+						{
+							border-bottom: 2px solid #afafaf;
+							color:#464646;							
+							background: none;
+							border-radius: 0;
+							padding: 0;
+							text-decoration: none;
+						}
+					}						
+				}
+				.active 
+				{
+					a 
+					{	
+						border-bottom: 2px solid #afafaf;
+						color:#464646;
+						font-weight: bold;
+						background: none;
+						border-radius: 0;
+						padding: 0;
+	
+					}
+				}
+			}
+		}
+	}
+	.resultListvideo
+	{
+		@include styleText(#898989, 12px);
+		padding-bottom: 20px;
+	}
+	.wrap-selecttag .options li
+	{
+		padding:7px 10px;
+	}
+	.searchsection
+	{
+		// float: $float-left;	
+		// width: calc(100% - 202px);
+		// padding-right: 16px;
+		// border-right: 1px solid #eaeaea;	
+
+		.filter-result
+		{
+			border:none;
+			padding: 0;
+			// height: 0;
+			overflow: hidden;
+			// opacity: 0;
+			// transition: height 0.5s;
+			display: none;
+			&.active 
+			{
+				display: block;
+				opacity: 1;
+				height: auto;
+			}
+			> ul 
+			{
+				background: #fafafa;
+				border:none;
+				display: block;
+				margin-bottom: 20px;
+
+				>li 
+				{
+					display: inline-block;
+					width: 25%;
+					padding: 0 10px;
+					margin: 0;
+					background: none;
+					border:none;
+					&.ui-state-active
+					{
+						background: none;
+						a 
+						{
+							border-bottom: 2px solid #eb4335;
+							color: #1e1e1e;
+						}
+					}
+					// &.defaulttab
+					// {
+					// 	a 
+					// 	{
+					// 		border-bottom:none;
+					// 		color: #969696;
+					// 	}
+					// }
+					a 
+					{
+						display: inline-block;						
+						height: 60px;
+						line-height: 60px;
+						padding: 0;
+						margin: 0;
+						@include styleText(#969696, 13px);
+						&:hover 
+						{
+							text-decoration: none;
+							border-bottom: 2px solid #eb4335;
+						}
+					}
+				}
+			}
+			>div 
+			{
+				display: none;
+				padding: 0;
+				margin: 0;
+				// &.closebox
+				// {
+				// 	display: none !important;
+				// }
+			}
+		}
+
+		.search-result ::ng-deep
+		{
+			.video 
+			{
+                @include sizeVideo(100% !important, 110px);	
+                @extend %inlineVideos;
+				padding: 0;	
+                margin: 0 0 20px;                						
+				.thumbnail
+				{
+					@include sizeVideo(196px, 110px);
+					
+					.duration
+					{
+						padding: 7px 4px;
+						font-size: 12px;
+					}
+				}
+				.wrapPlaynow
+				{
+					display: none;
+				}
+				
+				.meta 
+				{
+					.title 
+					{
+						margin-bottom: 3px;
+						a 
+						{
+							@include styleText(#393939, 15px);							
+						}
+					}
+					.uploader
+					{
+						display: block;
+						a 
+						{
+							font-style: normal;   
+						    @include styleText(#828282, 11px);   
+							text-transform: uppercase;
+						}
+					}
+					.description
+					{
+						@include styleText(#666666, 13px);
+						line-height: 18px;
+						max-height: 35px;
+						overflow: $overflow-hidden;	
+						margin-top: 5px;
+						display: none;
+					}
+				}
+				.desc-ct 
+				{
+					 display: none;
+				}
+			}
+
+			.playlistitems
+			{
+				height: 110px;
+				width: 100%;
+				border:none;
+				margin-bottom: 20px;	
+				overflow: hidden;			
+				.thumbnail
+				{
+					float: left;
+					width: 110px;
+					height: 110px;
+					margin-left: 43px;
+					margin-right: 52px;
+				}
+				.playitems,.vf-followplbtn
+				{
+					display: none;
+				}
+				.meta
+				{
+					overflow: hidden;
+					padding: 0;
+					.title a
+					{
+						color: #393939;
+						white-space: nowrap; 					    
+					    overflow: hidden;
+					    text-overflow: ellipsis; 
+					}
+				}
+				.uploader
+				{
+					overflow: hidden;
+					padding: 0;
+					margin-bottom: 0;
+					a 
+					{
+					font-style: normal;
+					}
+				}
+				.desc-intro
+				{
+					overflow: hidden;
+					padding: 0;
+					max-height: 35px;
+					* 
+					{
+						font-size: 13px;
+						line-height: 18px;
+					}
+				}
+				.desc-intro + ul 
+				{
+					// overflow: hidden;
+					background: rgba(0,0,0,0.75);
+					text-align: center;
+					padding: 8px 1px;
+					width: 110px;
+					position: absolute;
+					bottom: 0;
+					left: 43px;
+
+					li 
+					{
+						display: inline-block;
+						@include styleText(#fff,12px);
+						margin-right: 8px;
+						margin-left: 0;
+						.fonticons
+						{
+							color: #fff;
+						}
+						&.watch-count
+						{
+							.fonticons
+							{
+							     font-size: 13px;
+							    position: relative;
+							    top: 1px;
+
+							}
+						}
+						&.videoTotal
+						{
+							position: relative;
+							background: none;
+							bottom: 0;
+							right: 0;
+							margin-right: 0;
+						}
+						&.rating
+						{
+							position: absolute;
+							left: 163px;
+							width: 100px;
+							bottom: -2px;
+							.fonticons
+							{
+								color: #f1c40f;
+								display: inline-block;
+								font-size: 14px;
+							}
+						}
+					}
+					
+				}
+			}			
+			
+			.channelitem
+			{
+				border: none;
+				width: 100%;
+				height: 110px;
+				margin:0;
+				margin-bottom: 20px;
+				.wrap-thumb
+				{
+					width: 196px;
+					height: 110px;
+					display: block;
+					text-align: center;
+					float: left;
+					margin-right: 10px;
+					position: relative;	
+					border: none;				
+					.thumbnail 
+					{
+						width: 110px;
+						margin:0 auto;
+						height: 110px;
+						float: none;
+						background-size: cover;
+						background-position: 50% 50%;
+						border:1px solid #dcdcdc;
+						border-radius: 50%;
+						a 
+						{
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+					}									
+				}
+
+				.wrap-title 
+				{					
+					overflow: hidden;
+					padding: 0;
+					margin: 0;
+					.title 
+					{	
+						text-align: left;					
+						a 
+						{
+							@include styleText(#393939, 15px);
+						}
+					}
+					.totalvideos
+					{
+						display: block;
+						p 
+						{
+							@include styleText(#828282, 12px);
+						}
+					}
+					.desc-channel
+					{
+						@include styleText(#666666, 13px);
+						line-height: 18px;
+						margin-bottom: 5px;
+						display: block;
+						* 
+						{
+							@include styleText(#666666, 13px);
+							line-height: 18px;
+						}
+					}
+				}
+
+				.followChanel
+				{
+					overflow: hidden;
+					padding: 0;
+					margin: 0;
+					text-align: left;
+					margin-top: 10px;
+				}
+			}
+
+			.artist-item
+			{
+				border: none;
+				width: 100%;
+				height: 110px;
+				margin:0;
+				margin-bottom: 20px;
+				.wrap-thumb
+				{
+					width: 196px;
+					height: 110px;
+					display: block;
+					text-align: center;
+					float: left;
+					margin-right: 10px;
+					position: relative;	
+					border: none;				
+					.thumbnail 
+					{
+						width: 110px;
+						margin:0 auto;
+						height: 110px;
+						float: none;
+						background-size: cover;
+						background-position: 50% 50%;
+						border:1px solid #dcdcdc;
+						a 
+						{
+							display: block;
+							width: 100%;
+							height: 100%;
+						}
+					}
+					.vf-followplbtn
+					{
+						display: block;
+						right: 52px;
+						top: 8px;
+					}					
+				}
+				.wrap-title 
+				{					
+					overflow: hidden;
+					padding: 0;
+					margin: 0;
+					.title 
+					{
+						@include styleText(#393939, 15px);
+						a 
+						{
+							@include styleText(#393939, 15px);
+						}
+					}
+					.totalAlbums
+					{
+						display: none;
+					}
+				}
+			}
+
+			
+			.wrapbox
+			{
+				left: 200px;
+				right: auto;				
+			}
+
+		}
+	}
+	.showMore
+	{
+		@extend %showMore ;
+		clear: left;		
+	}
+
+	.reviewMost
+	{
+		float: $float-right;
+		width: 202px;
+		padding-left: 16px;		
+		.listvideo
+		{
+			.video
+			{				
+				@include sizeVideo(100%, 195px);
+				padding: 0;
+				margin-left: 0;
+				margin-right: 0;
+				.thumbnail
+				{
+					height: 110px;
+				}
+				.desc-ct 
+				{
+					display: none;
+				}
+			}
+
+			.videoPlaylist 
+			{
+				height: auto;
+				.thumbnail
+				{
+					height: 186px;
+				}
+			}
+		}
+	}
+
+	.wrapfiterandresult
+	{
+		.searchfiltter
+		{
+			float: left;
+			button 
+			{
+				background: #eb4335;
+				padding: 0 20px;
+				border-radius: 4px;
+				height: 40px;
+				line-height: 40px;
+				@include styleText(#ffffff, 13px);
+				text-transform: uppercase;
+				text-align: center;
+
+			}
+
+
+			.s-hidden 
+			{
+				position: absolute;
+			}
+			.select 
+			{
+				margin-top: 0;				
+			}
+			.styledSelect
+			{
+				@include styleText(#000, 12px);
+				font-weight: bold;
+				font-style: normal;				
+				padding: 5px 0;
+				position: relative;
+				&::after 
+				{
+					top: 10px;
+					right:10px;
+				}
+			}
+			.options
+			{
+				li
+				{
+					&:first-child
+					{
+						display: none;
+					}
+					@include styleText(#000, 12px);
+					font-style: normal;
+				}
+			}
+		}
+		.resultListvideo
+		{
+			float: right;
+		}
+	}
+}

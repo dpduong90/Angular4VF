@@ -26,8 +26,11 @@ import { SVideoChannelSlideComponent,
     ChannelitemComponent,
     SimilarartistitemComponent,
     BannergenreComponent,
-    BannerartistComponent
+    BannerartistComponent,
+    ChannelplaylistitemComponent,
+    BanneraccountComponent
   } from './items/index';
+
 
 
 @NgModule({
@@ -56,7 +59,9 @@ import { SVideoChannelSlideComponent,
     StrackvideosComponent, 
     SimilarartistitemComponent, 
     BannergenreComponent, 
-    BannerartistComponent
+    BannerartistComponent, 
+    ChannelplaylistitemComponent, 
+    BanneraccountComponent
     
    ],
   exports: [ PlaylistitemComponent, 
@@ -81,7 +86,9 @@ import { SVideoChannelSlideComponent,
     StrackvideosComponent,
     SimilarartistitemComponent,
     BannergenreComponent,
-    BannerartistComponent
+    BannerartistComponent,
+    ChannelplaylistitemComponent,
+    BanneraccountComponent
   ]
 })
 export class SharedComponentsModule { }

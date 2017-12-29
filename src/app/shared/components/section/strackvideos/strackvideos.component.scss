@@ -2,7 +2,19 @@
 @import '../../../../../assets/css/partial/_setting.scss';
 .listvideos
 {
-    overflow: hidden;
+    overflow: hidden; 
+  
+        app-videoitem
+        {
+            float: left;
+            width: calc(50% - 10px);
+            margin-bottom: 12px;
+             &:nth-child(2n) 
+            {
+                margin-left: 20px;
+            }
+        }
+  
     ::ng-deep 
     {
         .video 

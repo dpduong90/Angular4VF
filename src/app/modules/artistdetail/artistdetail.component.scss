@@ -1,4 +1,4 @@
-@import '../../../styles.scss';
+@import '../../../assets/css/partial/_setting.scss';
 
 .vf-artistpage
 {
@@ -153,43 +153,7 @@
 
 	.vf-main-track
 	{
-		padding-bottom: 10px;
-		
-		.wrap-haftsection
-		{
-			width: 100%;
-			&.left 
-			{
-				float: left;
-				padding-right: 10px;
-			}
-			&.right 
-			{
-				float: right;
-				padding-left: 10px;
-			}
-			> header 
-			{
-				.title 
-				{
-					@include styleText(#000000, 18px);
-				}
-			}
-		   
-		}
-		::ng-deep 
-		{
-			app-videoitem
-			{
-				float: left;
-				width: calc(50% - 10px);
-				margin-bottom: 12px;
-				 &:nth-child(2n) 
-				{
-					margin-left: 20px;
-				}
-			}
-		}
+		padding-bottom: 10px;	
 		
 	}
 

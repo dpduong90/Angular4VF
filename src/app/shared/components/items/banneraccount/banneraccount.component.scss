@@ -1,0 +1,691 @@
+@import '../../../../../assets/css/partial/_setting.scss';
+
+.userIntroduce
+{
+    position: $position-relative;
+    border: none;
+    margin-bottom: 20px;
+    min-height: 470px;
+
+    .cameraCover
+    {
+        position: $position-absolute;
+        right: 0;
+        top: 10px;
+        // opacity: 0.5;
+        color: #eee;
+        font-size: 24px;
+        line-height: 24px;
+        font-weight: bold;
+        display: none;
+        z-index: 10;
+        width: 100%;
+        height: 46px;
+        
+        .cameralargericon
+        {
+            background-position: 0 -127px;
+            width: 30px;
+            height: 30px;	
+            float: right;
+            margin-right:5px;			
+        }	
+        .change-photo
+        {
+            position: absolute;
+            right: 0;
+            top:0;
+            opacity: 0;
+            width: 100%;
+            height: 46px;
+            font-size: 0;
+        }	
+
+
+    }
+    .change-action-box
+    {
+        position: absolute;			
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: #ffffff;
+        border-radius: 10px 0 0 0;
+        padding: 5px 5px 0 10px;
+    }
+    .messageError
+    {
+        @include styleText(red, 12px);
+        font-style: italic;
+        margin-bottom: 5px;
+    }
+    .progress
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        background: #b2b2b2;
+        width: 120px;
+        height: 10px;
+        border-radius:4px;
+        box-shadow: inset 0 1px 2px rgba(0, 0, 0, .5);
+        overflow: hidden;
+        .progress-bar 
+        {
+            background: #337ab7;
+            height: 10px;
+            width: 100%;
+        }
+    }	
+    .message-imgsize
+    {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        background: rgba(153,153,153,0.76);							
+        padding: 13px 5px 10px;
+        z-index: 0;
+        display: none;
+        p 
+        {
+            @include styleText(#ffffff, 10px);
+            font-weight: bold;
+            margin-bottom: 3px;
+        }
+
+        
+    }
+    .cameraAvartar
+    {
+        @extend .cameraCover;
+        right: 0;
+        top: 5px;			
+        i 
+        {
+            font-size: 20px;
+            line-height: 20px;
+        }
+        .camerasmallicon
+        {
+            background-position: 0 -159px;
+            width: 30px;
+            height: 30px;
+            float: right;				
+        }
+        .change-photo
+        {
+            position: absolute;
+            right: 0;
+            top:0;
+            opacity: 0;
+            width: 100%;
+        }
+        
+
+
+    }
+    .coverPhoto
+    {
+        background-position: 50% 50%;
+        background-size: cover;
+        background-color: #e6e6e6;
+        width: 100%;
+        height: 327px;
+        position: $position-relative;
+        &:hover 
+        {
+            .cameraCover, .message-imgsize
+            {
+                display: block;
+            }
+        }			
+        
+            
+        .followchannel
+        {
+            position: $position-absolute;
+            right: 10px;
+            bottom: 12px;
+            z-index: 100;
+            .wrapbtnFollow
+            {
+                float: $float-right;
+                height: 28px;					
+                border-radius: 3px;
+                display: table;	
+                position: relative;				
+                .btnFollow 
+                {
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding-right:  5px;
+                    background: #fff;						
+                    height: 28px;
+                    line-height: 28px;	
+                    border-right: 1px solid #d0d0d0;
+                    border-radius: 3px 0 0 3px ;
+                    .activity
+                    {
+                        @include styleText(#4d4d4d, 14px);		
+                        overflow: $overflow-hidden;
+                        display: $display-inlinebl;
+                        height: 28px;
+                        line-height: 28px;	
+                        position: $position-relative;
+                        left: -4px;		
+                        top: -1px;															
+                        span.iconFont
+                        {
+                            background: #c8c8c8;
+                            color: #7b7b7b;
+                            font-weight: bold;
+                            display: $display-inlinebl;
+                            height: 28px;
+                            line-height: 28px;
+                            text-align: center;
+                            padding: 0 5px;	
+                            float: $float-left;
+                            margin-right: 10px;
+                            padding-top: 2px;
+                            border-radius: 3px 0 0 3px ;
+
+                        }
+                        span.iconFldone
+                        {
+                            background: #04bf09;
+                            display: $display-none;
+                            .material-icons
+                            {
+                                color: #fff;                              
+                            }
+                            .doneicon
+                            {
+                                background-position: 5px -212px;
+                            }
+
+                            
+                        }
+                        span.iconFlclear
+                        {
+                            background: #e40800;
+                            display: $display-none;
+                            .material-icons
+                            {
+                                color: #fff;                              
+                            }
+                            .clearicon
+                            {
+                                background-position: 5px -236px;
+                            }
+                        }
+                        span.iconmyaccount
+                        {
+                            display: $display-inlinebl;
+                            background: #e40800;
+                            .material-icons
+                            {
+                                color: #fff;                              
+                            }
+                            .accounticon
+                            {
+                                background-position:4px -258px;
+                            }
+                        }
+                        span.iconFladd
+                        {								
+                            .fladdicon
+                            {
+                                background-position: 5px -189px;
+                            }
+                        }
+                        .following
+                        {
+                            display: $display-none;
+                        }
+                        .disfollow 
+                        {
+                            @extend .following;
+                        }
+
+                        .myfollow
+                        {
+                            display: $display-inlinebl;
+                        }
+
+                    }
+
+                    
+
+                }
+                .btnmyaccount
+                {
+                     pointer-events: none !important;
+                }
+
+                .btnFollowactive
+                {
+                    &:hover 
+                    {
+                        .activity.activityfl 
+                        {
+                            span.iconFlclear
+                            {
+                                display: $display-block;
+                                
+                            }
+                            span.iconFladd
+                            {
+                                display: $display-none;									
+                            }
+                            span.iconFldone
+                            {
+                                display: $display-none !important;									
+                            }
+                            .disfollow 
+                            {
+                                display: $display-inlinebl;
+                            }
+                            .following
+                            {
+                                display: none !important;
+                            }
+                        }
+                    }
+                }
+                .totalFollow
+                {
+                    @include styleText(#4d4d4d, 14px);
+                    display: table-cell;
+                    vertical-align: middle;
+                    padding: 0 10px;
+                    background: #ffffff;
+                    border-radius: 0 3px 3px 0  ;						
+                }
+
+                .wrapbox
+                {						
+                    top: calc(100% + 11px);
+                }
+            }
+        }
+    }
+
+    .avatarUser
+    {
+        height: 196px;
+        width: 196px;
+        border: 4px solid #ffffff;
+        outline: 1px solid #cccccc;
+        position: $position-absolute;
+        left: 16px;
+        top: 270px ; 
+        z-index: 10;
+        .avatarPhoto
+        {
+            @extend .coverPhoto;
+            height: 100%;
+            &:hover 
+            {
+                .cameraAvatar, .message-imgsize
+                {
+                    display: block;
+                }
+            }
+        } 
+
+        .message-imgsize
+        {
+            padding: 13px 5px 5px;
+            p 
+            {
+                margin-bottom: 8px;
+            }
+        }
+    }
+
+    .vf-infochannel
+    {
+        padding-left: 235px;
+        padding-right: 25px;
+        position: relative;	
+        top:0;
+        margin-bottom: 10px;	
+        margin-top: 20px;	
+        .cke_focus
+        {
+            border: 1px solid #99ccff !important;
+            padding:0 3px;
+        }
+        &.account-unlogin
+        {
+            .vf-channel-name 
+            {
+                border: none !important;
+                background: none !important;
+                .vf-confirm
+                {
+                    display: inline-block !important; 
+                    top: -17px;
+                }
+            }
+            .vf-desc-channel .desc 
+            {
+                border: none !important;
+                background: none !important;
+            }
+        }
+        .box-edit
+        {
+            display: none;				
+            margin-left: 0;	
+            position: relative;
+            textarea 
+            {					
+                width: 50%;
+                border: 1px dashed #ccc;
+                padding: 2px;
+                vertical-align: middle;
+            }
+            // .update-btn, .cancel-btn
+            // {
+            // 	position: relative;
+            // 	top:5px;
+            // }
+            .wrap-btn
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                right: 0;
+            }
+        }
+        
+        .vf-channel-name
+        {
+            position: relative;
+            max-width: calc(100% - 300px);				
+            display: inline-block;
+            padding-right: 35px;
+            margin-left: 0;	
+            border: 1px solid #ffffff;	
+            .vf-confirm
+            {
+                top: -17px;
+            }
+
+            &:hover 
+            {
+                .vf-confirm
+                {
+                    top: -17px;
+                    display: none;
+                }	
+            }
+                                
+            .vf-editText
+            {
+                position: absolute;
+                right: 0;
+                top: 4px;
+                display: none;
+            }
+            &.active 
+            {
+                border: none !important;
+                background: none !important;
+                .vf-editText
+                {
+                    display: none !important;
+                }
+                .box-edit 
+                {
+                    display: inline-block;
+                }
+                .nameUser
+                {
+                    display: none;
+                }
+            }
+            &:hover 
+            {
+                border: 1px dashed #ccc;	
+                background: #F4FCF7;
+                .vf-editText
+                {
+                    display: block;
+                    background: #fff;
+                }
+            }
+
+            .box-edit
+            {
+                width: 500px;				
+                textarea 
+                {
+                    @include styleText(#303234, 18px);
+                    width: 430px;
+                }
+            }
+        }
+        .nameUser
+        { 
+            @include styleText(#303234, 24px);	
+            text-shadow: none;
+            font-weight: normal;									
+            max-height: 60px;
+            overflow: $overflow-hidden;	
+            margin-left: 0;	
+            display: inline-block;				
+            // border: 1px dashed #fff;
+        }
+
+        .submenu
+        {
+            padding-top: 5px;
+            li 
+            {
+                display: $display-inlinebl;
+                padding: 0 10px;
+                &:first-child 
+                {
+                    padding-left: 0;
+                }
+
+                a 
+                {
+                    @include styleText(#525252, 15px);
+                    display: block;
+                    height: 40px;
+                    line-height: 40px;
+                }
+                &:hover 
+                {
+                    a 
+                    {
+                        border-bottom: 3px solid #ff0000;
+                    }
+                }
+            }
+            .active
+            {
+                a 
+                {
+                    font-weight: bold;
+                    border-bottom: 3px solid #ff0000;
+                }
+            }
+        }
+        .vf-desc-channel
+        {				
+            border-top : 1px solid #e5e8ec;				
+            padding-top: 10px;
+            position: relative;
+            &.active 
+            {
+                border: none !important;
+                background: none !important;
+                .vf-editText
+                {
+                    display: none !important;
+                }
+                .box-edit 
+                {
+                    display: block;
+                }
+                .desc
+                {
+                    display: none;
+                }
+                .vf-viewall
+                {
+                    display: none;
+                }
+            }
+            .desc
+            {
+                @include styleText(#303234, 14px);
+                line-height: 22px;
+                max-height: 300px;
+                overflow: hidden;		
+                border: 1px solid #fff;			
+                position: $position-relative;
+                height: 65px;
+                // p 
+                // {
+                // 	height: 44px;
+                // 	overflow: hidden;
+                // }
+            }
+            .box-edit
+            {
+                width: 100%;
+                margin-top: 10px;
+                textarea 
+                {
+                    @include styleText(#303234, 14px);
+                    line-height: 22px;
+                    width: calc(100% - 80px);
+                    // max-height: 80px;
+                     // resize: none !important;
+                     // height: auto;
+                }
+            }
+            .vf-editText
+            {
+                position: absolute;
+                right: 2px;
+                top: 12px;
+                display: none;
+                background: #fff;
+            }
+            &:hover 
+            {					
+                .desc
+                {
+                    border: 1px dashed #ccc;
+                    background: #F4FCF7;
+                }
+                .vf-editText
+                {
+                    display: block;
+                }
+                
+            }
+        }
+        
+        .vf-media
+        {
+            position: $position-absolute;
+            right:25px;
+            top:5px;
+            > div 
+            {
+                float: left;
+                margin-left: 10px;
+            }
+        }
+    }
+
+}
+
+.vf-menu-channel
+{
+    background: #f12323;
+    margin-bottom: 25px;
+    ul 
+    {
+        overflow: $overflow-hidden;
+        li 
+        {
+            float: $float-left;				
+            a 
+            {
+                @include styleText(#ffffff, 14px);
+                text-align: center;
+                padding: 0 20px;
+                height: 40px;
+                line-height: 40px;
+                max-width: 200px;
+                overflow: hidden;
+                @extend %styleinline;
+                display: $display-block;
+                -webkit-transition: background 0.2s;
+                -moz-transition: background 0.2s;
+                -ms-transition: background 0.2s;
+                -o-transition: background 0.2s;
+                transition: background 0.2s;
+                &:hover 
+                {
+                    background: #d21e1e;
+                    text-decoration: none;
+                }
+            }
+            a.active 
+            {
+                background: #d21e1e;
+                font-weight: bold;
+            }
+            button 
+            {
+                width: 30px;
+                height: 25px;
+                background: none;
+                float: $float-left;
+            }
+            input[type="text"]
+            {
+                @include styleText(#ffffff, 12px);
+                height: 25px;
+                border-bottom: 1px solid #fff;
+                width: 0;
+                position: relative;
+                top:5px;
+                background: none;
+                -webkit-transition: width 0.2s;
+                -moz-transition: width 0.2s;
+                -ms-transition: width 0.2s;
+                -o-transition: width 0.2s;
+                transition: width 0.2s;
+            }
+            ::-webkit-input-placeholder {
+              color: #ffffff;
+            }
+
+            &:last-child 
+            {					
+                max-height: 40px;
+                button 
+                {
+                    margin-top: 7px;
+                }
+            }
+
+
+        }
+    }
+}

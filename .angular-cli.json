@@ -25,7 +25,8 @@
         "./assets/css/glyphicons.min.css",
         "./assets/css/simple-line-icons.css",
         "./assets/css/jquery.mCustomScrollbar.css",
-        "./assets/css/jquery.bxslider.css"
+        "./assets/css/jquery.bxslider.css",
+        "./assets/css/jquery-ui.css"
         
 
       ],
@@ -36,7 +37,8 @@
         "./assets/js/main.js",
         "./assets/js/vfplayer.js",
         "./assets/js/jquery.mCustomScrollbar.concat.min.js",
-        "./assets/js/selectoption.js"
+        "./assets/js/selectoption.js",
+        "./assets/js/jquery-ui.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {

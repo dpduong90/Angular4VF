@@ -1,0 +1,95 @@
+@import '../../../assets/css/partial/_setting.scss';
+.channel-allplaylistspage
+{
+    .vf-allcategory-chanel
+    {
+        padding: 0 25px;
+        .vf-filter-video
+        {
+            margin-bottom: 25px;
+            .select-option-video
+            {
+                float: $float-left;
+                .vf-wraptitle
+                {
+                    h2 
+                    {
+                        width: 100%;
+                        color: #303234;
+                        font-size: 18px;
+    
+                    }
+                }
+                .select
+                {
+                    margin-top: 0;
+                }
+                .s-hidden
+                {
+                    position: absolute;
+                    pointer-events: none;
+                }
+                .styledSelect
+                {
+                    @include styleText(#303234, 18px);
+                    position: $position-relative;
+                    padding-left: 0;
+                    font-style: normal;
+                    &::after 
+                    {
+                        
+                        border:5px solid transparent;
+                        border-color:#707378 transparent transparent transparent;
+                        position:absolute;
+                        top:10px;
+                        right:-12px;
+                    }
+                }
+                .options
+                {
+                    min-width: 170px;
+                    top:-22px;					
+                    border-radius: 3px;
+                    li
+                    {
+                        @include styleText(#303234, 18px);
+                        font-style: normal;
+                    }
+                } 
+            }
+            .sapxep
+            {
+                float: $float-right;	
+                .options
+                {
+                    top:-22px;					
+                    border-radius: 3px;
+                }			
+            }
+        }
+
+    }
+    
+
+    .playlists-section
+    {
+        overflow: hidden;
+        margin-bottom: 30px;
+        app-channelplaylistitem
+        {
+            float: left;
+            margin: 0 8px;
+            margin-bottom: 16px;
+            &:nth-child(6n)
+            {
+                margin-right: 0;
+            }
+            &:nth-child(6n + 1)
+            {
+                margin-left: 0;
+            }
+        }
+    }
+}
+
+//for responsive

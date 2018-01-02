@@ -18,7 +18,10 @@ export const routes: Routes = [
     {path: 'cong-dong', loadChildren: './modules/community-page/community-page.module#CommunityPageModule'},
     {path: 'video', loadChildren: './modules/video-page/video-page.module#VideoPageModule'},
     {path: 'search', loadChildren: './modules/search-page/search-page.module#SearchPageModule'},
-    {path: 'channel-detail', loadChildren: './modules/channeldetail/channeldetail.module#ChanneldetailModule'}
+    {path: 'channel-detail', loadChildren: './modules/channeldetail/channeldetail.module#ChanneldetailModule'},
+    {path: 'channel-videos', loadChildren: './modules/channel-videos/channel-videos.module#ChannelVideosModule'},
+    {path: 'channel-playlists', loadChildren: './modules/channel-playlists/channel-playlists.module#ChannelPlaylistsModule'}
+    
     
     
 ];

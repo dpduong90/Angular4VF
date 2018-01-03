@@ -20,8 +20,9 @@ export const routes: Routes = [
     {path: 'search', loadChildren: './modules/search-page/search-page.module#SearchPageModule'},
     {path: 'channel-detail', loadChildren: './modules/channeldetail/channeldetail.module#ChanneldetailModule'},
     {path: 'channel-videos', loadChildren: './modules/channel-videos/channel-videos.module#ChannelVideosModule'},
-    {path: 'channel-playlists', loadChildren: './modules/channel-playlists/channel-playlists.module#ChannelPlaylistsModule'}
-    
+    {path: 'channel-playlists', loadChildren: './modules/channel-playlists/channel-playlists.module#ChannelPlaylistsModule'},
+    {path: 'channel-channelsuggest', loadChildren: './modules/channel-channelsuggest/channel-channelsuggest.module#ChannelChannelsuggestModule'}, 
+    {path: 'channel-infomation', loadChildren: './modules/channel-info/channel-info.module#ChannelInfoModule'}
     
     
 ];

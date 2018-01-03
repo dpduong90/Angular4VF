@@ -1,0 +1,33 @@
+.channel-channelsuggestpage
+{
+    .vf-allrelated-channels
+    {
+        .vf-list-channels
+        {
+            overflow: hidden;
+            padding: 0 25px;
+            app-channelitem 
+            {
+                float: left;
+                margin: 0 16px;
+                margin-bottom: 30px;
+                ::ng-deep
+                {
+                    .channelitem
+                    {
+                        width: 165px;
+                        .wrap-thumb
+                        {
+                            width: 128px;
+                            height: 128px;
+                        }
+                        .subscription-container
+                        {
+                            display: inline-block;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import '../../../assets/css/partial/_setting.scss';
+.channel-infopage
+{        
+    .vf-about-channel
+    {
+        overflow: $overflow-hidden;
+        padding: 0 25px;
+        &::before 
+        {
+            display: none;
+        }
+        .main-info-channel
+        {
+            @include styleText(#303234, 14px);
+            line-height: 22px;
+            float: $float-left;
+            width: calc(100% - 350px);
+            padding-right: 25px;
+            border-right: 1px solid #e5e8ec;
+            p 
+            {
+                margin-bottom: 10px;
+                @include styleText(#303234, 14px);
+                line-height: 22px;
+            }
+        }
+        .side-info-channel
+        {
+            float: $float-right;
+            padding-left: 25px;
+            width: 350px;
+            p 
+            {
+                @include styleText(#303234, 14px);
+                line-height: 22px;
+            }
+            .vf-media-social
+            {
+                margin-top: 20px;
+                p 
+                {
+                    @include styleText(#303234, 14px);					
+                }				
+                a 
+                {
+                    float: $float-left;
+                    display: $display-inlinebl;
+                    width: calc(50% - 10px);
+                    // margin-bottom: 10px;
+                    @include styleText(#707378, 14px);
+                    span 
+                    {
+                        // float: left;
+                        display: $display-inlinebl;	
+                        width: 25px;
+                        height: 25px;
+                        position: $position-relative;
+                        top:4px;					
+                    }
+                }
+            }
+        }
+        
+    }    
+
+}

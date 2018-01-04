@@ -22,7 +22,8 @@ export const routes: Routes = [
     {path: 'channel-videos', loadChildren: './modules/channel-videos/channel-videos.module#ChannelVideosModule'},
     {path: 'channel-playlists', loadChildren: './modules/channel-playlists/channel-playlists.module#ChannelPlaylistsModule'},
     {path: 'channel-channelsuggest', loadChildren: './modules/channel-channelsuggest/channel-channelsuggest.module#ChannelChannelsuggestModule'}, 
-    {path: 'channel-infomation', loadChildren: './modules/channel-info/channel-info.module#ChannelInfoModule'}
+    {path: 'channel-infomation', loadChildren: './modules/channel-info/channel-info.module#ChannelInfoModule'},
+    {path: 'channel-search', loadChildren: './modules/channel-search/channel-search.module#ChannelSearchModule'}
     
     
 ];
